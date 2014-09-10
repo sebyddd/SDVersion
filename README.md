@@ -23,17 +23,17 @@ With the announcement of the new iPhone models, developers have a little more wo
       /* e.g: Outputs 'iPhone6,2' */
 ```
 
- ## Add to your project
+## Add to your project
  
- There are 2 ways you can add SDiPhoneVersion to your project:
+There are 2 ways you can add SDiPhoneVersion to your project:
  
- ### Manual installation
+### Manual installation
  
  Simply import the 'SDiPhoneVersion' into your project then import the following in the class you want to use it: 
  ```objective-c
        #import "SDiPhoneVersion.h"
  ```      
- ### Cocoapods
+### Cocoapods
 _* Coming soon *_
       
 ## Available methods
