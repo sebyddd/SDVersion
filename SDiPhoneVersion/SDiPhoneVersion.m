@@ -53,7 +53,7 @@
         return iPhone4inch;
     else if(screenHeight == 667)
         return  iPhone47inch;
-    else if(screenHeight == 960)
+    else if(screenHeight == 736)
         return iPhone55inch;
     else
         return 0;
