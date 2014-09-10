@@ -66,9 +66,6 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
     iPhone47inch
     iPhone55inch
 
-### TODO
-- Add Cocoapods
-
 ## License
 Usage is provided under the [MIT License](http://http//opensource.org/licenses/mit-license.php). See LICENSE for the full details.
 
