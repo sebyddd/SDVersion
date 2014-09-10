@@ -33,8 +33,16 @@ There are 2 ways you can add SDiPhoneVersion to your project:
  ```objective-c
        #import "SDiPhoneVersion.h"
  ```      
-### Cocoapods
-_* Coming soon *_
+### Installation with CocoaPods
+
+CocoaPods is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like SDFeedParser in your projects. See the "[Getting Started](http://guides.cocoapods.org/syntax/podfile.html)" guide for more information.
+
+### Podfile
+
+        platform :ios, '5.0'
+        pod "SDiPhoneVersion", "~> "1.0"
+
+
       
 ## Available methods
 ```objective-c
