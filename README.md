@@ -7,7 +7,7 @@ Objective-C library for detecting running device model and screen size.
 With the announcement of the new iPhone models, developers have a little more work to do. This library simplifies their job by allowing them to get information about the running device and easily target the one they want.
 
 ## How to use
-
+```objective-c
       //Check for device model
       if ([SDiPhoneVersion deviceVersion] == iPhone6)
            NSLog(@"You got the new iPhone 6. Nice!");
@@ -21,7 +21,8 @@ With the announcement of the new iPhone models, developers have a little more wo
       //Get device name
       NSLog(@"%@",[SDiPhoneVersion deviceName]);
       /* e.g: Outputs 'iPhone6,2' */
-      
+```
+
  ## Add to your project
  
  There are 2 ways you can add SDiPhoneVersion to your project:
