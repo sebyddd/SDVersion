@@ -30,16 +30,18 @@ With the announcement of the new iPhone models, developers have a little more wo
  ### Manual installation
  
  Simply import the 'SDiPhoneVersion' into your project then import the following in the class you want to use it: 
- 
+ ```objective-c
        #import "SDiPhoneVersion.h"
+ ```      
  ### Cocoapods
 _* Coming soon *_
       
 ## Available methods
+```objective-c
     +(DeviceVersion)deviceVersion;
     +(DeviceSize)deviceSize;
     +(NSString*)deviceName;
-
+```
 ### Targetable models
 	iPhone4
     iPhone4S
