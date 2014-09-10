@@ -2,7 +2,7 @@
 SDiPhoneVersion
 ===============
 
-Objective-C library for detecting running device model and screen size.
+Objective-C library for detecting  the running device's model and screen size.
 
 With the announcement of the new iPhone models, developers have a little more work to do. This library simplifies their job by allowing them to get information about the running device and easily target the one they want.
 
