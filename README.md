@@ -1,9 +1,8 @@
 ![SDiPhoneVersion](https://dl.dropboxusercontent.com/s/z8d85uw2drs9lpm/sdiphoneversion.png)
 
-##SDiPhoneVersion 
+SDiPhoneVersion 
 
-[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/sebyddd/SDiPhoneVersion?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-![](http://img.shields.io/cocoapods/v/SDiPhoneVersion.svg?style=flat)          ![](http://img.shields.io/cocoapods/p/SDiPhoneVersion.svg?style=flat)    	      ![](http://img.shields.io/cocoapods/l/SDiPhoneVersion.svg?style=flat)
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/sebyddd/SDiPhoneVersion?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)![](http://img.shields.io/cocoapods/v/SDiPhoneVersion.svg?style=flat)          ![](http://img.shields.io/cocoapods/p/SDiPhoneVersion.svg?style=flat)    	      ![](http://img.shields.io/cocoapods/l/SDiPhoneVersion.svg?style=flat)
 ===============
 
 Objective-C library for detecting  the running device's model and screen size.
