@@ -1,6 +1,6 @@
 ![SDiPhoneVersion](https://dl.dropboxusercontent.com/s/z8d85uw2drs9lpm/sdiphoneversion.png)
 
-SDFeedParser 
+SDiPhoneVersion 
 =============
 
 [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/sebyddd/SDiPhoneVersion?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)![](http://img.shields.io/cocoapods/v/SDiPhoneVersion.svg?style=flat)          ![](http://img.shields.io/cocoapods/p/SDiPhoneVersion.svg?style=flat)    	      ![](http://img.shields.io/cocoapods/l/SDiPhoneVersion.svg?style=flat)
