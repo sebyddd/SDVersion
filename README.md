@@ -1,3 +1,4 @@
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/sebyddd/SDiPhoneVersion?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 ![SDiPhoneVersion](https://dl.dropboxusercontent.com/s/z8d85uw2drs9lpm/sdiphoneversion.png)
 SDiPhoneVersion
 ===============
