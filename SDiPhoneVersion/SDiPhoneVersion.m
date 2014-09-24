@@ -24,7 +24,7 @@
                               @"iPhone5,4" :[NSNumber numberWithInteger:iPhone5C],
                               @"iPhone6,1" :[NSNumber numberWithInteger:iPhone5S],
                               @"iPhone7,2" :[NSNumber numberWithInteger:iPhone6],
-                              @"iPhone8,1" :[NSNumber numberWithInteger:iPhone6Plus], //Not confirmed yet
+                              @"iPhone7,1" :[NSNumber numberWithInteger:iPhone6Plus],
                               @"i386"      :[NSNumber numberWithInteger:Simulator],
                               @"x86_64"    :[NSNumber numberWithInteger:Simulator]
                               };

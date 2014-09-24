@@ -90,7 +90,6 @@
 				9AA6625319BFABFC0055042F /* ViewController.m */,
 				9AA6625519BFABFC0055042F /* Main.storyboard */,
 				9AA6625819BFABFC0055042F /* Images.xcassets */,
-				9AA6625A19BFABFC0055042F /* LaunchScreen.xib */,
 				9AA6627119BFAC080055042F /* SDiPhoneVersion */,
 				9AA6624B19BFABFC0055042F /* Supporting Files */,
 			);
@@ -100,6 +99,7 @@
 		9AA6624B19BFABFC0055042F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9AA6625A19BFABFC0055042F /* LaunchScreen.xib */,
 				9AA6624C19BFABFC0055042F /* Info.plist */,
 				9AA6624D19BFABFC0055042F /* main.m */,
 			);
@@ -431,6 +431,7 @@
 				9AA6626D19BFABFC0055042F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9AA6626E19BFABFC0055042F /* Build configuration list for PBXNativeTarget "SDiPhoneVersionTests" */ = {
 			isa = XCConfigurationList;
@@ -439,6 +440,7 @@
 				9AA6627019BFABFC0055042F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

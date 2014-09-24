@@ -3,6 +3,7 @@
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -29,57 +30,43 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SDiPhoneVersion" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="chf-4t-B7v">
-                                <rect key="frame" x="20" y="137" width="441" height="49.5"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="36"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="GkS-Ns-SUH">
+                                <rect key="frame" x="58" y="55" width="284" height="142"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.31429015971451196" green="0.69846573745959517" blue="0.82389987244897955" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.26274511218070984" green="0.78431379795074463" blue="0.46274513006210327" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
-                            <constraint firstItem="chf-4t-B7v" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="114" id="0Ba-LX-Z8O">
-                                <variation key="widthClass=compact" constant="81"/>
-                            </constraint>
-                            <constraint firstAttribute="centerX" secondItem="chf-4t-B7v" secondAttribute="centerX" constant="-0.5" id="7da-Cn-QR7"/>
-                            <constraint firstAttribute="centerY" secondItem="chf-4t-B7v" secondAttribute="centerY" constant="141.25" id="9Et-7J-TQu">
-                                <variation key="widthClass=compact" constant="157.75"/>
-                            </constraint>
+                            <constraint firstItem="GkS-Ns-SUH" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="HXl-cc-PTa"/>
                             <constraint firstAttribute="centerY" secondItem="egl-js-Gcb" secondAttribute="centerY" constant="-25" id="L4D-JL-lZA"/>
+                            <constraint firstItem="GkS-Ns-SUH" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="35" id="Tv7-jD-Jrm"/>
                             <constraint firstAttribute="centerX" secondItem="egl-js-Gcb" secondAttribute="centerX" constant="-0.5" id="gg3-kl-TyF"/>
                             <constraint firstAttribute="centerY" secondItem="HBv-GR-d3r" secondAttribute="centerY" constant="25" id="hYa-SJ-gsi"/>
+                            <constraint firstItem="GkS-Ns-SUH" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="42" id="klt-BW-uRu"/>
                             <constraint firstAttribute="centerX" secondItem="HBv-GR-d3r" secondAttribute="centerX" constant="-0.5" id="phJ-Pi-cYA"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="GkS-Ns-SUH" secondAttribute="bottom" constant="403" id="xAY-9o-YTr"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="egl-js-Gcb"/>
                                 <exclude reference="HBv-GR-d3r"/>
-                                <exclude reference="chf-4t-B7v"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="hYa-SJ-gsi"/>
                                 <exclude reference="phJ-Pi-cYA"/>
                                 <exclude reference="L4D-JL-lZA"/>
                                 <exclude reference="gg3-kl-TyF"/>
-                                <exclude reference="0Ba-LX-Z8O"/>
-                                <exclude reference="7da-Cn-QR7"/>
-                                <exclude reference="9Et-7J-TQu"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="egl-js-Gcb"/>
                                 <include reference="HBv-GR-d3r"/>
-                                <include reference="chf-4t-B7v"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="hYa-SJ-gsi"/>
                                 <include reference="phJ-Pi-cYA"/>
                                 <include reference="L4D-JL-lZA"/>
                                 <include reference="gg3-kl-TyF"/>
-                                <include reference="0Ba-LX-Z8O"/>
-                                <include reference="7da-Cn-QR7"/>
-                                <include reference="9Et-7J-TQu"/>
                             </mask>
                         </variation>
                     </view>
@@ -92,7 +79,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="149.25" y="-38"/>
+            <point key="canvasLocation" x="149" y="-38"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="254" height="92"/>
+    </resources>
 </document>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C149029B-48E4-4362-9AED-C93F50018FC2</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SDiPhoneVersion</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>314DE8E74304520AC762622D36460EDB7E1C15E5</key>
+		<string>https://github.com/sebyddd/SDiPhoneVersion.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SDiPhoneVersion-Demo/SDiPhoneVersion.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>314DE8E74304520AC762622D36460EDB7E1C15E5</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/sebyddd/SDiPhoneVersion.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>314DE8E74304520AC762622D36460EDB7E1C15E5</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>314DE8E74304520AC762622D36460EDB7E1C15E5</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SDiPhoneVersion</string>
+		</dict>
+	</array>
+</dict>
+</plist>
