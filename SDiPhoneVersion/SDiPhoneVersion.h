@@ -14,14 +14,14 @@
 @interface SDiPhoneVersion : NSObject
 
 typedef NS_ENUM(NSInteger, DeviceVersion){
-    iPhone4 = 0,
-    iPhone4S = 1,
-    iPhone5 = 2,
-    iPhone5C = 3,
-    iPhone5S = 4,
-    iPhone6 = 5,
-    iPhone6Plus = 6,
-    Simulator = 7
+    iPhone4 = 3,
+    iPhone4S = 4,
+    iPhone5 = 5,
+    iPhone5C = 5,
+    iPhone5S = 6,
+    iPhone6 = 7,
+    iPhone6Plus = 8,
+    Simulator = 0
 };
 
 typedef NS_ENUM(NSInteger, DeviceSize){
@@ -33,5 +33,6 @@ typedef NS_ENUM(NSInteger, DeviceSize){
 
 +(DeviceVersion)deviceVersion;
 +(DeviceSize)deviceSize;
++(NSString*)deviceName;
 
 @end
