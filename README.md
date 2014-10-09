@@ -9,7 +9,7 @@ Objective-C library for detecting  the running device's model and screen size.
 
 With the new iPhone models, developers have a little more work to do. This library simplifies their job by allowing them to get information about the running device and easily target the ones they want.
 
-**NEW:** _Now supports iPads as well! Check it out bellow!_
+**NEW:** _Now supports iPads as well! Check them out bellow!_
 
 ## How to use
 ```objective-c
