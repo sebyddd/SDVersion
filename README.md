@@ -7,7 +7,9 @@ SDiPhoneVersion
 
 Objective-C library for detecting  the running device's model and screen size.
 
-With the announcement of the new iPhone models, developers have a little more work to do. This library simplifies their job by allowing them to get information about the running device and easily target the ones they want.
+With the new iPhone models, developers have a little more work to do. This library simplifies their job by allowing them to get information about the running device and easily target the ones they want.
+
+**NEW:** _Now supports iPads as well! Check it out bellow!_
 
 ## How to use
 ```objective-c
@@ -16,7 +18,9 @@ With the announcement of the new iPhone models, developers have a little more wo
            NSLog(@"You got the new iPhone 6. Nice!");
       else if ([SDiPhoneVersion deviceVersion] == iPhone6Plus)
            NSLog(@"You got the iPhone 6 Plus. Bigger is better!");
-          
+	  else if ([SDiPhoneVersion deviceVersion] == iPadAir)
+      	 NSLog(@"You own an iPad Air!");
+
       // Check for device screen size
       if ([SDiPhoneVersion deviceSize] == iPhone4inch)
            NSLog(@"Your screen is 4 inches");
@@ -61,6 +65,15 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
     iPhone5S
     iPhone6
     iPhone6Plus
+    
+    iPad1
+    iPad2
+    iPadMini
+    iPad3
+    iPad4
+    iPadAir
+    iPadMiniRetina
+    
     Simulator
 
 ### Targetable screen sizes
