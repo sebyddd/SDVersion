@@ -9,7 +9,7 @@ Objective-C library for detecting  the running device's model and screen size.
 
 With the new iPhone models, developers have a little more work to do. This library simplifies their job by allowing them to get information about the running device and easily target the ones they want.
 
-**NEW:** _Now supports iPads as well! Check them out bellow!_
+**NEW:** _Now supports iPads and iOS Version Finder as well! Check them out bellow!_
 
 ## How to use
 ```objective-c
@@ -86,6 +86,13 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
     iPhone4inch
     iPhone47inch
     iPhone55inch
+
+### Available iOS Version Finder methods
+    iOSVersionEqualTo(@"V")  //E.g: iOSVersionEqualTo(@"8.0.1")
+    iOSVersionGreaterThan(@"V")
+	iOSVersionGreaterThanOrEqualTo(@"V")
+	iOSVersionLessThan(@"V")
+	iOSVersionLessThanOrEqualTo(@"V")        
 
 ## Credits
 - Yasir Turk (iOS Version Finder, StackOverflow)
