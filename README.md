@@ -28,6 +28,11 @@ With the new iPhone models, developers have a little more work to do. This libra
       //Get device name
       NSLog(@"%@",[SDiPhoneVersion deviceName]);
       /* e.g: Outputs 'iPhone6,2' */
+      
+      //Check for iOS Version
+      if (iOSVersionGreaterThan(@"8"))
+           NSLog(@"You are running iOS 8 or above!");
+    
 ```
 
 ## Add to your project
@@ -81,6 +86,9 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
     iPhone4inch
     iPhone47inch
     iPhone55inch
+
+## Credits
+- Yasir Turk (iOS Version Finder, StackOverflow)
 
 ## License
 Usage is provided under the [MIT License](http://http//opensource.org/licenses/mit-license.php). See LICENSE for the full details.
