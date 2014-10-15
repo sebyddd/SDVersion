@@ -36,6 +36,10 @@
     else if([SDiPhoneVersion deviceSize] == iPhone55inch)
         NSLog(@"Your screen size is 5.5 inches");
     
+    //Check for iOS Version
+    if (iOSVersionGreaterThan(@"8"))
+        NSLog(@"You are running iOS 8 or above!");
+    
 }
 
 

@@ -68,6 +68,7 @@
     DeviceVersion version = (DeviceVersion)[[self.deviceNamesByCode objectForKey:code] integerValue];
 
     return version;
+    
 }
 
 +(DeviceSize)deviceSize {
