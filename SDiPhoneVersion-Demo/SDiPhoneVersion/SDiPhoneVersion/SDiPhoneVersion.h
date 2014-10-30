@@ -39,6 +39,7 @@ typedef NS_ENUM(NSInteger, DeviceVersion){
 };
 
 typedef NS_ENUM(NSInteger, DeviceSize){
+    UnknownSize = 0,
     iPhone35inch = 1,
     iPhone4inch = 2,
     iPhone47inch = 3,

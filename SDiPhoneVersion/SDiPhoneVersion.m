@@ -68,11 +68,22 @@
     DeviceVersion version = (DeviceVersion)[[self.deviceNamesByCode objectForKey:code] integerValue];
     
     return version;
+    
 }
 
 +(DeviceSize)deviceSize {
     
-    CGFloat screenHeight = [[UIScreen mainScreen] bounds].size.height;
+    CGFloat screenHeight;
+    
+    UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
+    
+    if (orientation ==  UIDeviceOrientationPortrait)
+        screenHeight = [[UIScreen mainScreen] bounds].size.height;
+    
+    else if((orientation == UIDeviceOrientationLandscapeRight) || (orientation == UIInterfaceOrientationLandscapeLeft))
+        screenHeight = [[UIScreen mainScreen] bounds].size.width;
+    
+    
     if (screenHeight == 480)
         return iPhone35inch;
     else if(screenHeight == 568)
@@ -82,7 +93,7 @@
     else if(screenHeight == 736)
         return iPhone55inch;
     else
-        return 0;
+        return UnknownSize;
 }
 
 +(NSString*)deviceName {
