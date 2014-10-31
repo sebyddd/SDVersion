@@ -75,23 +75,20 @@
     
     CGFloat screenHeight;
     
-    UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
-    
-    if (orientation ==  UIDeviceOrientationPortrait)
+    if (iOSVersionGreaterThan(@"8")) {
+        
+        UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
+        
+        if (orientation ==  UIDeviceOrientationPortrait)
+            screenHeight = [[UIScreen mainScreen] bounds].size.height;
+        
+        else if((orientation == UIDeviceOrientationLandscapeRight) || (orientation == UIInterfaceOrientationLandscapeLeft))
+            screenHeight = [[UIScreen mainScreen] bounds].size.width;
+        
+    }else
         screenHeight = [[UIScreen mainScreen] bounds].size.height;
     
-    else if((orientation == UIDeviceOrientationLandscapeRight) || (orientation == UIInterfaceOrientationLandscapeLeft))
-        screenHeight = [[UIScreen mainScreen] bounds].size.width;
     
-    CGFloat screenHeight = ({
-        // consider landscape orientation status
-        UIDeviceOrientation orientation = [[UIDevice currentDevice] orientation];
-        BOOL isLandscape = (orientation == UIDeviceOrientationLandscapeLeft || orientation == UIDeviceOrientationLandscapeRight);
-        CGFloat screenHeight = [[UIScreen mainScreen] bounds].size.height;
-        CGFloat screenWidth = [[UIScreen mainScreen] bounds].size.width;
-        screenHeight = isLandscape ? screenWidth : screenHeight;
-    });
-
     if (screenHeight == 480)
         return iPhone35inch;
     else if(screenHeight == 568)

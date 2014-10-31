@@ -75,13 +75,18 @@
     
     CGFloat screenHeight;
     
-    UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
-    
-    if (orientation ==  UIDeviceOrientationPortrait)
-        screenHeight = [[UIScreen mainScreen] bounds].size.height;
-    
-    else if((orientation == UIDeviceOrientationLandscapeRight) || (orientation == UIInterfaceOrientationLandscapeLeft))
-        screenHeight = [[UIScreen mainScreen] bounds].size.width;
+    if (iOSVersionGreaterThan(@"8")) {
+        
+        UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
+        
+        if (orientation ==  UIDeviceOrientationPortrait)
+            screenHeight = [[UIScreen mainScreen] bounds].size.height;
+        
+        else if((orientation == UIDeviceOrientationLandscapeRight) || (orientation == UIInterfaceOrientationLandscapeLeft))
+            screenHeight = [[UIScreen mainScreen] bounds].size.width;
+        
+    }else
+            screenHeight = [[UIScreen mainScreen] bounds].size.height;
     
     
     if (screenHeight == 480)
