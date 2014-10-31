@@ -95,7 +95,7 @@
     else if(screenHeight == 736)
         return iPhone55inch;
     else
-        return Unknowninch;
+        return UnknownSize;
 }
 
 +(NSString*)deviceName {
