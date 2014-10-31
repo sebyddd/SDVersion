@@ -74,7 +74,7 @@
 +(DeviceSize)deviceSize {
     
     CGFloat screenHeight;
-    
+
     if (iOSVersionGreaterThan(@"8")) {
         
         UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
