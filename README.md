@@ -13,7 +13,7 @@ With the new iPhone models, developers have a little more work to do. This libra
 
 ## How to use
 ```objective-c
-      //Check for device model
+      // Check for device model
       if ([SDiPhoneVersion deviceVersion] == iPhone6)
            NSLog(@"You got the new iPhone 6. Nice!");
       else if ([SDiPhoneVersion deviceVersion] == iPhone6Plus)
@@ -25,11 +25,11 @@ With the new iPhone models, developers have a little more work to do. This libra
       if ([SDiPhoneVersion deviceSize] == iPhone4inch)
            NSLog(@"Your screen is 4 inches");
       
-      //Get device name
+      // Get device name
       NSLog(@"%@",[SDiPhoneVersion deviceName]);
       /* e.g: Outputs 'iPhone6,2' */
       
-      //Check for iOS Version
+      // Check for iOS Version
       if (iOSVersionGreaterThan(@"8"))
            NSLog(@"You are running iOS 8 or above!");
     
