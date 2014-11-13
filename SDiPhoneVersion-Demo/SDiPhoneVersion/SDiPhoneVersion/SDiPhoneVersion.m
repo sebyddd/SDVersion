@@ -37,10 +37,10 @@
                               
                               //iPads
                               @"iPad1,1" :[NSNumber numberWithInteger:iPad1],
-                              @"iPad2,1" :[NSNumber numberWithInteger:iPad1],
-                              @"iPad2,2" :[NSNumber numberWithInteger:iPad1],
-                              @"iPad2,3" :[NSNumber numberWithInteger:iPad1],
-                              @"iPad2,4" :[NSNumber numberWithInteger:iPad1],
+                              @"iPad2,1" :[NSNumber numberWithInteger:iPad2],
+                              @"iPad2,2" :[NSNumber numberWithInteger:iPad2],
+                              @"iPad2,3" :[NSNumber numberWithInteger:iPad2],
+                              @"iPad2,4" :[NSNumber numberWithInteger:iPad2],
                               @"iPad2,5" :[NSNumber numberWithInteger:iPadMini],
                               @"iPad2,6" :[NSNumber numberWithInteger:iPadMini],
                               @"iPad2,7" :[NSNumber numberWithInteger:iPadMini],
