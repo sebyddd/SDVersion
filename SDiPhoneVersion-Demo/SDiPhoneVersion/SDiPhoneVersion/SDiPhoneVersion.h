@@ -35,6 +35,7 @@ typedef NS_ENUM(NSInteger, DeviceVersion){
     iPad4 = 14,
     iPadAir = 15,
     iPadMiniRetina = 16,
+    iPadAir2 = 17,
     Simulator = 0
 };
 

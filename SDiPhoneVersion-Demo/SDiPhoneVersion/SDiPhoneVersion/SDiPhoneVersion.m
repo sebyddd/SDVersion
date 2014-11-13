@@ -56,6 +56,8 @@
                               @"iPad4,4" :[NSNumber numberWithInteger:iPadMiniRetina],
                               @"iPad4,5" :[NSNumber numberWithInteger:iPadMiniRetina],
                               @"iPad4,6" :[NSNumber numberWithInteger:iPadMiniRetina],
+                              @"iPad5,3" :[NSNumber numberWithInteger:iPadAir2],
+                              @"iPad5,4" :[NSNumber numberWithInteger:iPadAir2],
 
                               
                               };
