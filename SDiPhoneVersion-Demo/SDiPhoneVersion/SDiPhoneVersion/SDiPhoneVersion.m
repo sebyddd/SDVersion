@@ -18,8 +18,11 @@
         deviceNamesByCode = @{
                               //iPhones
                               @"iPhone3,1" :[NSNumber numberWithInteger:iPhone4],
+                              @"iPhone3,2" :[NSNumber numberWithInteger:iPhone4],
                               @"iPhone3,3" :[NSNumber numberWithInteger:iPhone4],
                               @"iPhone4,1" :[NSNumber numberWithInteger:iPhone4S],
+                              @"iPhone4,2" :[NSNumber numberWithInteger:iPhone4S],
+                              @"iPhone4,3" :[NSNumber numberWithInteger:iPhone4S],
                               @"iPhone5,1" :[NSNumber numberWithInteger:iPhone5],
                               @"iPhone5,2" :[NSNumber numberWithInteger:iPhone5],
                               @"iPhone5,3" :[NSNumber numberWithInteger:iPhone5C],
@@ -34,10 +37,10 @@
                               
                               //iPads
                               @"iPad1,1" :[NSNumber numberWithInteger:iPad1],
-                              @"iPad2,1" :[NSNumber numberWithInteger:iPad1],
-                              @"iPad2,2" :[NSNumber numberWithInteger:iPad1],
-                              @"iPad2,3" :[NSNumber numberWithInteger:iPad1],
-                              @"iPad2,4" :[NSNumber numberWithInteger:iPad1],
+                              @"iPad2,1" :[NSNumber numberWithInteger:iPad2],
+                              @"iPad2,2" :[NSNumber numberWithInteger:iPad2],
+                              @"iPad2,3" :[NSNumber numberWithInteger:iPad2],
+                              @"iPad2,4" :[NSNumber numberWithInteger:iPad2],
                               @"iPad2,5" :[NSNumber numberWithInteger:iPadMini],
                               @"iPad2,6" :[NSNumber numberWithInteger:iPadMini],
                               @"iPad2,7" :[NSNumber numberWithInteger:iPadMini],
@@ -49,8 +52,15 @@
                               @"iPad3,6" :[NSNumber numberWithInteger:iPad4], 
                               @"iPad4,1" :[NSNumber numberWithInteger:iPadAir],
                               @"iPad4,2" :[NSNumber numberWithInteger:iPadAir],
-                              @"iPad4,4" :[NSNumber numberWithInteger:iPadMiniRetina],
-                              @"iPad4,5" :[NSNumber numberWithInteger:iPadMiniRetina]
+                              @"iPad4,3" :[NSNumber numberWithInteger:iPadAir],
+                              @"iPad4,4" :[NSNumber numberWithInteger:iPadMini2],
+                              @"iPad4,5" :[NSNumber numberWithInteger:iPadMini2],
+                              @"iPad4,6" :[NSNumber numberWithInteger:iPadMini2],
+                              @"iPad4,7" :[NSNumber numberWithInteger:iPadMini3],
+                              @"iPad4,8" :[NSNumber numberWithInteger:iPadMini3],
+                              @"iPad4,9" :[NSNumber numberWithInteger:iPadMini3],
+                              @"iPad5,3" :[NSNumber numberWithInteger:iPadAir2],
+                              @"iPad5,4" :[NSNumber numberWithInteger:iPadAir2],
 
                               
                               };
