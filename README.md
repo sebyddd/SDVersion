@@ -19,7 +19,7 @@ With the new iPhone models, developers have a little more work to do. This libra
       else if ([SDiPhoneVersion deviceVersion] == iPhone6Plus)
            NSLog(@"You got the iPhone 6 Plus. Bigger is better!");
 	  else if ([SDiPhoneVersion deviceVersion] == iPadAir)
-      	 NSLog(@"You own an iPad Air!");
+      	   NSLog(@"You own an iPad Air!");
 
       // Check for device screen size
       if ([SDiPhoneVersion deviceSize] == iPhone4inch)
