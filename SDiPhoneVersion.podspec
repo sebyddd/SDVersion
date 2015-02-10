@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "SDiPhoneVersion"
-  s.version      = "1.1.1"
+  s.version      = "1.1.2"
   s.summary      = "Objective-C library for detecting running device model and screen size."
   s.homepage     = "https://github.com/sebyddd/SDiPhoneVersion"
   s.screenshots  = "https://dl.dropboxusercontent.com/s/z8d85uw2drs9lpm/sdiphoneversion.png"
@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "5.0"
   s.source       = { 
   :git => "https://github.com/sebyddd/SDiPhoneVersion.git", 
-  :tag => "1.1.1" }
+  :tag => "1.1.2" }
 
   s.source_files  = "SDiPhoneVersion/*.{h,m}"
 

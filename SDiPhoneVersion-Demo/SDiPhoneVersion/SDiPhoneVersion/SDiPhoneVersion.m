@@ -73,7 +73,7 @@
 
 +(DeviceSize)deviceSize {
     
-    CGFloat screenHeight;
+    CGFloat screenHeight = 0;
     
     if (iOSVersionGreaterThan(@"8")) {
         
