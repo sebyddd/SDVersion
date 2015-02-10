@@ -73,7 +73,11 @@
 
 +(DeviceSize)deviceSize {
     
+<<<<<<< HEAD
     CGFloat screenHeight = 0;
+=======
+    CGFloat screenHeight=0;
+>>>>>>> FETCH_HEAD
 
     if (iOSVersionGreaterThan(@"8")) {
         
