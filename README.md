@@ -99,5 +99,3 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
 
 ## License
 Usage is provided under the [MIT License](http://http//opensource.org/licenses/mit-license.php). See LICENSE for the full details.
-
-
