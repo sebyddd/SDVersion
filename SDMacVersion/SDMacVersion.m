@@ -18,37 +18,37 @@ static NSString * const SDMacFullModel = @"SDMacFullModel";
 static NSString * const SDMacYear = @"SDMacReleaseYear";
 static NSString * const SDMacModel = @"SDMacReleaseModel";
 static NSString * const SDMacSize = @"SDMacReleaseSize";
-static NSString * const SDMacRetina = @"SDMacReleaseRetina";
+static NSString * const SDMacResolution = @"SDMacResolution";
 
 #pragma mark - Models
 
 + (NSDictionary *)dicOfMacPro {
 	// https://support.apple.com/fr-fr/HT202888
-	return @{SDMacFullModel: @"", SDMacModel: @(DeviceVersionMacPro), SDMacYear: @"", SDMacSize: @(UnknownSize), SDMacRetina: @NO};
+	return @{@"model": @{SDMacModel: @(DeviceVersionMacPro), SDMacYear: @"", SDMacSize: @(UnknownSize), SDMacResolution: @(DeviceScreenRetina)}};
 }
 
 + (NSDictionary *)dicOfIMac {
 	// https://support.apple.com/fr-fr/HT201634
-	return @{SDMacFullModel: @"", SDMacModel: @(DeviceVersionIMac), SDMacYear: @"", SDMacSize: @17, SDMacRetina: @NO};
+	return @{@"model": @{SDMacModel: @(DeviceVersionIMac), SDMacYear: @"", SDMacSize: @17, SDMacResolution: @(DeviceScreenRetina)}};
 }
 
 + (NSDictionary *)dicOfMacBookPro {
 	//https://support.apple.com/fr-fr/HT201300
-	return @{SDMacFullModel: @"", SDMacModel: @(DeviceVersionMacBookPro), SDMacYear: @"", SDMacSize: @17, SDMacRetina: @NO};
+	return @{@"model": @{SDMacModel: @(DeviceVersionMacBookPro), SDMacYear: @"", SDMacSize: @17, SDMacResolution: @(DeviceScreenRetina)}};
 }
 
 + (NSDictionary *)dicOfMacBookAir {
 	//	https://support.apple.com/fr-fr/HT201862
-	return @{SDMacFullModel: @"", SDMacModel: @(DeviceVersionMacBookAir), SDMacYear: @"", SDMacSize: @17, SDMacRetina: @NO};
+	return @{@"model": @{SDMacModel: @(DeviceVersionMacBookAir), SDMacYear: @"", SDMacSize: @17, SDMacResolution: @(DeviceScreenRetina)}};
 }
 
 + (NSDictionary *)dicOfMacBook {
 	//	https://support.apple.com/fr-fr/HT201608
-	return @{SDMacFullModel: @"", SDMacModel: @(DeviceVersionMacBook), SDMacYear: @"", SDMacSize: @17, SDMacRetina: @NO};
+	return @{@"model": @{SDMacModel: @(DeviceVersionMacBook), SDMacYear: @"", SDMacSize: @17, SDMacResolution: @(DeviceScreenRetina)}};
 }
 
 + (NSDictionary *)unknownMac {
-	return @{SDMacFullModel: @"", SDMacModel: @(DeviceVersionUnknown), SDMacYear: @"", SDMacSize: @(UnknownSize), SDMacRetina: @NO};
+	return @{@"model": @{SDMacModel: @(DeviceVersionUnknown), SDMacYear: @"", SDMacSize: @(UnknownSize), SDMacResolution: @(UnknownResolution)}};
 }
 
 
@@ -104,8 +104,8 @@ static NSString * const SDMacRetina = @"SDMacReleaseRetina";
 	return [[self deviceInformationForModel:[self currentModel]] objectForKey:SDMacFullModel];
 }
 
-+ (BOOL)isDeviceRetina {
-	return [[[self deviceInformationForModel:[self currentModel]] objectForKey:SDMacRetina] boolValue];
++ (DeviceScreenResolution)isDeviceRetina {
+	return [[[self deviceInformationForModel:[self currentModel]] objectForKey:SDMacResolution] integerValue];
 }
 
 @end

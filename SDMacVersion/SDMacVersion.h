@@ -48,10 +48,16 @@ typedef NS_ENUM(NSInteger, DeviceReleaseYear) {
 	//...
 };
 
+typedef NS_ENUM(NSInteger, DeviceScreenResolution) {
+	UnknownResolution,
+	DeviceScreenRetina,
+	DeviceScreenNoRetina
+};
+
 + (DeviceVersion)deviceVersion;
 + (DeviceReleaseYear)DeviceReleaseYear;
 + (DeviceSize)deviceSize;
 + (NSString *)deviceName;
-+ (BOOL)isDeviceRetina;
++ (DeviceScreenResolution)isDeviceRetina;
 
 @end
