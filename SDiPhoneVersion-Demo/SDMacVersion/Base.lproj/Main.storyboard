@@ -682,16 +682,40 @@
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="logo" id="zET-9h-oHo"/>
                             </imageView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nY5-uy-aSQ">
-                                <rect key="frame" x="198" y="125" width="85" height="17"/>
+                                <rect key="frame" x="166" y="125" width="148" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Mac model: " id="94G-tE-RaQ">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="woj-1m-Hg7">
-                                <rect key="frame" x="198" y="83" width="104" height="17"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="OSX Version: " id="s0w-ot-O8G">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="woj-1m-Hg7">
+                                <rect key="frame" x="166" y="44" width="148" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Mac screen resolution: " id="s0w-ot-O8G">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wN0-Bl-Va4">
+                                <rect key="frame" x="166" y="17" width="141" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Mac screen pixel size:" id="Gl0-Fh-ULm">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wbx-Ak-gyH">
+                                <rect key="frame" x="166" y="98" width="117" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Mac release year: " id="ano-cB-72B">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZU2-Y5-LlG">
+                                <rect key="frame" x="166" y="71" width="113" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Mac screen inch: " id="c0g-9y-PK3">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -700,16 +724,26 @@
                         </subviews>
                         <constraints>
                             <constraint firstItem="c47-We-KXa" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="10" id="8td-KN-kEN"/>
+                            <constraint firstItem="ZU2-Y5-LlG" firstAttribute="leading" secondItem="nY5-uy-aSQ" secondAttribute="leading" id="F1q-9d-vqI"/>
+                            <constraint firstItem="wN0-Bl-Va4" firstAttribute="leading" secondItem="wbx-Ak-gyH" secondAttribute="leading" id="FwA-t9-oG1"/>
+                            <constraint firstItem="wbx-Ak-gyH" firstAttribute="top" secondItem="nY5-uy-aSQ" secondAttribute="bottom" constant="10" id="Hnf-eZ-5dR"/>
+                            <constraint firstItem="wN0-Bl-Va4" firstAttribute="top" secondItem="woj-1m-Hg7" secondAttribute="bottom" constant="10" id="Jjz-FI-03Q"/>
                             <constraint firstAttribute="centerX" secondItem="nY5-uy-aSQ" secondAttribute="centerX" id="bLl-Yw-itk"/>
                             <constraint firstAttribute="centerX" secondItem="c47-We-KXa" secondAttribute="centerX" id="dBU-db-HoR"/>
-                            <constraint firstItem="woj-1m-Hg7" firstAttribute="top" secondItem="nY5-uy-aSQ" secondAttribute="bottom" constant="25" id="oP0-f1-AwI"/>
+                            <constraint firstItem="wN0-Bl-Va4" firstAttribute="leading" secondItem="nY5-uy-aSQ" secondAttribute="leading" id="l8M-Fd-qfV"/>
+                            <constraint firstItem="wN0-Bl-Va4" firstAttribute="leading" secondItem="woj-1m-Hg7" secondAttribute="leading" id="oT8-FW-3I2"/>
+                            <constraint firstItem="ZU2-Y5-LlG" firstAttribute="top" secondItem="wbx-Ak-gyH" secondAttribute="bottom" constant="10" id="qhg-vK-Wli"/>
                             <constraint firstAttribute="centerX" secondItem="woj-1m-Hg7" secondAttribute="centerX" id="rXP-yA-DOs"/>
+                            <constraint firstItem="woj-1m-Hg7" firstAttribute="top" secondItem="ZU2-Y5-LlG" secondAttribute="bottom" constant="10" id="yK6-cr-DeU"/>
                             <constraint firstItem="nY5-uy-aSQ" firstAttribute="top" secondItem="c47-We-KXa" secondAttribute="bottom" constant="25" id="z1J-mr-V0J"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="textFieldMacSceenPixelSize" destination="wN0-Bl-Va4" id="vn0-iW-HYy"/>
+                        <outlet property="textFieldMacScreenResolution" destination="woj-1m-Hg7" id="6Sq-5Y-wP5"/>
+                        <outlet property="textFieldMacSreenInch" destination="ZU2-Y5-LlG" id="ywV-cK-T6y"/>
                         <outlet property="textFieldModel" destination="nY5-uy-aSQ" id="R6t-BU-ttH"/>
-                        <outlet property="textFieldVersion" destination="woj-1m-Hg7" id="dUz-So-l4Q"/>
+                        <outlet property="textFieldReleaseYear" destination="wbx-Ak-gyH" id="7Ig-PK-KDp"/>
                     </connections>
                 </viewController>
             </objects>

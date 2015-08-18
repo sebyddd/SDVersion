@@ -12,6 +12,10 @@
 
 @property (weak) IBOutlet NSTextField *textFieldModel;
 @property (weak) IBOutlet NSTextField *textFieldVersion;
+@property (weak) IBOutlet NSTextField *textFieldReleaseYear;
+@property (weak) IBOutlet NSTextField *textFieldMacSreenInch;
+@property (weak) IBOutlet NSTextField *textFieldMacScreenResolution;
+@property (weak) IBOutlet NSTextField *textFieldMacSceenPixelSize;
 
 @end
 

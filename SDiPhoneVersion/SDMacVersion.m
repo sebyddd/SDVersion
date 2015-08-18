@@ -24,31 +24,31 @@ static NSString * const SDMacResolution = @"SDMacResolution";
 
 + (NSDictionary *)dicOfMacPro {
 	// https://support.apple.com/fr-fr/HT202888
-	return @{@"model": @{SDMacDeviceName: @"", SDMacVersionEnum: @(DeviceVersionMacPro), SDMacYear: @"", SDMacScreenSize: @(UnknownSize), SDMacResolution: @(DeviceScreenRetina)}};
+	return @{@"MacBookPro10,2": @{SDMacDeviceName: @"MacPro", SDMacVersionEnum: @(DeviceVersionMacPro), SDMacYear: @(DeviceReleaseIn2015), SDMacScreenSize: @(Mac13Inch), SDMacResolution: @(DeviceScreenRetina)}};
 }
 
 + (NSDictionary *)dicOfIMac {
 	// https://support.apple.com/fr-fr/HT201634
-	return @{@"model": @{SDMacDeviceName: @"", SDMacVersionEnum: @(DeviceVersionIMac), SDMacYear: @"", SDMacScreenSize: @(Mac20Inch), SDMacResolution: @(DeviceScreenRetina)}};
+	return @{@"model": @{SDMacDeviceName: @"iMac", SDMacVersionEnum: @(DeviceVersionIMac), SDMacYear: @(DeviceReleaseIn2015), SDMacScreenSize: @(Mac20Inch), SDMacResolution: @(DeviceScreenRetina)}};
 }
 
 + (NSDictionary *)dicOfMacBookPro {
 	//https://support.apple.com/fr-fr/HT201300
-	return @{@"model": @{SDMacDeviceName: @"", SDMacVersionEnum: @(DeviceVersionMacBookPro), SDMacYear: @"", SDMacScreenSize: @(Mac20Inch), SDMacResolution: @(DeviceScreenRetina)}};
+	return @{@"MacBookPro10,2": @{SDMacDeviceName: @"MacBookPro", SDMacVersionEnum: @(DeviceVersionMacBookPro), SDMacYear: @(DeviceReleaseIn2015), SDMacScreenSize: @(Mac20Inch), SDMacResolution: @(DeviceScreenRetina)}};
 }
 
 + (NSDictionary *)dicOfMacBookAir {
 	//	https://support.apple.com/fr-fr/HT201862
-	return @{@"model": @{SDMacDeviceName: @"", SDMacVersionEnum: @(DeviceVersionMacBookAir), SDMacYear: @"", SDMacScreenSize: @(Mac20Inch), SDMacResolution: @(DeviceScreenRetina)}};
+	return @{@"model": @{SDMacDeviceName: @"MacBookAir", SDMacVersionEnum: @(DeviceVersionMacBookAir), SDMacYear: @(DeviceReleaseIn2015), SDMacScreenSize: @(Mac20Inch), SDMacResolution: @(DeviceScreenRetina)}};
 }
 
 + (NSDictionary *)dicOfMacBook {
 	//	https://support.apple.com/fr-fr/HT201608
-	return @{@"model": @{SDMacDeviceName: @"", SDMacVersionEnum: @(DeviceVersionMacBook), SDMacYear: @"", SDMacScreenSize: @(Mac20Inch), SDMacResolution: @(DeviceScreenRetina)}};
+	return @{@"model": @{SDMacDeviceName: @"MacBook", SDMacVersionEnum: @(DeviceVersionMacBook), SDMacYear: @(DeviceReleaseIn2015), SDMacScreenSize: @(Mac13Inch), SDMacResolution: @(DeviceScreenRetina)}};
 }
 
 + (NSDictionary *)unknownMac {
-	return @{@"model": @{SDMacDeviceName: @"", SDMacVersionEnum: @(DeviceVersionUnknown), SDMacYear: @"", SDMacScreenSize: @(UnknownSize), SDMacResolution: @(UnknownResolution)}};
+	return @{@"model": @{SDMacDeviceName: @"unknown", SDMacVersionEnum: @(DeviceVersionUnknown), SDMacYear: @(DeviceReleaseIn2015), SDMacScreenSize: @(UnknownSize), SDMacResolution: @(UnknownResolution)}};
 }
 
 
@@ -56,21 +56,21 @@ static NSString * const SDMacResolution = @"SDMacResolution";
 	static NSDictionary *deviceDic = nil;
 	static dispatch_once_t onceToken;
 	dispatch_once(&onceToken, ^{
-		if ([model hasPrefix:@"MacBookPro"]) {
-			deviceDic = [self dicOfMacBookPro];
+		if ([model hasPrefix:@"MacPro"]) {
+			deviceDic = [self dicOfMacPro];
 		} else if ([model hasPrefix:@"iMac"]) {
 			deviceDic = [self dicOfIMac];
-		} else if ([model hasPrefix:@"MacPro"]) {
-			deviceDic = [self dicOfMacPro];
+		} else if ([model hasPrefix:@"MacBookPro"]) {
+			deviceDic = [self dicOfMacBookPro];
 		} else if ([model hasPrefix:@"MacBookAir"]) {
 			deviceDic = [self dicOfMacBookAir];
 		} else if ([model hasPrefix:@"MacBook"]) {
 			deviceDic = [self dicOfMacBook];
 		} else {
-			
+			deviceDic = [self unknownMac];
 		}
 	});
-	return deviceDic;
+	return [deviceDic objectForKey:model];
 }
 
 + (NSString *)currentModel {
@@ -108,7 +108,7 @@ static NSString * const SDMacResolution = @"SDMacResolution";
 	return [[[self deviceInformationForModel:[self currentModel]] objectForKey:SDMacResolution] integerValue];
 }
 
-+ (NSSize)deviceResolutionPixelSize {
++ (NSSize)deviceScreenResolutionPixelSize {
 	NSScreen *screen = [NSScreen mainScreen];
 	NSDictionary *description = [screen deviceDescription];
 	NSSize displayPixelSize = [[description objectForKey:NSDeviceSize] sizeValue];

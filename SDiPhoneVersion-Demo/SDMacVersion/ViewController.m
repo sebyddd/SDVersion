@@ -20,8 +20,20 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	[SDVersion deviceVersion];
-	// Do any additional setup after loading the view.
+	self.textFieldVersion.stringValue = [self.textFieldVersion.stringValue stringByAppendingFormat:@"%ld", [SDVersion deviceVersion]];
+	self.textFieldModel.stringValue = [self.textFieldModel.stringValue stringByAppendingString:[SDVersion deviceName]];
+	self.textFieldReleaseYear.stringValue = [self.textFieldReleaseYear.stringValue stringByAppendingFormat:@"%ld", [SDVersion deviceReleaseYear]];
+	self.textFieldMacSreenInch.stringValue = [self.textFieldMacSreenInch.stringValue stringByAppendingFormat:@"%ld", [SDVersion deviceSize]];
+	self.textFieldMacSceenPixelSize.stringValue = [self.textFieldMacSceenPixelSize.stringValue stringByAppendingFormat:@" {%.1f, %.1f}", [SDVersion deviceScreenResolutionPixelSize].width, [SDVersion deviceScreenResolutionPixelSize].height];
+
+	DeviceScreenResolution screenResolution = [SDVersion deviceScreenResolution];
+	NSString *resolutionText = @"";
+	switch (screenResolution) {
+		case DeviceScreenRetina: resolutionText = @"retina"; break;
+		case DeviceScreenNoRetina: resolutionText = @"no retina"; break;
+		default: resolutionText = @"unknown";
+	}
+	self.textFieldMacScreenResolution.stringValue = [self.textFieldMacScreenResolution.stringValue stringByAppendingString:resolutionText];
 }
 
 @end

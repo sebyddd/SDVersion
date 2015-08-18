@@ -30,22 +30,22 @@ typedef NS_ENUM(NSInteger, DeviceVersion) {
 
 typedef NS_ENUM(NSInteger, DeviceSize) {
 	UnknownSize,
-	Mac27Inch,
-	Mac24Inch,
-	Mac21Dot5Inch,
-	Mac20Inch,
-	Mac17Inch,
-	Mac15Inch,
-	Mac13Inch,
-	Mac12Inch,
-	Mac11Inch,
+	Mac27Inch = 27,
+	Mac24Inc = 24,
+	Mac21Dot5Inch = 21,
+	Mac20Inch = 20,
+	Mac17Inch = 17,
+	Mac15Inch = 15,
+	Mac13Inch = 13,
+	Mac12Inch = 12,
+	Mac11Inch = 11
 };
 
 typedef NS_ENUM(NSInteger, DeviceReleaseYear) {
 	UnknownYear,
-	DeviceReleaseIn2015,
-	DeviceReleaseIn2014,
-	DeviceReleaseIn2013
+	DeviceReleaseIn2015 = 2015,
+	DeviceReleaseIn2014 = 2014,
+	DeviceReleaseIn2013 = 2013
 	//...
 };
 
@@ -59,7 +59,7 @@ typedef NS_ENUM(NSInteger, DeviceScreenResolution) {
 + (NSString *)deviceName;
 + (DeviceReleaseYear)deviceReleaseYear;
 + (DeviceSize)deviceSize;
-+ (NSSize)deviceResolutionPixelSize;
++ (NSSize)deviceScreenResolutionPixelSize;
 + (DeviceScreenResolution)deviceScreenResolution;
 
 @end
