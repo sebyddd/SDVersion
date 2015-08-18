@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Cocoa/Cocoa.h>
 
 @interface SDMacVersion : NSObject
 
@@ -27,7 +28,7 @@ typedef NS_ENUM(NSInteger, DeviceVersion) {
 	DeviceVersionXserve,
 };
 
-typedef NS_ENUM(NSInteger, DeviceSize){
+typedef NS_ENUM(NSInteger, DeviceSize) {
 	UnknownSize,
 	Mac27Inch,
 	Mac24Inch,
@@ -55,9 +56,10 @@ typedef NS_ENUM(NSInteger, DeviceScreenResolution) {
 };
 
 + (DeviceVersion)deviceVersion;
-+ (DeviceReleaseYear)DeviceReleaseYear;
-+ (DeviceSize)deviceSize;
 + (NSString *)deviceName;
-+ (DeviceScreenResolution)isDeviceRetina;
++ (DeviceReleaseYear)deviceReleaseYear;
++ (DeviceSize)deviceSize;
++ (NSSize)deviceResolutionPixelSize;
++ (DeviceScreenResolution)deviceScreenResolution;
 
 @end

@@ -14,8 +14,9 @@
 
 @implementation SDMacVersion
 
+static NSString * const SDMacDeviceName = @"SDMacDeviceName";
 static NSString * const SDMacYear = @"SDMacReleaseYear";
-static NSString * const SDMacModel = @"SDMacReleaseModel";
+static NSString * const SDMacVersionEnum = @"SDMacVersionEnum";
 static NSString * const SDMacScreenSize = @"SDMacReleaseSize";
 static NSString * const SDMacResolution = @"SDMacResolution";
 
@@ -23,31 +24,31 @@ static NSString * const SDMacResolution = @"SDMacResolution";
 
 + (NSDictionary *)dicOfMacPro {
 	// https://support.apple.com/fr-fr/HT202888
-	return @{@"model": @{SDMacModel: @(DeviceVersionMacPro), SDMacYear: @"", SDMacScreenSize: @(UnknownSize), SDMacResolution: @(DeviceScreenRetina)}};
+	return @{@"model": @{SDMacDeviceName: @"", SDMacVersionEnum: @(DeviceVersionMacPro), SDMacYear: @"", SDMacScreenSize: @(UnknownSize), SDMacResolution: @(DeviceScreenRetina)}};
 }
 
 + (NSDictionary *)dicOfIMac {
 	// https://support.apple.com/fr-fr/HT201634
-	return @{@"model": @{SDMacModel: @(DeviceVersionIMac), SDMacYear: @"", SDMacScreenSize: @(Mac20Inch), SDMacResolution: @(DeviceScreenRetina)}};
+	return @{@"model": @{SDMacDeviceName: @"", SDMacVersionEnum: @(DeviceVersionIMac), SDMacYear: @"", SDMacScreenSize: @(Mac20Inch), SDMacResolution: @(DeviceScreenRetina)}};
 }
 
 + (NSDictionary *)dicOfMacBookPro {
 	//https://support.apple.com/fr-fr/HT201300
-	return @{@"model": @{SDMacModel: @(DeviceVersionMacBookPro), SDMacYear: @"", SDMacScreenSize: @(Mac20Inch), SDMacResolution: @(DeviceScreenRetina)}};
+	return @{@"model": @{SDMacDeviceName: @"", SDMacVersionEnum: @(DeviceVersionMacBookPro), SDMacYear: @"", SDMacScreenSize: @(Mac20Inch), SDMacResolution: @(DeviceScreenRetina)}};
 }
 
 + (NSDictionary *)dicOfMacBookAir {
 	//	https://support.apple.com/fr-fr/HT201862
-	return @{@"model": @{SDMacModel: @(DeviceVersionMacBookAir), SDMacYear: @"", SDMacScreenSize: @(Mac20Inch), SDMacResolution: @(DeviceScreenRetina)}};
+	return @{@"model": @{SDMacDeviceName: @"", SDMacVersionEnum: @(DeviceVersionMacBookAir), SDMacYear: @"", SDMacScreenSize: @(Mac20Inch), SDMacResolution: @(DeviceScreenRetina)}};
 }
 
 + (NSDictionary *)dicOfMacBook {
 	//	https://support.apple.com/fr-fr/HT201608
-	return @{@"model": @{SDMacModel: @(DeviceVersionMacBook), SDMacYear: @"", SDMacScreenSize: @(Mac20Inch), SDMacResolution: @(DeviceScreenRetina)}};
+	return @{@"model": @{SDMacDeviceName: @"", SDMacVersionEnum: @(DeviceVersionMacBook), SDMacYear: @"", SDMacScreenSize: @(Mac20Inch), SDMacResolution: @(DeviceScreenRetina)}};
 }
 
 + (NSDictionary *)unknownMac {
-	return @{@"model": @{SDMacModel: @(DeviceVersionUnknown), SDMacYear: @"", SDMacScreenSize: @(UnknownSize), SDMacResolution: @(UnknownResolution)}};
+	return @{@"model": @{SDMacDeviceName: @"", SDMacVersionEnum: @(DeviceVersionUnknown), SDMacYear: @"", SDMacScreenSize: @(UnknownSize), SDMacResolution: @(UnknownResolution)}};
 }
 
 
@@ -88,10 +89,14 @@ static NSString * const SDMacResolution = @"SDMacResolution";
 #pragma mark - Mac information
 
 + (DeviceVersion)deviceVersion {
-	return [[[self deviceInformationForModel:[self currentModel]] objectForKey:SDMacModel] integerValue];
+	return [[[self deviceInformationForModel:[self currentModel]] objectForKey:SDMacVersionEnum] integerValue];
 }
 
-+ (DeviceReleaseYear)DeviceReleaseYear {
++ (NSString *)deviceName {
+	return [[self deviceInformationForModel:[self currentModel]] objectForKey:SDMacDeviceName];
+}
+
++ (DeviceReleaseYear)deviceReleaseYear {
 	return [[[self deviceInformationForModel:[self currentModel]] objectForKey:SDMacYear] integerValue];
 }
 
@@ -99,12 +104,15 @@ static NSString * const SDMacResolution = @"SDMacResolution";
 	return [[[self deviceInformationForModel:[self currentModel]] objectForKey:SDMacScreenSize] integerValue];
 }
 
-+ (NSString *)deviceName {
-	return [self currentModel];
++ (DeviceScreenResolution)deviceScreenResolution {
+	return [[[self deviceInformationForModel:[self currentModel]] objectForKey:SDMacResolution] integerValue];
 }
 
-+ (DeviceScreenResolution)isDeviceRetina {
-	return [[[self deviceInformationForModel:[self currentModel]] objectForKey:SDMacResolution] integerValue];
++ (NSSize)deviceResolutionPixelSize {
+	NSScreen *screen = [NSScreen mainScreen];
+	NSDictionary *description = [screen deviceDescription];
+	NSSize displayPixelSize = [[description objectForKey:NSDeviceSize] sizeValue];
+	return displayPixelSize;
 }
 
 @end
