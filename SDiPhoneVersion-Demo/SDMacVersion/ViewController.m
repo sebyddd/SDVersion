@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "SDMacVersion.h"
+#import "SDVersion.h"
 
 @implementation ViewController
 
@@ -17,9 +17,10 @@
 	[super awakeFromNib];
 	self.view.layer.backgroundColor = [NSColor colorWithRed:58.f / 255.f green:192.f / 255.f blue:98.f / 255.f alpha:1].CGColor;
 }
+
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	[SDMacVersion deviceVersion];
+	[SDVersion deviceVersion];
 	// Do any additional setup after loading the view.
 }
 

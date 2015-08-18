@@ -21,7 +21,7 @@
 		E2D975251B8265DF00675936 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2D975241B8265DF00675936 /* Images.xcassets */; };
 		E2D975281B8265DF00675936 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2D975261B8265DF00675936 /* Main.storyboard */; };
 		E2D975341B8265E000675936 /* SDMacVersionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D975331B8265E000675936 /* SDMacVersionTests.m */; };
-		E2D975421B8268CA00675936 /* SDMacVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D975411B8268CA00675936 /* SDMacVersion.m */; };
+		E2DB06221B83380300C3518D /* SDMacVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DB06211B83380300C3518D /* SDMacVersion.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,8 +69,9 @@
 		E2D9752D1B8265DF00675936 /* SDMacVersionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SDMacVersionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2D975321B8265E000675936 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2D975331B8265E000675936 /* SDMacVersionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDMacVersionTests.m; sourceTree = "<group>"; };
-		E2D975401B8268CA00675936 /* SDMacVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDMacVersion.h; sourceTree = "<group>"; };
-		E2D975411B8268CA00675936 /* SDMacVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDMacVersion.m; sourceTree = "<group>"; };
+		E2DB06201B83380300C3518D /* SDMacVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDMacVersion.h; path = ../../../SDiPhoneVersion/SDMacVersion.h; sourceTree = "<group>"; };
+		E2DB06211B83380300C3518D /* SDMacVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDMacVersion.m; path = ../../../SDiPhoneVersion/SDMacVersion.m; sourceTree = "<group>"; };
+		E2DB06261B83385900C3518D /* SDVersion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDVersion.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +109,7 @@
 		9AA6623F19BFABFC0055042F = {
 			isa = PBXGroup;
 			children = (
+				9AA6627119BFAC080055042F /* SDiPhoneVersion */,
 				9AA6624A19BFABFC0055042F /* SDiPhoneVersion */,
 				9AA6626419BFABFC0055042F /* SDiPhoneVersionTests */,
 				E2D975191B8265DF00675936 /* SDMacVersion */,
@@ -136,7 +138,6 @@
 				9AA6625319BFABFC0055042F /* ViewController.m */,
 				9AA6625519BFABFC0055042F /* Main.storyboard */,
 				9AA6625819BFABFC0055042F /* Images.xcassets */,
-				9AA6627119BFAC080055042F /* SDiPhoneVersion */,
 				9AA6624B19BFABFC0055042F /* Supporting Files */,
 			);
 			path = SDiPhoneVersion;
@@ -172,16 +173,19 @@
 		9AA6627119BFAC080055042F /* SDiPhoneVersion */ = {
 			isa = PBXGroup;
 			children = (
+				E2DB06261B83385900C3518D /* SDVersion.h */,
 				9AA6627219BFAC080055042F /* SDiPhoneVersion.h */,
 				9AA6627319BFAC080055042F /* SDiPhoneVersion.m */,
+				E2DB06201B83380300C3518D /* SDMacVersion.h */,
+				E2DB06211B83380300C3518D /* SDMacVersion.m */,
 			);
-			path = SDiPhoneVersion;
+			name = SDiPhoneVersion;
+			path = SDiPhoneVersion/SDiPhoneVersion;
 			sourceTree = "<group>";
 		};
 		E2D975191B8265DF00675936 /* SDMacVersion */ = {
 			isa = PBXGroup;
 			children = (
-				E2D9753F1B8268CA00675936 /* SDMacVersion */,
 				E2D9751C1B8265DF00675936 /* AppDelegate.h */,
 				E2D9751D1B8265DF00675936 /* AppDelegate.m */,
 				E2D975211B8265DF00675936 /* ViewController.h */,
@@ -219,16 +223,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		E2D9753F1B8268CA00675936 /* SDMacVersion */ = {
-			isa = PBXGroup;
-			children = (
-				E2D975401B8268CA00675936 /* SDMacVersion.h */,
-				E2D975411B8268CA00675936 /* SDMacVersion.m */,
-			);
-			name = SDMacVersion;
-			path = ../../SDMacVersion;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -239,6 +233,7 @@
 				9AA6624419BFABFC0055042F /* Sources */,
 				9AA6624519BFABFC0055042F /* Frameworks */,
 				9AA6624619BFABFC0055042F /* Resources */,
+				0442D68BB0410A6524F24B64 /* Find unused imports */,
 			);
 			buildRules = (
 			);
@@ -384,6 +379,23 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0442D68BB0410A6524F24B64 /* Find unused imports */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Find unused imports";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/bin/sh \"/Users/Tom/Library/Application Support/Developer/Shared/Xcode/Plug-ins/xcfui.xcplugin/Contents/Resources/fui_script.sh\" \"/Users/Tom/Documents/Workspace/fork/SDiPhoneVersion/SDiPhoneVersion-Demo\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9AA6624419BFABFC0055042F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -409,9 +421,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2D975231B8265DF00675936 /* ViewController.m in Sources */,
+				E2DB06221B83380300C3518D /* SDMacVersion.m in Sources */,
 				E2D975201B8265DF00675936 /* main.m in Sources */,
 				E2D9751E1B8265DF00675936 /* AppDelegate.m in Sources */,
-				E2D975421B8268CA00675936 /* SDMacVersion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -722,6 +734,7 @@
 				E2D975361B8265E000675936 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E2D9753A1B8265E000675936 /* Build configuration list for PBXNativeTarget "SDMacVersionTests" */ = {
 			isa = XCConfigurationList;
@@ -730,6 +743,7 @@
 				E2D975381B8265E000675936 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

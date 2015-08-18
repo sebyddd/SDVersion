@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "SDiPhoneVersion.h"
+#import "SDVersion.h"
 
 @implementation ViewController
 
@@ -15,25 +15,25 @@
     [super viewDidLoad];
     
     // Get device name as NSString
-    self.iphoneVersionLabel.text = [self.iphoneVersionLabel.text stringByAppendingString:[SDiPhoneVersion deviceName]];
+    self.iphoneVersionLabel.text = [self.iphoneVersionLabel.text stringByAppendingString:[SDVersion deviceName]];
     
     // Get device size (NS_ENUM)
-    self.iphoneSizeLabel.text = [self.iphoneSizeLabel.text stringByAppendingString:[NSString stringWithFormat:@"%ld",[SDiPhoneVersion deviceSize]]];
+    self.iphoneSizeLabel.text = [self.iphoneSizeLabel.text stringByAppendingString:[NSString stringWithFormat:@"%ld",[SDVersion deviceSize]]];
     
     // Check for device model
-    if ([SDiPhoneVersion deviceVersion] == iPhone6)
+    if ([SDVersion deviceVersion] == iPhone6)
         NSLog(@"You got the new iPhone 6. Nice!");
-    else if ([SDiPhoneVersion deviceVersion] == iPhone5S)
+    else if ([SDVersion deviceVersion] == iPhone5S)
         NSLog(@"You got the iPhone 5S. Good device!");
     
     // Check for device screen size
-    if ([SDiPhoneVersion deviceSize] == iPhone35inch)
+    if ([SDVersion deviceSize] == iPhone35inch)
         NSLog(@"Your screen is 3.5 inches");
-    else if ([SDiPhoneVersion deviceSize] == iPhone4inch)
+    else if ([SDVersion deviceSize] == iPhone4inch)
         NSLog(@"Your screen size is 4 inches");
-    else if([SDiPhoneVersion deviceSize] == iPhone47inch)
+    else if([SDVersion deviceSize] == iPhone47inch)
         NSLog(@"Your screen size is 4.7 inches");
-    else if([SDiPhoneVersion deviceSize] == iPhone55inch)
+    else if([SDVersion deviceSize] == iPhone55inch)
         NSLog(@"Your screen size is 5.5 inches");
     
     //Check for iOS Version
