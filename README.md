@@ -33,7 +33,7 @@ SDVersion supports both iOS and Mac OS. Browse through the implementation of eac
       else if ([SDVersion deviceVersion] == iPhone6Plus)
            NSLog(@"iPhone 6 Plus? Bigger is better!");
       else if ([SDVersion deviceVersion] == iPadAir2)
-           NSLog(@"You own an iPad Air 2 🌀!");
+      	   NSLog(@"You own an iPad Air 2 🌀!");
 
       // Check for device screen size
       if ([SDVersion deviceSize] == iPhone4inch)
@@ -78,7 +78,7 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
     + (NSString*)deviceName;
 ```
 ### Targetable models
-  iPhone4
+	iPhone4
     iPhone4S
     iPhone5
     iPhone5C
@@ -107,13 +107,13 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
 ### Available iOS Version Finder methods
     iOSVersionEqualTo(@"v")  //E.g: iOSVersionEqualTo(@"8.4.1")
     iOSVersionGreaterThan(@"v")
-  iOSVersionGreaterThanOrEqualTo(@"v")
-  iOSVersionLessThan(@"v")
-  iOSVersionLessThanOrEqualTo(@"v")       
+	iOSVersionGreaterThanOrEqualTo(@"v")
+	iOSVersionLessThan(@"v")
+	iOSVersionLessThanOrEqualTo(@"v")       
 
 ### Helpers
 ```objective-c
-    NSLog(@"%@", stringFromDeviceVersion([SDVersion deviceVersion]));
+	  NSLog(@"%@", stringFromDeviceVersion([SDVersion deviceVersion]));
       /* e.g: Outputs 'iPad Air 2' */
       
       NSLog(@"%@", stringFromDeviceSize([SDVersion deviceSize]));
@@ -158,40 +158,40 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
     + (DeviceScreenResolution)deviceScreenResolution;
 ```
 ### Targetable models
-  DeviceVersionIMac
-  DeviceVersionMacMini
-  DeviceVersionMacPro
-  DeviceVersionMacBook
-  DeviceVersionMacBookAir
-  DeviceVersionMacBookPro
-  DeviceVersionXserve
+	DeviceVersionIMac
+	DeviceVersionMacMini
+	DeviceVersionMacPro
+	DeviceVersionMacBook
+	DeviceVersionMacBookAir
+	DeviceVersionMacBookPro
+	DeviceVersionXserve
 
 ### Targetable screen sizes
     Mac27Inch
-  Mac24Inch
-  Mac21Dot5Inch
-  Mac20Inch
-  Mac17Inch
-  Mac15Inch
-  Mac13Inch
-  Mac12Inch
-  Mac11Inch
+	Mac24Inch
+	Mac21Dot5Inch
+	Mac20Inch
+	Mac17Inch
+	Mac15Inch
+	Mac13Inch
+	Mac12Inch
+	Mac11Inch
     
 ### Targetable screen resolutions
     DeviceScreenRetina,
-  DeviceScreenNoRetina
+	DeviceScreenNoRetina
 
 ### Available OSX Version Finder methods
     OSXVersionEqualTo(@"v")  //E.g: OSXVersionEqualTo(@"11") - OSX 10.11
     OSXVersionGreaterThan(@"v")
-  OSXVersionGreaterThanOrEqualTo(@"v")
-  OSXVersionLessThan(@"v")
-  OSXVersionLessThanOrEqualTo(@"v")        
-  /* 'v' must be the minor OS Version. e.g: OSX 10.9 - 'v' is 9 */
+	OSXVersionGreaterThanOrEqualTo(@"v")
+	OSXVersionLessThan(@"v")
+	OSXVersionLessThanOrEqualTo(@"v")        
+	/* 'v' must be the minor OS Version. e.g: OSX 10.9 - 'v' is 9 */
 
 ### Helpers
 ```objective-c
-    NSLog(@"%@", stringFromDeviceSize([SDVersion deviceSize]));
+	  NSLog(@"%@", stringFromDeviceSize([SDVersion deviceSize]));
       /* e.g: Outputs '15 inch' */
       
       NSLog(@"%@", stringFromDeviceResolution([SDVersion deviceScreenResolution]))
