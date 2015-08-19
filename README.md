@@ -1,69 +1,85 @@
-![SDiPhoneVersion](https://dl.dropboxusercontent.com/s/z8d85uw2drs9lpm/sdiphoneversion.png)
+![SDVersion](https://dl.dropboxusercontent.com/s/5ddx58dsex25x57/sdversion-logo.png?dl=0)
 
-SDiPhoneVersion 
-=============
+<p align="center">
+    <a href="https://gitter.im/sebyddd/SDiPhoneVersion?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge">
+        <img src="https://img.shields.io/badge/gitter-join%20chat-1dce73.svg"
+             alt="Gitter">
+    </a>
+    <a href="http://sebastiandobrincu.com">
+        <img src="https://img.shields.io/badge/platform-iOS%20%7C%20OSX-D0547F.svg"
+             alt="MIT">
+    </a>
+    <a href="http://sebastiandobrincu.com">
+        <img src="https://img.shields.io/badge/license-MIT-blue.svg"
+             alt="Community Approved">
+    </a>
+</p>
 
-[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/sebyddd/SDiPhoneVersion?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)![](http://img.shields.io/cocoapods/v/SDiPhoneVersion.svg?style=flat)          ![](http://img.shields.io/cocoapods/p/SDiPhoneVersion.svg?style=flat)    	      ![](http://img.shields.io/cocoapods/l/SDiPhoneVersion.svg?style=flat)
+Objective-C library for detecting the running device's model and screen size.
 
-Objective-C library for detecting  the running device's model and screen size.
+With the newer  devices, developers have more work to do. This library simplifies their job by allowing them to get information about the running device and easily target the ones they want.
 
-With the new iPhone models, developers have a little more work to do. This library simplifies their job by allowing them to get information about the running device and easily target the ones they want.
+SDVersion supports both iOS and Mac OS. Browse through the implementation of each platform using the links below.
 
-**NEW:** _Now supports iPads and iOS Version Finder as well! Check them out bellow!_
+[![iOS](https://dl.dropboxusercontent.com/s/wadogkm72fvzaxn/sdiphoneversion-link.png?dl=0)](#ios)
+[![MacOS](https://dl.dropboxusercontent.com/s/yo76akhjuv4meip/sdmacversion-link.png?dl=0)](#mac-os)
+## How it works 
 
-## How to use
 ```objective-c
+
       // Check for device model
-      if ([SDiPhoneVersion deviceVersion] == iPhone6)
-           NSLog(@"You got the new iPhone 6. Nice!");
-      else if ([SDiPhoneVersion deviceVersion] == iPhone6Plus)
-           NSLog(@"You got the iPhone 6 Plus. Bigger is better!");
-	  else if ([SDiPhoneVersion deviceVersion] == iPadAir)
-      	   NSLog(@"You own an iPad Air!");
+      if ([SDVersion deviceVersion] == iPhone6)
+           NSLog(@"You got the iPhone 6. Sweet 🍭!");
+      else if ([SDVersion deviceVersion] == iPhone6Plus)
+           NSLog(@"iPhone 6 Plus? Bigger is better!");
+      else if ([SDVersion deviceVersion] == iPadAir2)
+           NSLog(@"You own an iPad Air 2 🌀!");
 
       // Check for device screen size
-      if ([SDiPhoneVersion deviceSize] == iPhone4inch)
+      if ([SDVersion deviceSize] == iPhone4inch)
            NSLog(@"Your screen is 4 inches");
       
       // Get device name
-      NSLog(@"%@",[SDiPhoneVersion deviceName]);
-      /* e.g: Outputs 'iPhone6,2' */
+      NSLog(@"%@", stringFromDeviceVersion([SDVersion deviceName]));
+      /* e.g: Outputs 'iPhone 6 Plus' */
       
       // Check for iOS Version
-      if (iOSVersionGreaterThan(@"8"))
+      if (iOSVersionGreaterThanOrEqual(@"8"))
            NSLog(@"You are running iOS 8 or above!");
     
 ```
 
 ## Add to your project
  
-There are 2 ways you can add SDiPhoneVersion to your project:
+There are 2 ways you can add SDVersion to your project:
  
 ### Manual installation
  
- Simply import the 'SDiPhoneVersion' into your project then import the following in the class you want to use it: 
+ Simply import the 'SDVersion' into your project then import the following in the class you want to use it: 
  ```objective-c
-       #import "SDiPhoneVersion.h"
+       #import "SDVersion.h"
  ```      
 ### Installation with CocoaPods
 
-CocoaPods is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like SDiPhoneVersion in your projects. See the "[Getting Started](http://guides.cocoapods.org/syntax/podfile.html)" guide for more information.
+CocoaPods is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like SDVersion in your projects. See the "[Getting Started](http://guides.cocoapods.org/syntax/podfile.html)" guide for more information.
 
 ### Podfile
 ```ruby
         platform :ios, '5.0'
-        pod "SDiPhoneVersion", "~> "1.1.1"
+        pod "SDVersion", "~> "1.0"
 ```
 
+
+## iOS
       
-## Available methods
+### Available methods
 ```objective-c
-    +(DeviceVersion)deviceVersion;
-    +(DeviceSize)deviceSize;
-    +(NSString*)deviceName;
+    + (DeviceVersion)deviceVersion;
+    + (DeviceSize)deviceSize;
+    + (NSString*)deviceName;
 ```
 ### Targetable models
-	iPhone4
+  iPhone4
     iPhone4S
     iPhone5
     iPhone5C
@@ -77,7 +93,9 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
     iPad3
     iPad4
     iPadAir
-    iPadMiniRetina
+    iPadMini2
+    iPadAir2
+    iPadMini3
     
     Simulator
 
@@ -88,13 +106,101 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
     iPhone55inch
 
 ### Available iOS Version Finder methods
-    iOSVersionEqualTo(@"V")  //E.g: iOSVersionEqualTo(@"8.0.1")
-    iOSVersionGreaterThan(@"V")
-	iOSVersionGreaterThanOrEqualTo(@"V")
-	iOSVersionLessThan(@"V")
-	iOSVersionLessThanOrEqualTo(@"V")        
+    iOSVersionEqualTo(@"v")  //E.g: iOSVersionEqualTo(@"8.4.1")
+    iOSVersionGreaterThan(@"v")
+  iOSVersionGreaterThanOrEqualTo(@"v")
+  iOSVersionLessThan(@"v")
+  iOSVersionLessThanOrEqualTo(@"v")       
 
-## Credits
+### Helpers
+```objective-c
+    NSLog(@"%@", stringFromDeviceVersion([SDVersion deviceVersion]));
+      /* e.g: Outputs 'iPad Air 2' */
+      
+      NSLog(@"%@", stringFromDeviceSize([SDVersion deviceSize]));
+      /* e.g: Outputs '4.7 inch' */
+```
+
+## Mac OS
+```objective-c
+
+      // Check for device model
+      if ([SDVersion deviceVersion] == DeviceVersionIMac)
+          NSLog(@"So you have a iMac? 💻");
+      else if ([SDVersion deviceVersion] == DeviceVersionMacBookPro)
+          NSLog(@"You're using a MacBook Pro.");
+
+      // Check for screen size
+      if ([SDVersion deviceSize] == Mac27Inch)
+          NSLog(@"Whoah! You got a big ass 27 inch screen.");
+      else if ([SDVersion deviceSize] == Mac21Dot5Inch)
+          NSLog(@"You have a 21.5 inch screen.");
+
+      // Check for screen resolution
+      if ([SDVersion deviceScreenResolution] == DeviceScreenRetina)
+          NSLog(@"Nice retina screen!");
+    
+      // Get screen resolution in pixels
+      NSLog(@"%@", stringFromDeviceResolution([SDVersion deviceScreenResolution]));
+      /* e.g: Outputs '{2880, 1800}' */
+      
+      // Check OSX Version (pass the minor version)
+      if(OSXVersionGreaterThanOrEqualTo(@"11"))
+           NSLog(@"Looks like you are running OSX 10.11 El Capitan or 🆙.");
+    
+```
+
+### Available methods
+```objective-c
+    + (DeviceVersion)deviceVersion;
+    + (NSString *)deviceVersionString;
+    + (DeviceSize)deviceSize;
+    + (NSSize)deviceScreenResolutionPixelSize;
+    + (DeviceScreenResolution)deviceScreenResolution;
+```
+### Targetable models
+  DeviceVersionIMac
+  DeviceVersionMacMini
+  DeviceVersionMacPro
+  DeviceVersionMacBook
+  DeviceVersionMacBookAir
+  DeviceVersionMacBookPro
+  DeviceVersionXserve
+
+### Targetable screen sizes
+    Mac27Inch
+  Mac24Inch
+  Mac21Dot5Inch
+  Mac20Inch
+  Mac17Inch
+  Mac15Inch
+  Mac13Inch
+  Mac12Inch
+  Mac11Inch
+    
+### Targetable screen resolutions
+    DeviceScreenRetina,
+  DeviceScreenNoRetina
+
+### Available OSX Version Finder methods
+    OSXVersionEqualTo(@"v")  //E.g: OSXVersionEqualTo(@"11") - OSX 10.11
+    OSXVersionGreaterThan(@"v")
+  OSXVersionGreaterThanOrEqualTo(@"v")
+  OSXVersionLessThan(@"v")
+  OSXVersionLessThanOrEqualTo(@"v")        
+  /* 'v' must be the minor OS Version. e.g: OSX 10.9 - 'v' is 9 */
+
+### Helpers
+```objective-c
+    NSLog(@"%@", stringFromDeviceSize([SDVersion deviceSize]));
+      /* e.g: Outputs '15 inch' */
+      
+      NSLog(@"%@", stringFromDeviceResolution([SDVersion deviceScreenResolution]))
+      /* e.g: Outputs '{2880, 1800}' */
+```
+
+## Special thanks to
+- Tom Baranes (Contribution to SDMacVersion)
 - Yasir Turk (iOS Version Finder, StackOverflow)
 
 ## License
