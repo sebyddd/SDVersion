@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "SDVersion"
-  s.version      = "1.0.0"
+  s.version      = "2.0"
   s.summary      = "Objective-C library for detecting running device model and screen size."
   s.homepage     = "https://github.com/sebyddd/SDVersion"
   s.screenshots  = "https://dl.dropboxusercontent.com/s/5ddx58dsex25x57/sdversion-logo.png?dl=0"
@@ -23,12 +23,12 @@ Pod::Spec.new do |s|
 
   s.license      = "MIT (example)"
   s.license      = { :type => "MIT", :file => "LICENSE" }
-  s.author             = { "Sebastian Dobrincu" => "sebyddd@gmail.com" }
-  s.platform     = :ios, "5.0"
-  s.source       = { 
-  :git => "https://github.com/sebyddd/SDVersion.git", 
-  :tag => "1.1.2" }
-
+  s.author       = { "Sebastian Dobrincu" => "sebyddd@gmail.com" }
+  s.platform     = :ios
+  s.platform     = :osx
+  s.ios.source_files = "SDVersion/SDiPhoneVersion/*.{h,m}"
+  s.osx.source_files = "SDVersion/SDMacVersion/*.{h,m}"
+  s.source       = { :git => 'https://github.com/sebyddd/SDVersion.git', :tag => "#{s.version}" }
   s.source_files  = "SDVersion/*.{h,m}"
 
   s.requires_arc = true
