@@ -7,11 +7,11 @@
     </a>
     <a href="http://sebastiandobrincu.com">
         <img src="https://img.shields.io/badge/platform-iOS%20%7C%20OSX-D0547F.svg"
-             alt="MIT">
+             alt="Platform">
     </a>
     <a href="http://sebastiandobrincu.com">
         <img src="https://img.shields.io/badge/license-MIT-blue.svg"
-             alt="Community Approved">
+             alt="License MIT">
     </a>
 </p>
 
@@ -65,8 +65,7 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
 
 ### Podfile
 ```ruby
-        platform :ios, '5.0'
-        pod "SDVersion", "~> "1.0"
+        pod "SDVersion"
 ```
 
 
