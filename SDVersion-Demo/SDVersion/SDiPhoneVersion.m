@@ -86,7 +86,7 @@
     if (iOSVersionGreaterThan(@"8")) {
         
         UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
-        if (orientation ==  UIDeviceOrientationPortrait)
+        if (orientation ==  UIDeviceOrientationPortrait || orientation == UIDeviceOrientationPortraitUpsideDown)
             screenHeight = [[UIScreen mainScreen] bounds].size.height;
         else if((orientation == UIDeviceOrientationLandscapeRight) || (orientation == UIInterfaceOrientationLandscapeLeft))
             screenHeight = [[UIScreen mainScreen] bounds].size.width;
