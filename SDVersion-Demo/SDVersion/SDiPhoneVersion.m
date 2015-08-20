@@ -2,7 +2,7 @@
 //  SDiPhoneVersion.m
 //  SDVersion
 //
-//  Copyright (c) 2015 Sebastian Dobrincu. All rights reserved.
+//  Copyright (c) 2014 Sebastian Dobrincu. All rights reserved.
 //
 
 #import "SDiPhoneVersion.h"
@@ -48,7 +48,7 @@
                               @"iPad3,3" :[NSNumber numberWithInteger:iPad3],
                               @"iPad3,4" :[NSNumber numberWithInteger:iPad4],
                               @"iPad3,5" :[NSNumber numberWithInteger:iPad4],
-                              @"iPad3,6" :[NSNumber numberWithInteger:iPad4], 
+                              @"iPad3,6" :[NSNumber numberWithInteger:iPad4],
                               @"iPad4,1" :[NSNumber numberWithInteger:iPadAir],
                               @"iPad4,2" :[NSNumber numberWithInteger:iPadAir],
                               @"iPad4,3" :[NSNumber numberWithInteger:iPadAir],
@@ -60,7 +60,7 @@
                               @"iPad4,9" :[NSNumber numberWithInteger:iPadMini3],
                               @"iPad5,3" :[NSNumber numberWithInteger:iPadAir2],
                               @"iPad5,4" :[NSNumber numberWithInteger:iPadAir2],
-
+                              
                               
                               };
     });
@@ -69,13 +69,13 @@
 }
 
 +(DeviceVersion)deviceVersion {
-
+    
     struct utsname systemInfo;
     uname(&systemInfo);
     NSString *code = [NSString stringWithCString:systemInfo.machine encoding:NSUTF8StringEncoding];
     
     DeviceVersion version = (DeviceVersion)[[self.deviceNamesByCode objectForKey:code] integerValue];
-
+    
     return version;
 }
 
@@ -86,7 +86,7 @@
     if (iOSVersionGreaterThan(@"8")) {
         
         UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
-        if (orientation ==  UIDeviceOrientationPortrait || orientation == UIDeviceOrientationPortraitUpsideDown)
+        if (orientation ==  UIDeviceOrientationPortrait)
             screenHeight = [[UIScreen mainScreen] bounds].size.height;
         else if((orientation == UIDeviceOrientationLandscapeRight) || (orientation == UIInterfaceOrientationLandscapeLeft))
             screenHeight = [[UIScreen mainScreen] bounds].size.width;
@@ -99,8 +99,7 @@
     else if(screenHeight == 568)
         return iPhone4inch;
     else if(screenHeight == 667){
-        // fixed:iphone 6 plus scale mode，treat as iphone 6
-        if ([UIScreen mainScreen].scale > 2.9) return iPhone55inch;   // Scale is only 3 when not in scaled mode for iPhone 6 Plus
+        if ([UIScreen mainScreen].scale > 2.9) return iPhone55inch;
         return  iPhone47inch;
     }else if(screenHeight == 736)
         return iPhone55inch;

@@ -99,9 +99,8 @@
     else if(screenHeight == 568)
         return iPhone4inch;
     else if(screenHeight == 667){
-        // fixed:iphone 6 plus scale mode，treat as iphone 6
-        if ([UIScreen mainScreen].scale > 2.9) return iPhone55inch;   // Scale is only 3 when not in scaled mode for iPhone 6 Plus
-        return  iPhone47inch;
+        if ([UIScreen mainScreen].scale > 2.9) return iPhone55inch;
+            return  iPhone47inch;
     }else if(screenHeight == 736)
         return iPhone55inch;
     else
