@@ -26,6 +26,8 @@ Pod::Spec.new do |s|
   s.author       = { "Sebastian Dobrincu" => "sebyddd@gmail.com" }
   s.platform     = :ios
   s.platform     = :osx
+  s.ios.deployment_target = '7.0'
+  s.osx.deployment_target = '10.9'
   s.ios.source_files = "SDVersion/SDiPhoneVersion/*.{h,m}"
   s.osx.source_files = "SDVersion/SDMacVersion/*.{h,m}"
   s.source       = { :git => 'https://github.com/sebyddd/SDVersion.git', :tag => "#{s.version}" }
