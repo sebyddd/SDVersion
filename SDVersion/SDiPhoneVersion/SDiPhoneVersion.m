@@ -48,7 +48,7 @@
                               @"iPad3,3" :[NSNumber numberWithInteger:iPad3],
                               @"iPad3,4" :[NSNumber numberWithInteger:iPad4],
                               @"iPad3,5" :[NSNumber numberWithInteger:iPad4],
-                              @"iPad3,6" :[NSNumber numberWithInteger:iPad4], 
+                              @"iPad3,6" :[NSNumber numberWithInteger:iPad4],
                               @"iPad4,1" :[NSNumber numberWithInteger:iPadAir],
                               @"iPad4,2" :[NSNumber numberWithInteger:iPadAir],
                               @"iPad4,3" :[NSNumber numberWithInteger:iPadAir],
@@ -60,7 +60,7 @@
                               @"iPad4,9" :[NSNumber numberWithInteger:iPadMini3],
                               @"iPad5,3" :[NSNumber numberWithInteger:iPadAir2],
                               @"iPad5,4" :[NSNumber numberWithInteger:iPadAir2],
-
+                              
                               
                               };
     });
@@ -69,13 +69,13 @@
 }
 
 +(DeviceVersion)deviceVersion {
-
+    
     struct utsname systemInfo;
     uname(&systemInfo);
     NSString *code = [NSString stringWithCString:systemInfo.machine encoding:NSUTF8StringEncoding];
     
     DeviceVersion version = (DeviceVersion)[[self.deviceNamesByCode objectForKey:code] integerValue];
-
+    
     return version;
 }
 
@@ -95,14 +95,14 @@
         screenHeight = [[UIScreen mainScreen] bounds].size.height;
     
     if (screenHeight == 480)
-        return iPhone35inch;
+        return iPhone3Dot5inch;
     else if(screenHeight == 568)
         return iPhone4inch;
     else if(screenHeight == 667){
-        if ([UIScreen mainScreen].scale > 2.9) return iPhone55inch;
-            return  iPhone47inch;
+        if ([UIScreen mainScreen].scale > 2.9) return iPhone5Dot5inch;
+        return  iPhone4Dot7inch;
     }else if(screenHeight == 736)
-        return iPhone55inch;
+        return iPhone5Dot5inch;
     else
         return UnknownSize;
 }

@@ -95,14 +95,14 @@
         screenHeight = [[UIScreen mainScreen] bounds].size.height;
     
     if (screenHeight == 480)
-        return iPhone35inch;
+        return iPhone3Dot5inch;
     else if(screenHeight == 568)
         return iPhone4inch;
     else if(screenHeight == 667){
-        if ([UIScreen mainScreen].scale > 2.9) return iPhone55inch;
-        return  iPhone47inch;
+        if ([UIScreen mainScreen].scale > 2.9) return iPhone5Dot5inch;
+        return  iPhone4Dot7inch;
     }else if(screenHeight == 736)
-        return iPhone55inch;
+        return iPhone5Dot5inch;
     else
         return UnknownSize;
 }

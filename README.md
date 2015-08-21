@@ -99,10 +99,10 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
     Simulator
 
 ### Targetable screen sizes
-    iPhone35inch
+    iPhone3Dot5inch
     iPhone4inch
-    iPhone47inch
-    iPhone55inch
+    iPhone4Dot7inch
+    iPhone5Dot5inch
 
 ### Available iOS Version Finder methods
     iOSVersionEqualTo(@"v")  //E.g: iOSVersionEqualTo(@"8.4.1")

@@ -2,7 +2,7 @@
 //  SDiPhoneVersion.h
 //  SDVersion
 //
-//  Copyright (c) 2014 Sebastian Dobrincu. All rights reserved.
+//  Copyright (c) 2015 Sebastian Dobrincu. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -44,10 +44,10 @@ typedef NS_ENUM(NSInteger, DeviceVersion){
 
 typedef NS_ENUM(NSInteger, DeviceSize){
     UnknownSize = 0,
-    iPhone35inch = 1,
+    iPhone3Dot5inch = 1,
     iPhone4inch = 2,
-    iPhone47inch = 3,
-    iPhone55inch = 4
+    iPhone4Dot7inch = 3,
+    iPhone5Dot5inch = 4
 };
 
 +(DeviceVersion)deviceVersion;
