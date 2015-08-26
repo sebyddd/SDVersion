@@ -1,19 +1,18 @@
 //
-//  SDiPhoneVersionTests.m
-//  SDiPhoneVersionTests
+//  SDiOSVersionTests.m
+//  SDiOSVersionTests
 //
-//  Created by Sebastian Dobrincu on 10/09/14.
-//  Copyright (c) 2014 Sebastian Dobrincu. All rights reserved.
+//  Copyright (c) 2015 Sebastian Dobrincu. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
-@interface SDiPhoneVersionTests : XCTestCase
+@interface SDiOSVersionTests : XCTestCase
 
 @end
 
-@implementation SDiPhoneVersionTests
+@implementation SDiOSVersionTests
 
 - (void)setUp {
     [super setUp];

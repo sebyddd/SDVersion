@@ -9,8 +9,8 @@
 #define SDVersion_h
 
 #if (TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE)
-	#import "SDiPhoneVersion.h"
-	#define SDVersion SDiPhoneVersion
+	#import "SDiOSVersion.h"
+	#define SDVersion SDiOSVersion
 #else
 	#import "SDMacVersion.h"
 	#define SDVersion SDMacVersion

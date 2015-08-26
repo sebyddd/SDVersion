@@ -36,7 +36,7 @@ SDVersion supports both iOS and Mac OS. Browse through the implementation of eac
       	   NSLog(@"You own an iPad Air 2 🌀!");
 
       // Check for device screen size
-      if ([SDVersion deviceSize] == iPhone4inch)
+      if ([SDVersion deviceSize] == Screen4inch)
            NSLog(@"Your screen is 4 inches");
       
       // Get device name
@@ -96,13 +96,20 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
     iPadAir2
     iPadMini3
     
+	iPodTouch1Gen
+    iPodTouch2Gen
+    iPodTouch3Gen
+    iPodTouch4Gen
+    iPodTouch5Gen
+    iPodTouch6Gen
+
     Simulator
 
 ### Targetable screen sizes
-    iPhone3Dot5inch
-    iPhone4inch
-    iPhone4Dot7inch
-    iPhone5Dot5inch
+    Screen3Dot5inch
+    Screen4inch
+    Screen4Dot7inch
+    Screen5Dot5inch
 
 ### Available iOS Version Finder methods
     iOSVersionEqualTo(@"v")  //E.g: iOSVersionEqualTo(@"8.4.1")

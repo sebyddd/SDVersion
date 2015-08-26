@@ -1,9 +1,8 @@
 //
 //  ViewController.m
-//  SDiPhoneVersion
+//  SDiOSVersion
 //
-//  Created by Sebastian Dobrincu on 10/09/14.
-//  Copyright (c) 2014 Sebastian Dobrincu. All rights reserved.
+//  Copyright (c) 2015 Sebastian Dobrincu. All rights reserved.
 //
 
 #import "ViewController.h"
@@ -15,25 +14,27 @@
     [super viewDidLoad];
     
     // Get device name as NSString
-    self.iphoneVersionLabel.text = [self.iphoneVersionLabel.text stringByAppendingString:stringFromDeviceVersion([SDVersion deviceVersion])];
+    self.iphoneVersionLabel.text = [self.iphoneVersionLabel.text stringByAppendingString:stringFromDeviceVersion([SDiOSVersion deviceVersion])];
 
     // Get device size using string conversion
-    self.iphoneSizeLabel.text    = [self.iphoneSizeLabel.text stringByAppendingString:[NSString stringWithFormat:@"%@", stringFromDeviceSize([SDVersion deviceSize])]];
+    self.iphoneSizeLabel.text = [self.iphoneSizeLabel.text stringByAppendingString:[NSString stringWithFormat:@"%@", stringFromDeviceSize([SDiOSVersion deviceSize])]];
     
     // Check for device model
-    if ([SDVersion deviceVersion] == iPhone6)
+    if ([SDiOSVersion deviceVersion] == iPhone6)
         NSLog(@"You got the iPhone 6. Nice!");
-    else if ([SDVersion deviceVersion] == iPhone5S)
+    else if ([SDiOSVersion deviceVersion] == iPhone5S)
         NSLog(@"You got the iPhone 5S. Good device!");
+    else if ([SDiOSVersion deviceVersion] == iPodTouch6Gen)
+        NSLog(@"The latest iPod Touch. Cool! ❄️")
     
     // Check for device screen size
-    if ([SDVersion deviceSize] == iPhone3Dot5inch)
+    if ([SDiOSVersion deviceSize] == Screen3Dot5inch)
         NSLog(@"Your screen is 3.5 inches");
-    else if ([SDVersion deviceSize] == iPhone4inch)
+    else if ([SDiOSVersion deviceSize] == Screen4inch)
         NSLog(@"Your screen size is 4 inches");
-    else if([SDVersion deviceSize] == iPhone4Dot7inch)
+    else if([SDiOSVersion deviceSize] == Screen4Dot7inch)
         NSLog(@"Your screen size is 4.7 inches");
-    else if([SDVersion deviceSize] == iPhone5Dot5inch)
+    else if([SDiOSVersion deviceSize] == Screen5Dot5inch)
         NSLog(@"Your screen size is 5.5 inches");
     
     //Check for iOS Version

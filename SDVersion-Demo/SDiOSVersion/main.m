@@ -1,9 +1,8 @@
 //
 //  main.m
-//  SDiPhoneVersion
+//  SDiOSVersion
 //
-//  Created by Sebastian Dobrincu on 10/09/14.
-//  Copyright (c) 2014 Sebastian Dobrincu. All rights reserved.
+//  Copyright (c) 2015 Sebastian Dobrincu. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

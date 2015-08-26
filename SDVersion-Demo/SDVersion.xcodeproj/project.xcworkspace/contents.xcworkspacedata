@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:SDiPhoneVersion.xcodeproj">
+      location = "self:/Users/Seby/SDVersion/SDVersion-Demo/SDVersion.xcodeproj">
    </FileRef>
 </Workspace>

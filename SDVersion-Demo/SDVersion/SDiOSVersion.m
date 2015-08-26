@@ -1,13 +1,13 @@
 //
-//  SDiPhoneVersion.m
+//  SDiOSVersion.m
 //  SDVersion
 //
-//  Copyright (c) 2014 Sebastian Dobrincu. All rights reserved.
+//  Copyright (c) 2015 Sebastian Dobrincu. All rights reserved.
 //
 
-#import "SDiPhoneVersion.h"
+#import "SDiOSVersion.h"
 
-@implementation SDiPhoneVersion
+@implementation SDiOSVersion
 
 +(NSDictionary*)deviceNamesByCode {
     
@@ -61,7 +61,14 @@
                               @"iPad5,3" :[NSNumber numberWithInteger:iPadAir2],
                               @"iPad5,4" :[NSNumber numberWithInteger:iPadAir2],
                               
-                              
+                              //iPods
+                              @"iPod1,1" :[NSNumber numberWithInteger:iPodTouch1Gen],
+                              @"iPod2,1" :[NSNumber numberWithInteger:iPodTouch2Gen],
+                              @"iPod3,1" :[NSNumber numberWithInteger:iPodTouch3Gen],
+                              @"iPod4,1" :[NSNumber numberWithInteger:iPodTouch4Gen],
+                              @"iPod5,1" :[NSNumber numberWithInteger:iPodTouch5Gen],
+                              @"iPod7,1" :[NSNumber numberWithInteger:iPodTouch6Gen]
+
                               };
     });
     
@@ -82,7 +89,7 @@
 +(DeviceSize)deviceSize {
     
     CGFloat screenHeight = 0;
-    
+
     if (iOSVersionGreaterThan(@"8")) {
         
         UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
@@ -95,14 +102,14 @@
         screenHeight = [[UIScreen mainScreen] bounds].size.height;
     
     if (screenHeight == 480)
-        return iPhone3Dot5inch;
+        return Screen3Dot5inch;
     else if(screenHeight == 568)
-        return iPhone4inch;
+        return Screen4inch;
     else if(screenHeight == 667){
-        if ([UIScreen mainScreen].scale > 2.9) return iPhone5Dot5inch;
-        return  iPhone4Dot7inch;
+        if ([UIScreen mainScreen].scale > 2.9) return Screen5Dot5inch;
+        return  Screen4Dot7inch;
     }else if(screenHeight == 736)
-        return iPhone5Dot5inch;
+        return Screen5Dot5inch;
     else
         return UnknownSize;
 }
