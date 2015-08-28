@@ -68,7 +68,7 @@
                               @"iPod4,1" :[NSNumber numberWithInteger:iPodTouch4Gen],
                               @"iPod5,1" :[NSNumber numberWithInteger:iPodTouch5Gen],
                               @"iPod7,1" :[NSNumber numberWithInteger:iPodTouch6Gen]
-
+                              
                               };
     });
     
@@ -89,7 +89,7 @@
 +(DeviceSize)deviceSize {
     
     CGFloat screenHeight = 0;
-
+    
     if (iOSVersionGreaterThan(@"8")) {
         
         UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
@@ -126,4 +126,3 @@
 }
 
 @end
-
