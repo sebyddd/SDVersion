@@ -10,8 +10,8 @@
              alt="Platform">
     </a>
     <a href="http://sebastiandobrincu.com">
-        <img src="https://img.shields.io/badge/license-MIT-blue.svg"
-             alt="License MIT">
+        <img src="http://img.shields.io/cocoapods/v/SDVersion.svg"
+             alt="Cocoapods Version">
     </a>
 </p>
 
