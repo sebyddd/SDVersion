@@ -25,7 +25,7 @@
     else if ([SDiOSVersion deviceVersion] == iPhone5S)
         NSLog(@"You got the iPhone 5S. Good device!");
     else if ([SDiOSVersion deviceVersion] == iPodTouch6Gen)
-        NSLog(@"The latest iPod Touch. Cool! ❄️")
+        NSLog(@"The latest iPod Touch. Cool! ❄️");
     
     // Check for device screen size
     if ([SDiOSVersion deviceSize] == Screen3Dot5inch)
