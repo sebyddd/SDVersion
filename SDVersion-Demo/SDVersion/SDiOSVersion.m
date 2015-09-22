@@ -96,13 +96,7 @@
     CGFloat screenHeight = 0;
     
     if (iOSVersionGreaterThanOrEqualTo(@"8")) {
-        
-        UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
-        if (orientation ==  UIDeviceOrientationPortrait)
-            screenHeight = [[UIScreen mainScreen] bounds].size.height;
-        else if((orientation == UIDeviceOrientationLandscapeRight) || (orientation == UIInterfaceOrientationLandscapeLeft))
-            screenHeight = [[UIScreen mainScreen] bounds].size.width;
-        
+		screenHeight = MAX([[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width);
     }else
         screenHeight = [[UIScreen mainScreen] bounds].size.height;
     
