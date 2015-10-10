@@ -30,8 +30,8 @@
                               @"iPhone6,2" :[NSNumber numberWithInteger:iPhone5S],
                               @"iPhone7,2" :[NSNumber numberWithInteger:iPhone6],
                               @"iPhone7,1" :[NSNumber numberWithInteger:iPhone6Plus],
-                              @"iPhone8,2" :[NSNumber numberWithInteger:iPhone6S],
-                              @"iPhone8,1" :[NSNumber numberWithInteger:iPhone6SPlus],
+                              @"iPhone8,1" :[NSNumber numberWithInteger:iPhone6S],
+                              @"iPhone8,2" :[NSNumber numberWithInteger:iPhone6SPlus],
                               @"i386"      :[NSNumber numberWithInteger:Simulator],
                               @"x86_64"    :[NSNumber numberWithInteger:Simulator],
                               
