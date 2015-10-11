@@ -1,0 +1,6 @@
+framework module SDMacVersion {
+    umbrella header "SDMacVersion.h"
+    header "SDMacVersion.h"
+    export *
+    module * { export * }
+}

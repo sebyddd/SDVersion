@@ -14,6 +14,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		23BB07AF1BCA6EC3004DD41D /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		23BB07B01BCA6ED9004DD41D /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		23F58A411BCA5AE40028C4F8 /* SDVersion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SDVersion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		23F58A511BCA5B050028C4F8 /* SDVersion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SDVersion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		23F58A5B1BCA5B6C0028C4F8 /* SDiOSVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDiOSVersion.h; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 			children = (
 				23F58A5B1BCA5B6C0028C4F8 /* SDiOSVersion.h */,
 				23F58A5C1BCA5B6C0028C4F8 /* SDiOSVersion.m */,
+				23BB07AF1BCA6EC3004DD41D /* module.modulemap */,
 			);
 			path = SDiOSVersion;
 			sourceTree = "<group>";
@@ -82,6 +85,7 @@
 			children = (
 				23F58A5E1BCA5B6C0028C4F8 /* SDMacVersion.h */,
 				23F58A5F1BCA5B6C0028C4F8 /* SDMacVersion.m */,
+				23BB07B01BCA6ED9004DD41D /* module.modulemap */,
 			);
 			path = SDMacVersion;
 			sourceTree = "<group>";
@@ -315,6 +319,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = SDVersion/SDiOSVersion/module.modulemap;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dobrincusebastian.SDiOSVersion-iOS";
 				PRODUCT_NAME = SDVersion;
 				SKIP_INSTALL = YES;
@@ -332,6 +337,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = SDVersion/SDiOSVersion/module.modulemap;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dobrincusebastian.SDiOSVersion-iOS";
 				PRODUCT_NAME = SDVersion;
 				SKIP_INSTALL = YES;
@@ -351,6 +357,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = SDVersion/SDMacVersion/module.modulemap;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dobrincusebastian.SDiOSVersion-OSX";
 				PRODUCT_NAME = SDVersion;
 				SDKROOT = macosx;
@@ -371,6 +378,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = SDVersion/SDMacVersion/module.modulemap;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dobrincusebastian.SDiOSVersion-OSX";
 				PRODUCT_NAME = SDVersion;
 				SDKROOT = macosx;
