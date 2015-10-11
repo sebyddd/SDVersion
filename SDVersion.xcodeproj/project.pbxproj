@@ -1,0 +1,414 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		23F58A611BCA5B6C0028C4F8 /* SDiOSVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 23F58A5B1BCA5B6C0028C4F8 /* SDiOSVersion.h */; settings = {ASSET_TAGS = (); }; };
+		23F58A621BCA5B6C0028C4F8 /* SDiOSVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F58A5C1BCA5B6C0028C4F8 /* SDiOSVersion.m */; settings = {ASSET_TAGS = (); }; };
+		23F58A651BCA5B6C0028C4F8 /* SDVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 23F58A601BCA5B6C0028C4F8 /* SDVersion.h */; settings = {ASSET_TAGS = (); }; };
+		23F58A661BCA5B740028C4F8 /* SDMacVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 23F58A5E1BCA5B6C0028C4F8 /* SDMacVersion.h */; settings = {ASSET_TAGS = (); }; };
+		23F58A671BCA5B780028C4F8 /* SDMacVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F58A5F1BCA5B6C0028C4F8 /* SDMacVersion.m */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		23F58A411BCA5AE40028C4F8 /* SDVersion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SDVersion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		23F58A511BCA5B050028C4F8 /* SDVersion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SDVersion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		23F58A5B1BCA5B6C0028C4F8 /* SDiOSVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDiOSVersion.h; sourceTree = "<group>"; };
+		23F58A5C1BCA5B6C0028C4F8 /* SDiOSVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDiOSVersion.m; sourceTree = "<group>"; };
+		23F58A5E1BCA5B6C0028C4F8 /* SDMacVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDMacVersion.h; sourceTree = "<group>"; };
+		23F58A5F1BCA5B6C0028C4F8 /* SDMacVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDMacVersion.m; sourceTree = "<group>"; };
+		23F58A601BCA5B6C0028C4F8 /* SDVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDVersion.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		23F58A3D1BCA5AE40028C4F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23F58A4D1BCA5B050028C4F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		23F58A371BCA5AE40028C4F8 = {
+			isa = PBXGroup;
+			children = (
+				23F58A591BCA5B6C0028C4F8 /* SDVersion */,
+				23F58A421BCA5AE40028C4F8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		23F58A421BCA5AE40028C4F8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				23F58A411BCA5AE40028C4F8 /* SDVersion.framework */,
+				23F58A511BCA5B050028C4F8 /* SDVersion.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		23F58A591BCA5B6C0028C4F8 /* SDVersion */ = {
+			isa = PBXGroup;
+			children = (
+				23F58A5A1BCA5B6C0028C4F8 /* SDiOSVersion */,
+				23F58A5D1BCA5B6C0028C4F8 /* SDMacVersion */,
+				23F58A601BCA5B6C0028C4F8 /* SDVersion.h */,
+			);
+			path = SDVersion;
+			sourceTree = "<group>";
+		};
+		23F58A5A1BCA5B6C0028C4F8 /* SDiOSVersion */ = {
+			isa = PBXGroup;
+			children = (
+				23F58A5B1BCA5B6C0028C4F8 /* SDiOSVersion.h */,
+				23F58A5C1BCA5B6C0028C4F8 /* SDiOSVersion.m */,
+			);
+			path = SDiOSVersion;
+			sourceTree = "<group>";
+		};
+		23F58A5D1BCA5B6C0028C4F8 /* SDMacVersion */ = {
+			isa = PBXGroup;
+			children = (
+				23F58A5E1BCA5B6C0028C4F8 /* SDMacVersion.h */,
+				23F58A5F1BCA5B6C0028C4F8 /* SDMacVersion.m */,
+			);
+			path = SDMacVersion;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		23F58A3E1BCA5AE40028C4F8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23F58A651BCA5B6C0028C4F8 /* SDVersion.h in Headers */,
+				23F58A611BCA5B6C0028C4F8 /* SDiOSVersion.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23F58A4E1BCA5B050028C4F8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23F58A661BCA5B740028C4F8 /* SDMacVersion.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		23F58A401BCA5AE40028C4F8 /* SDVersion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23F58A491BCA5AE40028C4F8 /* Build configuration list for PBXNativeTarget "SDVersion" */;
+			buildPhases = (
+				23F58A3C1BCA5AE40028C4F8 /* Sources */,
+				23F58A3D1BCA5AE40028C4F8 /* Frameworks */,
+				23F58A3E1BCA5AE40028C4F8 /* Headers */,
+				23F58A3F1BCA5AE40028C4F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SDVersion;
+			productName = "SDiOSVersion iOS";
+			productReference = 23F58A411BCA5AE40028C4F8 /* SDVersion.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		23F58A501BCA5B050028C4F8 /* SDVersion OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23F58A561BCA5B050028C4F8 /* Build configuration list for PBXNativeTarget "SDVersion OSX" */;
+			buildPhases = (
+				23F58A4C1BCA5B050028C4F8 /* Sources */,
+				23F58A4D1BCA5B050028C4F8 /* Frameworks */,
+				23F58A4E1BCA5B050028C4F8 /* Headers */,
+				23F58A4F1BCA5B050028C4F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SDVersion OSX";
+			productName = "SDiOSVersion OSX";
+			productReference = 23F58A511BCA5B050028C4F8 /* SDVersion.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		23F58A381BCA5AE40028C4F8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = com.dobrincusebastian;
+				TargetAttributes = {
+					23F58A401BCA5AE40028C4F8 = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+					23F58A501BCA5B050028C4F8 = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 23F58A3B1BCA5AE40028C4F8 /* Build configuration list for PBXProject "SDVersion" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 23F58A371BCA5AE40028C4F8;
+			productRefGroup = 23F58A421BCA5AE40028C4F8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				23F58A401BCA5AE40028C4F8 /* SDVersion */,
+				23F58A501BCA5B050028C4F8 /* SDVersion OSX */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		23F58A3F1BCA5AE40028C4F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23F58A4F1BCA5B050028C4F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		23F58A3C1BCA5AE40028C4F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23F58A621BCA5B6C0028C4F8 /* SDiOSVersion.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23F58A4C1BCA5B050028C4F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23F58A671BCA5B780028C4F8 /* SDMacVersion.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		23F58A471BCA5AE40028C4F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		23F58A481BCA5AE40028C4F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		23F58A4A1BCA5AE40028C4F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dobrincusebastian.SDiOSVersion-iOS";
+				PRODUCT_NAME = SDVersion;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		23F58A4B1BCA5AE40028C4F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dobrincusebastian.SDiOSVersion-iOS";
+				PRODUCT_NAME = SDVersion;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		23F58A571BCA5B050028C4F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dobrincusebastian.SDiOSVersion-OSX";
+				PRODUCT_NAME = SDVersion;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		23F58A581BCA5B050028C4F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dobrincusebastian.SDiOSVersion-OSX";
+				PRODUCT_NAME = SDVersion;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		23F58A3B1BCA5AE40028C4F8 /* Build configuration list for PBXProject "SDVersion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23F58A471BCA5AE40028C4F8 /* Debug */,
+				23F58A481BCA5AE40028C4F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		23F58A491BCA5AE40028C4F8 /* Build configuration list for PBXNativeTarget "SDVersion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23F58A4A1BCA5AE40028C4F8 /* Debug */,
+				23F58A4B1BCA5AE40028C4F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		23F58A561BCA5B050028C4F8 /* Build configuration list for PBXNativeTarget "SDVersion OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23F58A571BCA5B050028C4F8 /* Debug */,
+				23F58A581BCA5B050028C4F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 23F58A381BCA5AE40028C4F8 /* Project object */;
+}
