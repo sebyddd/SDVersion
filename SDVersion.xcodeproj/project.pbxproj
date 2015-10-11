@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		23BB079E1BCA5F7B004DD41D /* SDVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 23F58A601BCA5B6C0028C4F8 /* SDVersion.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		23F58A611BCA5B6C0028C4F8 /* SDiOSVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 23F58A5B1BCA5B6C0028C4F8 /* SDiOSVersion.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		23F58A621BCA5B6C0028C4F8 /* SDiOSVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F58A5C1BCA5B6C0028C4F8 /* SDiOSVersion.m */; settings = {ASSET_TAGS = (); }; };
-		23F58A651BCA5B6C0028C4F8 /* SDVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 23F58A601BCA5B6C0028C4F8 /* SDVersion.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		23F58A661BCA5B740028C4F8 /* SDMacVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 23F58A5E1BCA5B6C0028C4F8 /* SDMacVersion.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		23F58A671BCA5B780028C4F8 /* SDMacVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F58A5F1BCA5B6C0028C4F8 /* SDMacVersion.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
@@ -95,7 +93,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23F58A651BCA5B6C0028C4F8 /* SDVersion.h in Headers */,
 				23F58A611BCA5B6C0028C4F8 /* SDiOSVersion.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -105,16 +102,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				23F58A661BCA5B740028C4F8 /* SDMacVersion.h in Headers */,
-				23BB079E1BCA5F7B004DD41D /* SDVersion.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		23F58A401BCA5AE40028C4F8 /* SDVersion */ = {
+		23F58A401BCA5AE40028C4F8 /* SDVersion iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 23F58A491BCA5AE40028C4F8 /* Build configuration list for PBXNativeTarget "SDVersion" */;
+			buildConfigurationList = 23F58A491BCA5AE40028C4F8 /* Build configuration list for PBXNativeTarget "SDVersion iOS" */;
 			buildPhases = (
 				23F58A3C1BCA5AE40028C4F8 /* Sources */,
 				23F58A3D1BCA5AE40028C4F8 /* Frameworks */,
@@ -125,7 +121,7 @@
 			);
 			dependencies = (
 			);
-			name = SDVersion;
+			name = "SDVersion iOS";
 			productName = "SDiOSVersion iOS";
 			productReference = 23F58A411BCA5AE40028C4F8 /* SDVersion.framework */;
 			productType = "com.apple.product-type.framework";
@@ -177,7 +173,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				23F58A401BCA5AE40028C4F8 /* SDVersion */,
+				23F58A401BCA5AE40028C4F8 /* SDVersion iOS */,
 				23F58A501BCA5B050028C4F8 /* SDVersion OSX */,
 			);
 		};
@@ -394,7 +390,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		23F58A491BCA5AE40028C4F8 /* Build configuration list for PBXNativeTarget "SDVersion" */ = {
+		23F58A491BCA5AE40028C4F8 /* Build configuration list for PBXNativeTarget "SDVersion iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				23F58A4A1BCA5AE40028C4F8 /* Debug */,

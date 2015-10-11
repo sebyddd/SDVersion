@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "23F58A401BCA5AE40028C4F8"
                BuildableName = "SDVersion.framework"
-               BlueprintName = "SDVersion"
+               BlueprintName = "SDVersion iOS"
                ReferencedContainer = "container:SDVersion.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,7 +47,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "23F58A401BCA5AE40028C4F8"
             BuildableName = "SDVersion.framework"
-            BlueprintName = "SDVersion"
+            BlueprintName = "SDVersion iOS"
             ReferencedContainer = "container:SDVersion.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -65,7 +65,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "23F58A401BCA5AE40028C4F8"
             BuildableName = "SDVersion.framework"
-            BlueprintName = "SDVersion"
+            BlueprintName = "SDVersion iOS"
             ReferencedContainer = "container:SDVersion.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
