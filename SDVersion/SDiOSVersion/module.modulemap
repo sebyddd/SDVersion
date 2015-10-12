@@ -1,0 +1,6 @@
+framework module SDiOSVersion {
+    umbrella header "SDiOSVersion.h"
+    header "SDiOSVersion.h"
+    export *
+    module * { export * }
+}

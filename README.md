@@ -23,7 +23,7 @@ SDVersion supports both iOS and Mac OS. Browse through the implementation of eac
 
 [![iOS](https://dl.dropboxusercontent.com/s/wadogkm72fvzaxn/sdiphoneversion-link.png?dl=0)](#ios)
 [![MacOS](https://dl.dropboxusercontent.com/s/yo76akhjuv4meip/sdmacversion-link.png?dl=0)](#mac-os)
-## How it works 
+## How it works
 
 ```objective-c
 
@@ -38,24 +38,24 @@ SDVersion supports both iOS and Mac OS. Browse through the implementation of eac
       // Check for device screen size
       if ([SDVersion deviceSize] == Screen4inch)
            NSLog(@"Your screen is 4 inches");
-      
+
       // Get device name
       NSLog(@"%@", stringFromDeviceVersion([SDVersion deviceName]));
       /* e.g: Outputs 'iPhone 6 Plus' */
-      
+
       // Check for iOS Version
       if (iOSVersionGreaterThanOrEqual(@"8"))
            NSLog(@"You are running iOS 8 or above!");
-    
+
 ```
 
 ## Add to your project
- 
+
 There are 2 ways you can add SDVersion to your project:
- 
+
 ### Manual installation
- 
- Simply import the 'SDVersion' into your project then import the following in the class you want to use it: 
+
+ Simply import the 'SDVersion' into your project then import the following in the class you want to use it:
  ```objective-c
        #import "SDVersion.h"
  ```      
@@ -68,9 +68,17 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
         pod "SDVersion"
 ```
 
+### Installation with Carthage
+If you prefer using Carthage as a dependency manager, SDVersion can also be integrated using it. Check  the [README](https://github.com/Carthage/Carthage) for more information
+
+### Cartfile
+```ruby
+github "sebyddd/SDVersion"
+```
+
 
 ## iOS
-      
+
 ### Available methods
 ```objective-c
     + (DeviceVersion)deviceVersion;
@@ -87,7 +95,7 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
     iPhone6Plus
     iPhone6S
     iPhone6SPlus
-    
+
     iPad1
     iPad2
     iPadMini
@@ -126,7 +134,7 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
 ```objective-c
 	  NSLog(@"%@", stringFromDeviceVersion([SDVersion deviceVersion]));
       /* e.g: Outputs 'iPad Air 2' */
-      
+
       NSLog(@"%@", stringFromDeviceSize([SDVersion deviceSize]));
       /* e.g: Outputs '4.7 inch' */
 ```
@@ -149,15 +157,15 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
       // Check for screen resolution
       if ([SDVersion deviceScreenResolution] == DeviceScreenRetina)
           NSLog(@"Nice retina screen!");
-    
+
       // Get screen resolution in pixels
       NSLog(@"%@", stringFromDeviceResolution([SDVersion deviceScreenResolution]));
       /* e.g: Outputs '{2880, 1800}' */
-      
+
       // Check OSX Version (pass the minor version)
       if(OSXVersionGreaterThanOrEqualTo(@"11"))
            NSLog(@"Looks like you are running OSX 10.11 El Capitan or 🆙.");
-    
+
 ```
 
 ### Available methods
@@ -187,7 +195,7 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
 	Mac13Inch
 	Mac12Inch
 	Mac11Inch
-    
+
 ### Targetable screen resolutions
     DeviceScreenRetina,
 	DeviceScreenNoRetina
@@ -204,7 +212,7 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
 ```objective-c
 	  NSLog(@"%@", stringFromDeviceSize([SDVersion deviceSize]));
       /* e.g: Outputs '15 inch' */
-      
+
       NSLog(@"%@", stringFromDeviceResolution([SDVersion deviceScreenResolution]))
       /* e.g: Outputs '{2880, 1800}' */
 ```
