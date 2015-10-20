@@ -40,7 +40,7 @@ SDVersion supports both iOS and Mac OS. Browse through the implementation of eac
            NSLog(@"Your screen is 4 inches");
       
       // Get device name
-      NSLog(@"%@", stringFromDeviceVersion([SDVersion deviceName]));
+      NSLog(@"%@", DeviceVersionNames[[SDVersion deviceVersion]]);
       /* e.g: Outputs 'iPhone 6 Plus' */
       
       // Check for iOS Version
@@ -124,10 +124,10 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
 
 ### Helpers
 ```objective-c
-	  NSLog(@"%@", stringFromDeviceVersion([SDVersion deviceVersion]));
+	  NSLog(@"%@", DeviceVersionNames[[SDVersion deviceVersion]]);
       /* e.g: Outputs 'iPad Air 2' */
       
-      NSLog(@"%@", stringFromDeviceSize([SDVersion deviceSize]));
+      NSLog(@"%@", DeviceSizeNames[[SDVersion deviceSize]]);
       /* e.g: Outputs '4.7 inch' */
 ```
 
@@ -151,7 +151,7 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
           NSLog(@"Nice retina screen!");
     
       // Get screen resolution in pixels
-      NSLog(@"%@", stringFromDeviceResolution([SDVersion deviceScreenResolution]));
+      NSLog(@"%@", DeviceScreenResolutionNames[[SDVersion deviceScreenResolution]]);
       /* e.g: Outputs '{2880, 1800}' */
       
       // Check OSX Version (pass the minor version)
@@ -202,10 +202,10 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
 
 ### Helpers
 ```objective-c
-	  NSLog(@"%@", stringFromDeviceSize([SDVersion deviceSize]));
+	  NSLog(@"%@", DeviceSizeNames[[SDVersion deviceSize]]);
       /* e.g: Outputs '15 inch' */
       
-      NSLog(@"%@", stringFromDeviceResolution([SDVersion deviceScreenResolution]))
+      NSLog(@"%@",DeviceScreenResolutionNames[[SDVersion deviceScreenResolution]])
       /* e.g: Outputs '{2880, 1800}' */
 ```
 
