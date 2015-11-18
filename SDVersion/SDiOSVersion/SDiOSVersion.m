@@ -64,6 +64,7 @@
                               @"iPad5,2" :[NSNumber numberWithInteger:iPadMini4],
                               @"iPad5,3" :[NSNumber numberWithInteger:iPadAir2],
                               @"iPad5,4" :[NSNumber numberWithInteger:iPadAir2],
+                              @"iPad6,7" :[NSNumber numberWithInteger:iPadPro],                              
                               @"iPad6,8" :[NSNumber numberWithInteger:iPadPro],
                               
                               //iPods
