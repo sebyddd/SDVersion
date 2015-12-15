@@ -65,7 +65,7 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
 
 ### Podfile
 ```ruby
-        pod "SDVersion"
+        pod 'SDVersion'
 ```
 
 
