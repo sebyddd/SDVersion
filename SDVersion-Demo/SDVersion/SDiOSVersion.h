@@ -102,6 +102,7 @@ static NSString *DeviceSizeNames[] = {
 
 
 +(DeviceVersion)deviceVersion;
++ (DeviceSize)resolutionSize;
 +(DeviceSize)deviceSize;
 +(NSString*)deviceName;
 
