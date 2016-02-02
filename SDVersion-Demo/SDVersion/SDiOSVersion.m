@@ -9,79 +9,77 @@
 
 @implementation SDiOSVersion
 
-+(NSDictionary*)deviceNamesByCode {
-    
++ (NSDictionary*)deviceNamesByCode
+{
     static NSDictionary* deviceNamesByCode = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         deviceNamesByCode = @{
                               //iPhones
-                              @"iPhone3,1" :[NSNumber numberWithInteger:iPhone4],
-                              @"iPhone3,2" :[NSNumber numberWithInteger:iPhone4],
-                              @"iPhone3,3" :[NSNumber numberWithInteger:iPhone4],
-                              @"iPhone4,1" :[NSNumber numberWithInteger:iPhone4S],
-                              @"iPhone4,2" :[NSNumber numberWithInteger:iPhone4S],
-                              @"iPhone4,3" :[NSNumber numberWithInteger:iPhone4S],
-                              @"iPhone5,1" :[NSNumber numberWithInteger:iPhone5],
-                              @"iPhone5,2" :[NSNumber numberWithInteger:iPhone5],
-                              @"iPhone5,3" :[NSNumber numberWithInteger:iPhone5C],
-                              @"iPhone5,4" :[NSNumber numberWithInteger:iPhone5C],
-                              @"iPhone6,1" :[NSNumber numberWithInteger:iPhone5S],
-                              @"iPhone6,2" :[NSNumber numberWithInteger:iPhone5S],
-                              @"iPhone7,2" :[NSNumber numberWithInteger:iPhone6],
-                              @"iPhone7,1" :[NSNumber numberWithInteger:iPhone6Plus],
-                              @"iPhone8,1" :[NSNumber numberWithInteger:iPhone6S],
-                              @"iPhone8,2" :[NSNumber numberWithInteger:iPhone6SPlus],
-                              @"i386"      :[NSNumber numberWithInteger:Simulator],
-                              @"x86_64"    :[NSNumber numberWithInteger:Simulator],
+                              @"iPhone3,1" : @(iPhone4),
+                              @"iPhone3,2" : @(iPhone4),
+                              @"iPhone3,3" : @(iPhone4),
+                              @"iPhone4,1" : @(iPhone4S),
+                              @"iPhone4,2" : @(iPhone4S),
+                              @"iPhone4,3" : @(iPhone4S),
+                              @"iPhone5,1" : @(iPhone5),
+                              @"iPhone5,2" : @(iPhone5),
+                              @"iPhone5,3" : @(iPhone5C),
+                              @"iPhone5,4" : @(iPhone5C),
+                              @"iPhone6,1" : @(iPhone5S),
+                              @"iPhone6,2" : @(iPhone5S),
+                              @"iPhone7,2" : @(iPhone6),
+                              @"iPhone7,1" : @(iPhone6Plus),
+                              @"iPhone8,1" : @(iPhone6S),
+                              @"iPhone8,2" : @(iPhone6SPlus),
+                              @"i386"      : @(Simulator),
+                              @"x86_64"    : @(Simulator),
                               
                               
                               //iPads
-                              @"iPad1,1" :[NSNumber numberWithInteger:iPad1],
-                              @"iPad2,1" :[NSNumber numberWithInteger:iPad2],
-                              @"iPad2,2" :[NSNumber numberWithInteger:iPad2],
-                              @"iPad2,3" :[NSNumber numberWithInteger:iPad2],
-                              @"iPad2,4" :[NSNumber numberWithInteger:iPad2],
-                              @"iPad2,5" :[NSNumber numberWithInteger:iPadMini],
-                              @"iPad2,6" :[NSNumber numberWithInteger:iPadMini],
-                              @"iPad2,7" :[NSNumber numberWithInteger:iPadMini],
-                              @"iPad3,1" :[NSNumber numberWithInteger:iPad3],
-                              @"iPad3,2" :[NSNumber numberWithInteger:iPad3],
-                              @"iPad3,3" :[NSNumber numberWithInteger:iPad3],
-                              @"iPad3,4" :[NSNumber numberWithInteger:iPad4],
-                              @"iPad3,5" :[NSNumber numberWithInteger:iPad4],
-                              @"iPad3,6" :[NSNumber numberWithInteger:iPad4],
-                              @"iPad4,1" :[NSNumber numberWithInteger:iPadAir],
-                              @"iPad4,2" :[NSNumber numberWithInteger:iPadAir],
-                              @"iPad4,3" :[NSNumber numberWithInteger:iPadAir],
-                              @"iPad4,4" :[NSNumber numberWithInteger:iPadMini2],
-                              @"iPad4,5" :[NSNumber numberWithInteger:iPadMini2],
-                              @"iPad4,6" :[NSNumber numberWithInteger:iPadMini2],
-                              @"iPad4,7" :[NSNumber numberWithInteger:iPadMini3],
-                              @"iPad4,8" :[NSNumber numberWithInteger:iPadMini3],
-                              @"iPad4,9" :[NSNumber numberWithInteger:iPadMini3],
-                              @"iPad5,1" :[NSNumber numberWithInteger:iPadMini4],
-                              @"iPad5,2" :[NSNumber numberWithInteger:iPadMini4],
-                              @"iPad5,3" :[NSNumber numberWithInteger:iPadAir2],
-                              @"iPad5,4" :[NSNumber numberWithInteger:iPadAir2],
-                              @"iPad6,8" :[NSNumber numberWithInteger:iPadPro],
+                              @"iPad1,1" : @(iPad1),
+                              @"iPad2,1" : @(iPad2),
+                              @"iPad2,2" : @(iPad2),
+                              @"iPad2,3" : @(iPad2),
+                              @"iPad2,4" : @(iPad2),
+                              @"iPad2,5" : @(iPadMini),
+                              @"iPad2,6" : @(iPadMini),
+                              @"iPad2,7" : @(iPadMini),
+                              @"iPad3,1" : @(iPad3),
+                              @"iPad3,2" : @(iPad3),
+                              @"iPad3,3" : @(iPad3),
+                              @"iPad3,4" : @(iPad4),
+                              @"iPad3,5" : @(iPad4),
+                              @"iPad3,6" : @(iPad4),
+                              @"iPad4,1" : @(iPadAir),
+                              @"iPad4,2" : @(iPadAir),
+                              @"iPad4,3" : @(iPadAir),
+                              @"iPad4,4" : @(iPadMini2),
+                              @"iPad4,5" : @(iPadMini2),
+                              @"iPad4,6" : @(iPadMini2),
+                              @"iPad4,7" : @(iPadMini3),
+                              @"iPad4,8" : @(iPadMini3),
+                              @"iPad4,9" : @(iPadMini3),
+                              @"iPad5,1" : @(iPadMini4),
+                              @"iPad5,2" : @(iPadMini4),
+                              @"iPad5,3" : @(iPadAir2),
+                              @"iPad5,4" : @(iPadAir2),
+                              @"iPad6,8" : @(iPadPro),
                               
                               //iPods
-                              @"iPod1,1" :[NSNumber numberWithInteger:iPodTouch1Gen],
-                              @"iPod2,1" :[NSNumber numberWithInteger:iPodTouch2Gen],
-                              @"iPod3,1" :[NSNumber numberWithInteger:iPodTouch3Gen],
-                              @"iPod4,1" :[NSNumber numberWithInteger:iPodTouch4Gen],
-                              @"iPod5,1" :[NSNumber numberWithInteger:iPodTouch5Gen],
-                              @"iPod7,1" :[NSNumber numberWithInteger:iPodTouch6Gen]
-                              
-                              };
+                              @"iPod1,1" : @(iPodTouch1Gen),
+                              @"iPod2,1" : @(iPodTouch2Gen),
+                              @"iPod3,1" : @(iPodTouch3Gen),
+                              @"iPod4,1" : @(iPodTouch4Gen),
+                              @"iPod5,1" : @(iPodTouch5Gen),
+                              @"iPod7,1" : @(iPodTouch6Gen)};
     });
     
     return deviceNamesByCode;
 }
 
-+(DeviceVersion)deviceVersion {
-    
++ (DeviceVersion)deviceVersion
+{
     struct utsname systemInfo;
     uname(&systemInfo);
     NSString *code = [NSString stringWithCString:systemInfo.machine encoding:NSUTF8StringEncoding];
@@ -91,35 +89,47 @@
     return version;
 }
 
-+(DeviceSize)deviceSize {
-    
++ (DeviceSize)resolutionSize
+{
     CGFloat screenHeight = 0;
     
     if (iOSVersionGreaterThanOrEqualTo(@"8")) {
-		screenHeight = MAX([[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width);
-    }else
+        screenHeight = MAX([[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width);
+    } else {
         screenHeight = [[UIScreen mainScreen] bounds].size.height;
+    }
     
-    if (screenHeight == 480)
+    if (screenHeight == 480) {
         return Screen3Dot5inch;
-    else if(screenHeight == 568)
+    } else if(screenHeight == 568) {
         return Screen4inch;
-    else if(screenHeight == 667){
-        if ([UIScreen mainScreen].scale > 2.9) return Screen5Dot5inch;
+    } else if(screenHeight == 667) {
         return  Screen4Dot7inch;
-    }else if(screenHeight == 736)
+    } else if(screenHeight == 736) {
         return Screen5Dot5inch;
-    else
+    } else
         return UnknownSize;
 }
 
-+(NSString*)deviceName {
++ (DeviceSize)deviceSize
+{
+    DeviceSize deviceSize = [self resolutionSize];
+    BOOL is6PInZoomMode = (Screen4Dot7inch == deviceSize && [UIScreen mainScreen].scale > 2.9);
+    if (is6PInZoomMode) {
+        deviceSize = Screen5Dot5inch;
+    }
     
+    return deviceSize;
+}
+
++ (NSString*)deviceName
+{
     struct utsname systemInfo;
     uname(&systemInfo);
     NSString *code = [NSString stringWithCString:systemInfo.machine encoding:NSUTF8StringEncoding];
-    if ([code isEqualToString:@"x86_64"] || [code isEqualToString:@"i386"])
+    if ([code isEqualToString:@"x86_64"] || [code isEqualToString:@"i386"]) {
         code = @"Simulator";
+    }
     
     return code;
 }
