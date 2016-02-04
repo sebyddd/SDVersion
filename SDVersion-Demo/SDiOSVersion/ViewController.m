@@ -14,10 +14,10 @@
     [super viewDidLoad];
     
     // Get device name as NSString
-    self.iphoneVersionLabel.text = [self.iphoneVersionLabel.text stringByAppendingString:stringFromDeviceVersion([SDiOSVersion deviceVersion])];
+    self.iphoneVersionLabel.text = [self.iphoneVersionLabel.text stringByAppendingString:DeviceVersionNames[[SDiOSVersion deviceVersion]]];
 
     // Get device size using string conversion
-    self.iphoneSizeLabel.text = [self.iphoneSizeLabel.text stringByAppendingString:[NSString stringWithFormat:@"%@", stringFromDeviceSize([SDiOSVersion deviceSize])]];
+    self.iphoneSizeLabel.text = [self.iphoneSizeLabel.text stringByAppendingString:[NSString stringWithFormat:@"%@", DeviceSizeNames[[SDiOSVersion deviceSize]]]];
     
     // Check for device model
     if ([SDiOSVersion deviceVersion] == iPhone6)

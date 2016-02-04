@@ -10,17 +10,6 @@
 #import <UIKit/UIKit.h>
 #import <sys/utsname.h>
 
-#define stringFromDeviceVersion(v) [@{@(3):@"iPhone 4", @(4):@"iPhone 4S", @(5):@"iPhone 5", @(6):@"iPhone 5C", @(7):@"iPhone 5S", @(8):@"iPhone 6", @(9): @"iPhone 6 Plus", @(10):@"iPhone 6S", @(11): @"iPhone 6S Plus", @(12):@"iPad 1", @(13):@"iPad 2", @(14):@"iPad Mini", @(15):@"iPad 3", @(16):@"iPad 4", @(17):@"iPad Air", @(18):@"iPad Mini 2", @(19):@"iPad Air 2", @(20):@"iPad Mini 3", @(21):@"iPad Mini 4", @(22):@"iPad Pro", @(23):@"iPod Touch 1st Gen", @(24):@"iPod Touch 2nd Gen", @(25):@"iPod Touch 3rd Gen", @(26):@"iPod Touch 4th Gen", @(27):@"iPod Touch 5th Gen", @(28):@"iPod Touch 6th Gen", @(0):@"Simulator"} objectForKey:[NSNumber numberWithInteger:v]]
-#define stringFromDeviceSize(v) [@{@(0):@"Unknown Size", @(1):@"3.5 inch", @(2):@"4 inch", @(3):@"4.7 inch", @(4):@"5.5 inch"} objectForKey:[NSNumber numberWithInteger:v]]
-
-@interface SDiOSVersion : NSObject
-
-#define iOSVersionEqualTo(v)                  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedSame)
-#define iOSVersionGreaterThan(v)              ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedDescending)
-#define iOSVersionGreaterThanOrEqualTo(v)     ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
-#define iOSVersionLessThan(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
-#define iOSVersionLessThanOrEqualTo(v)        ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
-
 typedef NS_ENUM(NSInteger, DeviceVersion){
     iPhone4       = 3,
     iPhone4S      = 4,
@@ -54,6 +43,39 @@ typedef NS_ENUM(NSInteger, DeviceVersion){
     Simulator     = 0
 };
 
+static NSString *DeviceVersionNames[] = {
+    [iPhone4]       = @"iPhone 4",
+    [iPhone4S]      = @"iPhone 4S",
+    [iPhone5]       = @"iPhone 5",
+    [iPhone5C]      = @"iPhone 5C",
+    [iPhone5S]      = @"iPhone 5S",
+    [iPhone6]       = @"iPhone 6",
+    [iPhone6Plus]   = @"iPhone 6 Plus",
+    [iPhone6S]      = @"iPhone 6S",
+    [iPhone6SPlus]  = @"iPhone 6S Plus",
+    
+    [iPad1]         = @"iPad 1",
+    [iPad2]         = @"iPad 2",
+    [iPadMini]      = @"iPad Mini",
+    [iPad3]         = @"iPad 3",
+    [iPad4]         = @"iPad 4",
+    [iPadAir]       = @"iPad Air",
+    [iPadMini2]     = @"iPad Mini 2",
+    [iPadAir2]      = @"iPad Air 2",
+    [iPadMini3]     = @"iPad Mini 3",
+    [iPadMini4]     = @"iPad Mini 4",
+    [iPadPro]       = @"iPad Pro",
+    
+    [iPodTouch1Gen] = @"iPod Touch 1st Gen",
+    [iPodTouch2Gen] = @"iPod Touch 2nd Gen",
+    [iPodTouch3Gen] = @"iPod Touch 3rd Gen",
+    [iPodTouch4Gen] = @"iPod Touch 4th Gen",
+    [iPodTouch5Gen] = @"iPod Touch 5th Gen",
+    [iPodTouch6Gen] = @"iPod Touch 6th Gen",
+    
+    [Simulator]     = @"Simulator"
+};
+
 typedef NS_ENUM(NSInteger, DeviceSize){
     UnknownSize     = 0,
     Screen3Dot5inch = 1,
@@ -62,7 +84,25 @@ typedef NS_ENUM(NSInteger, DeviceSize){
     Screen5Dot5inch = 4
 };
 
+static NSString *DeviceSizeNames[] = {
+    [UnknownSize]     = @"Unknown Size",
+    [Screen3Dot5inch] = @"3.5 inch",
+    [Screen4inch]     = @"4 inch",
+    [Screen4Dot7inch] = @"4.7 inch",
+    [Screen5Dot5inch] = @"5.5 inch"
+};
+
+@interface SDiOSVersion : NSObject
+
+#define iOSVersionEqualTo(v)                  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedSame)
+#define iOSVersionGreaterThan(v)              ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedDescending)
+#define iOSVersionGreaterThanOrEqualTo(v)     ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
+#define iOSVersionLessThan(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
+#define iOSVersionLessThanOrEqualTo(v)        ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
+
+
 +(DeviceVersion)deviceVersion;
++ (DeviceSize)resolutionSize;
 +(DeviceSize)deviceSize;
 +(NSString*)deviceName;
 

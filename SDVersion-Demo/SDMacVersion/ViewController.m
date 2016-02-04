@@ -16,9 +16,9 @@
     
     // Get device info
     NSString *deviceVersion    = [SDVersion deviceVersionString];                                // Eg.: MacBookPro
-    NSString *deviceSize       = stringFromDeviceSize([SDVersion deviceSize]);                   // Eg.: 15 inch
+    NSString *deviceSize       = DeviceSizeNames[[SDVersion deviceSize]];                   // Eg.: 15 inch
     NSString *devicePixelSize  = NSStringFromSize([SDVersion deviceScreenResolutionPixelSize]);  // Eg.: Retina screen
-    NSString *deviceResolution = stringFromDeviceResolution([SDVersion deviceScreenResolution]); // Eg.: {2880, 1800}
+    NSString *deviceResolution = DeviceScreenResolutionNames[[SDVersion deviceScreenResolution]]; // Eg.: {2880, 1800}
     
     
     // Check OSX Version
