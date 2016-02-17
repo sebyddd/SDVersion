@@ -1,4 +1,6 @@
-![SDVersion](https://dl.dropboxusercontent.com/s/5ddx58dsex25x57/sdversion-logo.png?dl=0)
+<p align="center">
+ <img src="https://dl.dropboxusercontent.com/s/5ddx58dsex25x57/sdversion-logo.png?dl=0" alt="SDVersion"/>
+</p>
 
 <p align="center">
     <a href="https://gitter.im/sebyddd/SDiPhoneVersion?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge">
@@ -21,8 +23,15 @@ With the newer  devices, developers have more work to do. This library simpli
 
 SDVersion supports both iOS and Mac OS. Browse through the implementation of each platform using the links below.
 
-[![iOS](https://dl.dropboxusercontent.com/s/wadogkm72fvzaxn/sdiphoneversion-link.png?dl=0)](#ios)
-[![MacOS](https://dl.dropboxusercontent.com/s/yo76akhjuv4meip/sdmacversion-link.png?dl=0)](#mac-os)
+<p align="center">
+	<a href="#ios">
+        	<img src="https://dl.dropboxusercontent.com/s/wadogkm72fvzaxn/sdiphoneversion-link.png?dl=0" alt="iOS">
+	</a>
+	<a href="#mac-os">
+		<img src="https://dl.dropboxusercontent.com/s/yo76akhjuv4meip/sdmacversion-link.png?dl=0" alt="Mac">
+	</a>
+</p>
+
 ## How it works 
 
 ```objective-c
