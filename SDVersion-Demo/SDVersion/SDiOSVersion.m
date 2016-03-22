@@ -32,6 +32,7 @@
                               @"iPhone7,1" : @(iPhone6Plus),
                               @"iPhone8,1" : @(iPhone6S),
                               @"iPhone8,2" : @(iPhone6SPlus),
+                              @"iPhone8,4" : @(iPhoneSE),
                               @"i386"      : @(Simulator),
                               @"x86_64"    : @(Simulator),
                               
@@ -64,6 +65,9 @@
                               @"iPad5,2" : @(iPadMini4),
                               @"iPad5,3" : @(iPadAir2),
                               @"iPad5,4" : @(iPadAir2),
+                              @"iPad6,3" : @(iPadPro),
+                              @"iPad6,4" : @(iPadPro),
+                              @"iPad6,7" : @(iPadPro),
                               @"iPad6,8" : @(iPadPro),
                               
                               //iPods

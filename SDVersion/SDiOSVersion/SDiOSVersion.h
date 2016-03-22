@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 #import <sys/utsname.h>
 
-#define stringFromDeviceVersion(v) [@{@(3):@"iPhone 4", @(4):@"iPhone 4S", @(5):@"iPhone 5", @(6):@"iPhone 5C", @(7):@"iPhone 5S", @(8):@"iPhone 6", @(9): @"iPhone 6 Plus", @(10):@"iPhone 6S", @(11): @"iPhone 6S Plus", @(12):@"iPad 1", @(13):@"iPad 2", @(14):@"iPad Mini", @(15):@"iPad 3", @(16):@"iPad 4", @(17):@"iPad Air", @(18):@"iPad Mini 2", @(19):@"iPad Air 2", @(20):@"iPad Mini 3", @(21):@"iPad Mini 4", @(22):@"iPad Pro", @(23):@"iPod Touch 1st Gen", @(24):@"iPod Touch 2nd Gen", @(25):@"iPod Touch 3rd Gen", @(26):@"iPod Touch 4th Gen", @(27):@"iPod Touch 5th Gen", @(28):@"iPod Touch 6th Gen", @(0):@"Simulator"} objectForKey:[NSNumber numberWithInteger:v]]
+#define stringFromDeviceVersion(v) [@{@(3):@"iPhone 4", @(4):@"iPhone 4S", @(5):@"iPhone 5", @(6):@"iPhone 5C", @(7):@"iPhone 5S", @(8):@"iPhone 6", @(9): @"iPhone 6 Plus", @(10):@"iPhone 6S", @(11): @"iPhone 6S Plus", @(12): @"iPhone SE", @(13):@"iPad 1", @(14):@"iPad 2", @(15):@"iPad Mini", @(16):@"iPad 3", @(17):@"iPad 4", @(18):@"iPad Air", @(19):@"iPad Mini 2", @(20):@"iPad Air 2", @(21):@"iPad Mini 3", @(22):@"iPad Mini 4", @(23):@"iPad Pro", @(24):@"iPod Touch 1st Gen", @(25):@"iPod Touch 2nd Gen", @(26):@"iPod Touch 3rd Gen", @(27):@"iPod Touch 4th Gen", @(28):@"iPod Touch 5th Gen", @(29):@"iPod Touch 6th Gen", @(0):@"Simulator"} objectForKey:[NSNumber numberWithInteger:v]]
 #define stringFromDeviceSize(v) [@{@(0):@"Unknown Size", @(1):@"3.5 inch", @(2):@"4 inch", @(3):@"4.7 inch", @(4):@"5.5 inch"} objectForKey:[NSNumber numberWithInteger:v]]
 
 @interface SDiOSVersion : NSObject
@@ -31,25 +31,26 @@ typedef NS_ENUM(NSInteger, DeviceVersion){
     iPhone6Plus   = 9,
     iPhone6S      = 10,
     iPhone6SPlus  = 11,
+    iPhoneSE      = 12,
     
-    iPad1         = 12,
-    iPad2         = 13,
-    iPadMini      = 14,
-    iPad3         = 15,
-    iPad4         = 16,
-    iPadAir       = 17,
-    iPadMini2     = 18,
-    iPadAir2      = 19,
-    iPadMini3     = 20,
-    iPadMini4     = 21,
-    iPadPro       = 22,
+    iPad1         = 13,
+    iPad2         = 14,
+    iPadMini      = 15,
+    iPad3         = 16,
+    iPad4         = 17,
+    iPadAir       = 18,
+    iPadMini2     = 19,
+    iPadAir2      = 20,
+    iPadMini3     = 21,
+    iPadMini4     = 22,
+    iPadPro       = 23,
     
-    iPodTouch1Gen = 23,
-    iPodTouch2Gen = 24,
-    iPodTouch3Gen = 25,
-    iPodTouch4Gen = 26,
-    iPodTouch5Gen = 27,
-    iPodTouch6Gen = 28,
+    iPodTouch1Gen = 24,
+    iPodTouch2Gen = 25,
+    iPodTouch3Gen = 26,
+    iPodTouch4Gen = 27,
+    iPodTouch5Gen = 28,
+    iPodTouch6Gen = 29,
     
     Simulator     = 0
 };
