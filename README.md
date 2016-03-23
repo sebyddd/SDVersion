@@ -96,6 +96,7 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
     iPhone6Plus
     iPhone6S
     iPhone6SPlus
+    iPhoneSE
     
     iPad1
     iPad2
