@@ -64,8 +64,10 @@
                               @"iPad5,2" :[NSNumber numberWithInteger:iPadMini4],
                               @"iPad5,3" :[NSNumber numberWithInteger:iPadAir2],
                               @"iPad5,4" :[NSNumber numberWithInteger:iPadAir2],
-                              @"iPad6,7" :[NSNumber numberWithInteger:iPadPro],                              
-                              @"iPad6,8" :[NSNumber numberWithInteger:iPadPro],
+                              @"iPad6,3" :[NSNumber numberWithInteger:iPadPro9Dot7Inch],
+                              @"iPad6,4" :[NSNumber numberWithInteger:iPadPro9Dot7Inch],
+                              @"iPad6,7" :[NSNumber numberWithInteger:iPadPro12Dot9Inch],
+                              @"iPad6,8" :[NSNumber numberWithInteger:iPadPro12Dot9Inch],
                               
                               //iPods
                               @"iPod1,1" :[NSNumber numberWithInteger:iPodTouch1Gen],
