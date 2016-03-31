@@ -65,10 +65,10 @@
                               @"iPad5,2" : @(iPadMini4),
                               @"iPad5,3" : @(iPadAir2),
                               @"iPad5,4" : @(iPadAir2),
-                              @"iPad6,3" : @(iPadPro),
-                              @"iPad6,4" : @(iPadPro),
-                              @"iPad6,7" : @(iPadPro),
-                              @"iPad6,8" : @(iPadPro),
+                              @"iPad6,3" : @(iPadPro9Dot7Inch),
+                              @"iPad6,4" : @(iPadPro9Dot7Inch),
+                              @"iPad6,7" : @(iPadPro12Dot9Inch),
+                              @"iPad6,8" : @(iPadPro12Dot9Inch),
                               
                               //iPods
                               @"iPod1,1" : @(iPodTouch1Gen),
