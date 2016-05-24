@@ -25,10 +25,10 @@ SDVersion supports both iOS and Mac OS. Browse through the implementation of eac
 
 <p align="center">
 	<a href="#ios">
-        	<img src="https://dl.dropboxusercontent.com/s/wadogkm72fvzaxn/sdiphoneversion-link.png?dl=0" alt="iOS">
+        	<img src="https://dl.dropboxusercontent.com/s/ck42lqeda643v02/sdversion-ios.png?dl=0" alt="iOS">
 	</a>
 	<a href="#mac-os">
-		<img src="https://dl.dropboxusercontent.com/s/yo76akhjuv4meip/sdmacversion-link.png?dl=0" alt="Mac">
+		<img src="https://dl.dropboxusercontent.com/s/2yhgx57v4alnzld/sdversion-mac.png?dl=0" alt="Mac">
 	</a>
 </p>
 
