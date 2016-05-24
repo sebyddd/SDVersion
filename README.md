@@ -1,5 +1,5 @@
 <p align="center">
- <img src="https://dl.dropboxusercontent.com/s/5ddx58dsex25x57/sdversion-logo.png?dl=0" alt="SDVersion"/>
+ <img src="https://dl.dropboxusercontent.com/s/bmfjwfe2ngnivwn/sdversion.png?dl=0" alt="SDVersion"/>
 </p>
 
 <p align="center">
