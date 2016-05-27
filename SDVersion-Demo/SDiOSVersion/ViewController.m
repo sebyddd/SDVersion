@@ -37,6 +37,10 @@
     else if([SDiOSVersion deviceSize] == Screen5Dot5inch)
         NSLog(@"Your screen size is 5.5 inches");
     
+    if ([SDiOSVersion isZoomed]) {
+        NSLog(@"Your device is in Zoom Mode!");
+    }
+    
     //Check for iOS Version
     if (iOSVersionGreaterThanOrEqualTo(@"9"))
         NSLog(@"You are running iOS 9️⃣ or above!");

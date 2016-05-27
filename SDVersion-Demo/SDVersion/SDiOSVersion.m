@@ -2,7 +2,7 @@
 //  SDiOSVersion.m
 //  SDVersion
 //
-//  Copyright (c) 2015 Sebastian Dobrincu. All rights reserved.
+//  Copyright (c) 2016 Sebastian Dobrincu. All rights reserved.
 //
 
 #import "SDiOSVersion.h"
@@ -11,7 +11,7 @@
 
 + (NSDictionary*)deviceNamesByCode
 {
-    static NSDictionary* deviceNamesByCode = nil;
+    static NSDictionary *deviceNamesByCode = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         deviceNamesByCode = @{
@@ -32,6 +32,7 @@
                               @"iPhone7,1" : @(iPhone6Plus),
                               @"iPhone8,1" : @(iPhone6S),
                               @"iPhone8,2" : @(iPhone6SPlus),
+                              @"iPhone8,4" : @(iPhoneSE),
                               @"i386"      : @(Simulator),
                               @"x86_64"    : @(Simulator),
                               
@@ -64,7 +65,10 @@
                               @"iPad5,2" : @(iPadMini4),
                               @"iPad5,3" : @(iPadAir2),
                               @"iPad5,4" : @(iPadAir2),
-                              @"iPad6,8" : @(iPadPro),
+                              @"iPad6,3" : @(iPadPro9Dot7Inch),
+                              @"iPad6,4" : @(iPadPro9Dot7Inch),
+                              @"iPad6,7" : @(iPadPro12Dot9Inch),
+                              @"iPad6,8" : @(iPadPro12Dot9Inch),
                               
                               //iPods
                               @"iPod1,1" : @(iPodTouch1Gen),
@@ -114,8 +118,7 @@
 + (DeviceSize)deviceSize
 {
     DeviceSize deviceSize = [self resolutionSize];
-    BOOL is6PInZoomMode = (Screen4Dot7inch == deviceSize && [UIScreen mainScreen].scale > 2.9);
-    if (is6PInZoomMode) {
+    if ([self isZoomed]) {
         deviceSize = Screen5Dot5inch;
     }
     
@@ -132,6 +135,20 @@
     }
     
     return code;
+}
+
+#define IS_ZOOMED_IPHONE_6 (MAX([[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width) == 568.0 && [UIScreen mainScreen].nativeScale > [UIScreen mainScreen].scale)
+#define IS_ZOOMED_IPHONE_6_PLUS (MAX([[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width) == 667.0 && [UIScreen mainScreen].nativeScale < [UIScreen mainScreen].scale)
+
++ (BOOL)isZoomed {
+    
+    if ([self resolutionSize] == Screen4Dot7inch && [UIScreen mainScreen].nativeScale > [UIScreen mainScreen].scale) {
+        return YES;
+    }else if ([self resolutionSize] == Screen5Dot5inch && [UIScreen mainScreen].nativeScale < [UIScreen mainScreen].scale){
+        return YES;
+    }
+    
+    return NO;
 }
 
 @end
