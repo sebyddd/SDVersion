@@ -11,6 +11,7 @@
 #import <sys/utsname.h>
 
 typedef NS_ENUM(NSInteger, DeviceVersion){
+<<<<<<< HEAD
     iPhone4           = 3,
     iPhone4S          = 4,
     iPhone5           = 5,
@@ -41,11 +42,43 @@ typedef NS_ENUM(NSInteger, DeviceVersion){
     iPodTouch4Gen     = 28,
     iPodTouch5Gen     = 29,
     iPodTouch6Gen     = 30,
+=======
+    iPhone4       = 3,
+    iPhone4S      = 4,
+    iPhone5       = 5,
+    iPhone5C      = 6,
+    iPhone5S      = 7,
+    iPhone6       = 8,
+    iPhone6Plus   = 9,
+    iPhone6S      = 10,
+    iPhone6SPlus  = 11,
+    iPhoneSE      = 12,
+    
+    iPad1         = 13,
+    iPad2         = 14,
+    iPadMini      = 15,
+    iPad3         = 16,
+    iPad4         = 17,
+    iPadAir       = 18,
+    iPadMini2     = 19,
+    iPadAir2      = 20,
+    iPadMini3     = 21,
+    iPadMini4     = 22,
+    iPadPro       = 23,
+    
+    iPodTouch1Gen = 24,
+    iPodTouch2Gen = 25,
+    iPodTouch3Gen = 26,
+    iPodTouch4Gen = 27,
+    iPodTouch5Gen = 28,
+    iPodTouch6Gen = 29,
+>>>>>>> 1295b49387afa68ce4df5671e39151d4cc7966fd
     
     Simulator         =  0
 };
 
 static NSString *DeviceVersionNames[] = {
+<<<<<<< HEAD
     [iPhone4]           = @"iPhone 4",
     [iPhone4S]          = @"iPhone 4S",
     [iPhone5]           = @"iPhone 5",
@@ -56,6 +89,18 @@ static NSString *DeviceVersionNames[] = {
     [iPhone6S]          = @"iPhone 6S",
     [iPhone6SPlus]      = @"iPhone 6S Plus",
     [iPhoneSE]          = @"iPhone SE",
+=======
+    [iPhone4]       = @"iPhone 4",
+    [iPhone4S]      = @"iPhone 4S",
+    [iPhone5]       = @"iPhone 5",
+    [iPhone5C]      = @"iPhone 5C",
+    [iPhone5S]      = @"iPhone 5S",
+    [iPhone6]       = @"iPhone 6",
+    [iPhone6Plus]   = @"iPhone 6 Plus",
+    [iPhone6S]      = @"iPhone 6S",
+    [iPhone6SPlus]  = @"iPhone 6S Plus",
+    [iPhoneSE]  = @"iPhone SE",
+>>>>>>> 1295b49387afa68ce4df5671e39151d4cc7966fd
     
     [iPad1]             = @"iPad 1",
     [iPad2]             = @"iPad 2",
