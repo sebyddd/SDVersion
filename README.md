@@ -17,7 +17,7 @@
     </a>
 </p>
 
-Objective-C library for detecting the running device's model and screen size.
+Lightweight Cocoa library for detecting the running device's model and screen size.
 
 With the newer  devices, developers have more work to do. This library simplifies their job by allowing them to get information about the running device and easily target the ones they want.
 
