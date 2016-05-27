@@ -48,13 +48,17 @@ SDVersion supports both iOS and Mac OS. Browse through the implementation of eac
       if ([SDVersion deviceSize] == Screen4inch)
            NSLog(@"Your screen is 4 inches");
       
+      // Check if screen is in zoom mode
+      if ([SDVersion isZoomed])
+      	   NSLog(@"Your device is in Zoom Mode 🔎");
+      
       // Get device name
       NSLog(@"%@", DeviceVersionNames[[SDVersion deviceVersion]]);
-      /* e.g: Outputs 'iPhone 6 Plus' */
+      /* e.g: Outputs 'iPhone 6S Plus' */
       
       // Check for iOS Version
-      if (iOSVersionGreaterThanOrEqual(@"8"))
-           NSLog(@"You are running iOS 8 or above!");
+      if (iOSVersionGreaterThanOrEqual(@"9"))
+           NSLog(@"You are running iOS 9 or above!");
     
 ```
 
@@ -89,8 +93,10 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
 ### Available methods
 ```objective-c
     + (DeviceVersion)deviceVersion;
-    + (DeviceSize)deviceSize;
-    + (NSString*)deviceName;
+	+ (DeviceSize)resolutionSize;
+	+ (DeviceSize)deviceSize;
+	+ (NSString*)deviceName;
+	+ (BOOL)isZoomed;
 ```
 ### Targetable models
 	iPhone4
@@ -114,7 +120,8 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
     iPadAir2
     iPadMini3
     iPadMini4
-    iPadPro
+    iPadPro9Dot7Inch
+    iPadPro12Dot9Inch
 
 	iPodTouch1Gen
     iPodTouch2Gen
