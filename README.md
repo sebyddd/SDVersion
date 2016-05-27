@@ -63,11 +63,17 @@ SDVersion supports both iOS and Mac OS. Browse through the implementation of eac
 There are 2 ways you can add SDVersion to your project:
  
 ### Manual installation
+
  
  Simply import the 'SDVersion' into your project then import the following in the class you want to use it: 
  ```objective-c
        #import "SDVersion.h"
  ```      
+ In Swift, you need to import in the bridging header the specific library version, not the library wrapper: 
+  ```objective-c
+       #import "SDiOSVersion.h" // Or SDMacVersion.h
+ ```     
+ 
 ### Installation with CocoaPods
 
 CocoaPods is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like SDVersion in your projects. See the "[Getting Started](http://guides.cocoapods.org/syntax/podfile.html)" guide for more information.
@@ -126,7 +132,7 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
     Screen5Dot5inch
 
 ### Available iOS Version Finder methods
-    iOSVersionEqualTo(@"v")  //E.g: iOSVersionEqualTo(@"8.4.1")
+    iOSVersionEqualTo(@"v")  //E.g: iOSVersionEqualTo(@"9.3.1")
     iOSVersionGreaterThan(@"v")
 	iOSVersionGreaterThanOrEqualTo(@"v")
 	iOSVersionLessThan(@"v")
