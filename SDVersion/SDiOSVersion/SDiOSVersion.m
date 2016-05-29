@@ -36,7 +36,6 @@
                               @"i386"      : @(Simulator),
                               @"x86_64"    : @(Simulator),
                               
-                              
                               //iPads
                               @"iPad1,1" : @(iPad1),
                               @"iPad2,1" : @(iPad2),
