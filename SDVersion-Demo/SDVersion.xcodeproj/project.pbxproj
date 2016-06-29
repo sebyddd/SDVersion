@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1FC73D041D244B87005F81DA /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FC73D021D244B87005F81DA /* Interface.storyboard */; };
+		1FC73D061D244B87005F81DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FC73D051D244B87005F81DA /* Assets.xcassets */; };
+		1FC73D0D1D244B87005F81DA /* SDwatchOSVersion Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1FC73D0C1D244B87005F81DA /* SDwatchOSVersion Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1FC73D131D244B87005F81DA /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC73D121D244B87005F81DA /* InterfaceController.m */; };
+		1FC73D161D244B87005F81DA /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC73D151D244B87005F81DA /* ExtensionDelegate.m */; };
+		1FC73D181D244B87005F81DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FC73D171D244B87005F81DA /* Assets.xcassets */; };
+		1FC73D1C1D244B87005F81DA /* SDwatchOSVersion.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 1FC73D001D244B87005F81DA /* SDwatchOSVersion.app */; };
+		1FC73D291D244C93005F81DA /* SDwatchOSVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC73D281D244C93005F81DA /* SDwatchOSVersion.m */; };
 		9A6DB5E91B8E82D00065EA11 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6DB5DF1B8E82D00065EA11 /* AppDelegate.m */; };
 		9A6DB5EA1B8E82D00065EA11 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A6DB5E01B8E82D00065EA11 /* LaunchScreen.xib */; };
 		9A6DB5EB1B8E82D00065EA11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A6DB5E21B8E82D00065EA11 /* Main.storyboard */; };
@@ -25,6 +33,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1FC73D0E1D244B87005F81DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AA6624019BFABFC0055042F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1FC73D0B1D244B87005F81DA;
+			remoteInfo = "SDwatchOSVersion Extension";
+		};
+		1FC73D1A1D244B87005F81DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AA6624019BFABFC0055042F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1FC73CFF1D244B87005F81DA;
+			remoteInfo = SDwatchOSVersion;
+		};
 		9AA6626219BFABFC0055042F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9AA6624019BFABFC0055042F /* Project object */;
@@ -41,7 +63,45 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		1FC73D221D244B87005F81DA /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1FC73D0D1D244B87005F81DA /* SDwatchOSVersion Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FC73D241D244B87005F81DA /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				1FC73D1C1D244B87005F81DA /* SDwatchOSVersion.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		1FC73D001D244B87005F81DA /* SDwatchOSVersion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDwatchOSVersion.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FC73D031D244B87005F81DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		1FC73D051D244B87005F81DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1FC73D071D244B87005F81DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FC73D0C1D244B87005F81DA /* SDwatchOSVersion Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SDwatchOSVersion Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FC73D111D244B87005F81DA /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		1FC73D121D244B87005F81DA /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		1FC73D141D244B87005F81DA /* ExtensionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionDelegate.h; sourceTree = "<group>"; };
+		1FC73D151D244B87005F81DA /* ExtensionDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtensionDelegate.m; sourceTree = "<group>"; };
+		1FC73D171D244B87005F81DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1FC73D191D244B87005F81DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FC73D271D244C93005F81DA /* SDwatchOSVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDwatchOSVersion.h; sourceTree = "<group>"; };
+		1FC73D281D244C93005F81DA /* SDwatchOSVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDwatchOSVersion.m; sourceTree = "<group>"; };
 		9A6DB5DE1B8E82D00065EA11 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9A6DB5DF1B8E82D00065EA11 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		9A6DB5E11B8E82D00065EA11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -75,6 +135,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1FC73D091D244B87005F81DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9AA6624519BFABFC0055042F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -106,6 +173,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1FC73D011D244B87005F81DA /* SDwatchOSVersion */ = {
+			isa = PBXGroup;
+			children = (
+				1FC73D021D244B87005F81DA /* Interface.storyboard */,
+				1FC73D051D244B87005F81DA /* Assets.xcassets */,
+				1FC73D071D244B87005F81DA /* Info.plist */,
+			);
+			path = SDwatchOSVersion;
+			sourceTree = "<group>";
+		};
+		1FC73D101D244B87005F81DA /* SDwatchOSVersion Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1FC73D111D244B87005F81DA /* InterfaceController.h */,
+				1FC73D121D244B87005F81DA /* InterfaceController.m */,
+				1FC73D141D244B87005F81DA /* ExtensionDelegate.h */,
+				1FC73D151D244B87005F81DA /* ExtensionDelegate.m */,
+				1FC73D171D244B87005F81DA /* Assets.xcassets */,
+				1FC73D191D244B87005F81DA /* Info.plist */,
+			);
+			path = "SDwatchOSVersion Extension";
+			sourceTree = "<group>";
+		};
 		9A6DB5DD1B8E82D00065EA11 /* SDiOSVersion */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +229,8 @@
 				9A95DA951B853CFF00F96CB5 /* SDiOSVersion.m */,
 				9A95DA961B853CFF00F96CB5 /* SDMacVersion.h */,
 				9A95DA971B853CFF00F96CB5 /* SDMacVersion.m */,
+				1FC73D271D244C93005F81DA /* SDwatchOSVersion.h */,
+				1FC73D281D244C93005F81DA /* SDwatchOSVersion.m */,
 			);
 			path = SDVersion;
 			sourceTree = "<group>";
@@ -151,6 +243,8 @@
 				9A6DB5F01B8E82E00065EA11 /* SDiOSVersionTests */,
 				E2D975191B8265DF00675936 /* SDMacVersion */,
 				E2D975301B8265DF00675936 /* SDMacVersionTests */,
+				1FC73D011D244B87005F81DA /* SDwatchOSVersion */,
+				1FC73D101D244B87005F81DA /* SDwatchOSVersion Extension */,
 				9AA6624919BFABFC0055042F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -162,6 +256,8 @@
 				9AA6626119BFABFC0055042F /* SDiOSVersionTests.xctest */,
 				E2D975181B8265DF00675936 /* SDMacVersion.app */,
 				E2D9752D1B8265DF00675936 /* SDMacVersionTests.xctest */,
+				1FC73D001D244B87005F81DA /* SDwatchOSVersion.app */,
+				1FC73D0C1D244B87005F81DA /* SDwatchOSVersion Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -209,6 +305,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1FC73CFF1D244B87005F81DA /* SDwatchOSVersion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FC73D231D244B87005F81DA /* Build configuration list for PBXNativeTarget "SDwatchOSVersion" */;
+			buildPhases = (
+				1FC73CFE1D244B87005F81DA /* Resources */,
+				1FC73D221D244B87005F81DA /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1FC73D0F1D244B87005F81DA /* PBXTargetDependency */,
+			);
+			name = SDwatchOSVersion;
+			productName = SDwatchOSVersion;
+			productReference = 1FC73D001D244B87005F81DA /* SDwatchOSVersion.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		1FC73D0B1D244B87005F81DA /* SDwatchOSVersion Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FC73D211D244B87005F81DA /* Build configuration list for PBXNativeTarget "SDwatchOSVersion Extension" */;
+			buildPhases = (
+				1FC73D081D244B87005F81DA /* Sources */,
+				1FC73D091D244B87005F81DA /* Frameworks */,
+				1FC73D0A1D244B87005F81DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SDwatchOSVersion Extension";
+			productName = "SDwatchOSVersion Extension";
+			productReference = 1FC73D0C1D244B87005F81DA /* SDwatchOSVersion Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		9AA6624719BFABFC0055042F /* SDiOSVersion */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9AA6626B19BFABFC0055042F /* Build configuration list for PBXNativeTarget "SDiOSVersion" */;
@@ -216,10 +346,12 @@
 				9AA6624419BFABFC0055042F /* Sources */,
 				9AA6624519BFABFC0055042F /* Frameworks */,
 				9AA6624619BFABFC0055042F /* Resources */,
+				1FC73D241D244B87005F81DA /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1FC73D1B1D244B87005F81DA /* PBXTargetDependency */,
 			);
 			name = SDiOSVersion;
 			productName = SDiOSVersion;
@@ -288,6 +420,12 @@
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Sebastian Dobrincu";
 				TargetAttributes = {
+					1FC73CFF1D244B87005F81DA = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					1FC73D0B1D244B87005F81DA = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
 					9AA6624719BFABFC0055042F = {
 						CreatedOnToolsVersion = 6.0;
 					};
@@ -321,11 +459,30 @@
 				9AA6626019BFABFC0055042F /* SDiOSVersionTests */,
 				E2D975171B8265DF00675936 /* SDMacVersion */,
 				E2D9752C1B8265DF00675936 /* SDMacVersionTests */,
+				1FC73CFF1D244B87005F81DA /* SDwatchOSVersion */,
+				1FC73D0B1D244B87005F81DA /* SDwatchOSVersion Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1FC73CFE1D244B87005F81DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FC73D061D244B87005F81DA /* Assets.xcassets in Resources */,
+				1FC73D041D244B87005F81DA /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FC73D0A1D244B87005F81DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FC73D181D244B87005F81DA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9AA6624619BFABFC0055042F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -362,6 +519,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1FC73D081D244B87005F81DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FC73D161D244B87005F81DA /* ExtensionDelegate.m in Sources */,
+				1FC73D131D244B87005F81DA /* InterfaceController.m in Sources */,
+				1FC73D291D244C93005F81DA /* SDwatchOSVersion.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9AA6624419BFABFC0055042F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -403,6 +570,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		1FC73D0F1D244B87005F81DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1FC73D0B1D244B87005F81DA /* SDwatchOSVersion Extension */;
+			targetProxy = 1FC73D0E1D244B87005F81DA /* PBXContainerItemProxy */;
+		};
+		1FC73D1B1D244B87005F81DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1FC73CFF1D244B87005F81DA /* SDwatchOSVersion */;
+			targetProxy = 1FC73D1A1D244B87005F81DA /* PBXContainerItemProxy */;
+		};
 		9AA6626319BFABFC0055042F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9AA6624719BFABFC0055042F /* SDiOSVersion */;
@@ -416,6 +593,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		1FC73D021D244B87005F81DA /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1FC73D031D244B87005F81DA /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		9A6DB5E01B8E82D00065EA11 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -443,6 +628,80 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1FC73D1D1D244B87005F81DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IBSC_MODULE = SDwatchOSVersion_Extension;
+				INFOPLIST_FILE = SDwatchOSVersion/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dobrincusebastian.SDiOSVersion.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		1FC73D1E1D244B87005F81DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				IBSC_MODULE = SDwatchOSVersion_Extension;
+				INFOPLIST_FILE = SDwatchOSVersion/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dobrincusebastian.SDiOSVersion.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
+		1FC73D1F1D244B87005F81DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "SDwatchOSVersion Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dobrincusebastian.SDiOSVersion.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		1FC73D201D244B87005F81DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "SDwatchOSVersion Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dobrincusebastian.SDiOSVersion.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
 		9AA6626919BFABFC0055042F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -671,6 +930,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1FC73D211D244B87005F81DA /* Build configuration list for PBXNativeTarget "SDwatchOSVersion Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FC73D1F1D244B87005F81DA /* Debug */,
+				1FC73D201D244B87005F81DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1FC73D231D244B87005F81DA /* Build configuration list for PBXNativeTarget "SDwatchOSVersion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FC73D1D1D244B87005F81DA /* Debug */,
+				1FC73D1E1D244B87005F81DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		9AA6624319BFABFC0055042F /* Build configuration list for PBXProject "SDVersion" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

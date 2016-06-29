@@ -8,7 +8,7 @@
              alt="Gitter">
     </a>
     <a href="http://sebastiandobrincu.com">
-        <img src="https://img.shields.io/badge/platform-iOS%20%7C%20OSX-D0547F.svg"
+        <img src="https://img.shields.io/badge/platform-iOS%20%7C%20watchOS%20%7C%20macOS-D0547F.svg"
              alt="Platform">
     </a>
     <a href="http://sebastiandobrincu.com">
@@ -21,7 +21,7 @@ Lightweight Cocoa library for detecting the running device's model and screen si
 
 With the newer  devices, developers have more work to do. This library simplifies their job by allowing them to get information about the running device and easily target the ones they want.
 
-SDVersion supports both iOS and Mac OS. Browse through the implementation of each platform using the links below.
+SDVersion supports iOS, watchOS, and macOS. Browse through the implementation of each platform using the links below.
 
 <p align="center">
 	<a href="#ios">
@@ -152,6 +152,40 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
       
       NSLog(@"%@", DeviceSizeNames[[SDVersion deviceSize]]);
       /* e.g: Outputs '4.7 inch' */
+```
+
+## watchOS
+      
+### Available methods
+```objective-c
+    + (DeviceVersion)deviceVersion;
+	+ (DeviceSize)deviceSize;
+	+ (NSString*)deviceName;
+```
+### Targetable models
+	Apple Watch 38mm
+    Apple Watch 42mm
+
+    Simulator
+
+### Targetable screen sizes
+    Screen38mm
+    Screen42mm
+
+### Available watchOS Version Finder methods
+    watchOSVersionEqualTo(@"v")  //E.g: watchOSVersionEqualTo(@"2.2")
+    watchOSVersionGreaterThan(@"v")
+	watchOSVersionGreaterThanOrEqualTo(@"v")
+	watchOSVersionLessThan(@"v")
+	watchOSVersionLessThanOrEqualTo(@"v")       
+
+### Helpers
+```objective-c
+	  NSLog(@"%@", DeviceVersionNames[[SDVersion deviceVersion]]);
+      /* e.g: Outputs 'Apple Watch 42mm' */
+      
+      NSLog(@"%@", DeviceSizeNames[[SDVersion deviceSize]]);
+      /* e.g: Outputs '42mm' */
 ```
 
 ## Mac OS
