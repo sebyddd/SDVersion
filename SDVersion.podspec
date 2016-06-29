@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
   s.watchos.deployment_target = '2.0'
   s.ios.source_files = "SDVersion/SDiOSVersion/*.{h,m}"
   s.osx.source_files = "SDVersion/SDMacVersion/*.{h,m}"
-  s.watchos.source_file = "SDVersion/SDwatchOSVersion/*.{h,m}"
+  s.watchos.source_files = "SDVersion/SDwatchOSVersion/*.{h,m}"
   s.source       = { :git => 'https://github.com/sebyddd/SDVersion.git', :tag => "#{s.version}" }
   s.source_files  = "SDVersion/*.{h,m}"
 
