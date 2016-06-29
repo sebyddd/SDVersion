@@ -267,6 +267,7 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
 ```
 
 ## Special thanks to
+- Jeff Kelley (Contribution to implementing watchOS support)
 - Tom Baranes (Contribution to SDMacVersion)
 - Yasir Turk (iOS Version Finder, StackOverflow)
 
