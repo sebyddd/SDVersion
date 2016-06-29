@@ -2,18 +2,21 @@
 //  SDVersion.h
 //  SDVersion
 //
-//  Copyright (c) 2015 Sebastian Dobrincu. All rights reserved.
+//  Copyright (c) 2016 Sebastian Dobrincu. All rights reserved.
 //
 
 #ifndef SDVersion_h
 #define SDVersion_h
 
-#if (TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE)
-    #import "SDiOSVersion.h"
-    #define SDVersion SDiOSVersion
-#else
-    #import "SDMacVersion.h"
-    #define SDVersion SDMacVersion
+#if TARGET_OS_IOS
+#import "SDiOSVersion.h"
+#define SDVersion SDiOSVersion
+#elif TARGET_OS_WATCH
+#import "SDwatchOSVersion.h"
+#define SDVersion SDwatchOSVersion
+#elif TARGET_OS_MAC
+#import "SDMacVersion.h"
+#define SDVersion SDMacVersion
 #endif
 
 #endif

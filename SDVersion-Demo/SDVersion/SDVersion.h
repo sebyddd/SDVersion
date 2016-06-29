@@ -2,7 +2,7 @@
 //  SDVersion.h
 //  SDVersion
 //
-//  Copyright (c) 2015 Sebastian Dobrincu. All rights reserved.
+//  Copyright (c) 2016 Sebastian Dobrincu. All rights reserved.
 //
 
 #ifndef SDVersion_h
