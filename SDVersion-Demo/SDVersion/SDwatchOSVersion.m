@@ -7,7 +7,6 @@
 //
 
 #import "SDwatchOSVersion.h"
-
 #import <sys/utsname.h>
 
 @implementation SDwatchOSVersion
