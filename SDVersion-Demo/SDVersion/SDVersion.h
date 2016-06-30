@@ -8,12 +8,12 @@
 #ifndef SDVersion_h
 #define SDVersion_h
 
-#if TARGET_OS_IOS
-	#import "SDiOSVersion.h"
-	#define SDVersion SDiOSVersion
-#elif TARGET_OS_WATCH
+#if TARGET_OS_WATCH
     #import "SDwatchOSVersion.h"
     #define SDVersion SDwatchOSVersion
+#elif TARGET_OS_IOS
+    #import "SDiOSVersion.h"
+    #define SDVersion SDiOSVersion
 #elif TARGET_OS_MAC
 	#import "SDMacVersion.h"
 	#define SDVersion SDMacVersion
