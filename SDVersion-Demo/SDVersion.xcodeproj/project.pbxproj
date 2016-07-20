@@ -15,6 +15,13 @@
 		1FC73D181D244B87005F81DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FC73D171D244B87005F81DA /* Assets.xcassets */; };
 		1FC73D1C1D244B87005F81DA /* SDwatchOSVersion.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 1FC73D001D244B87005F81DA /* SDwatchOSVersion.app */; };
 		1FC73D291D244C93005F81DA /* SDwatchOSVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC73D281D244C93005F81DA /* SDwatchOSVersion.m */; };
+		1FE53CC31D3FF490005739A5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FE53CC21D3FF490005739A5 /* main.m */; };
+		1FE53CC61D3FF490005739A5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FE53CC51D3FF490005739A5 /* AppDelegate.m */; };
+		1FE53CC91D3FF490005739A5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FE53CC81D3FF490005739A5 /* ViewController.m */; };
+		1FE53CCC1D3FF490005739A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FE53CCA1D3FF490005739A5 /* Main.storyboard */; };
+		1FE53CCE1D3FF490005739A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FE53CCD1D3FF490005739A5 /* Assets.xcassets */; };
+		1FE53CD91D3FF491005739A5 /* SDtvOSVersionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FE53CD81D3FF491005739A5 /* SDtvOSVersionTests.m */; };
+		1FE53CE11D3FF4A3005739A5 /* SDtvOSVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FE53CB91D3FF468005739A5 /* SDtvOSVersion.m */; };
 		9A6DB5E91B8E82D00065EA11 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6DB5DF1B8E82D00065EA11 /* AppDelegate.m */; };
 		9A6DB5EA1B8E82D00065EA11 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A6DB5E01B8E82D00065EA11 /* LaunchScreen.xib */; };
 		9A6DB5EB1B8E82D00065EA11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A6DB5E21B8E82D00065EA11 /* Main.storyboard */; };
@@ -46,6 +53,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 1FC73CFF1D244B87005F81DA;
 			remoteInfo = SDwatchOSVersion;
+		};
+		1FE53CD51D3FF491005739A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AA6624019BFABFC0055042F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1FE53CBE1D3FF490005739A5;
+			remoteInfo = SDtvOSVersion;
 		};
 		9AA6626219BFABFC0055042F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -102,6 +116,20 @@
 		1FC73D191D244B87005F81DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FC73D271D244C93005F81DA /* SDwatchOSVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDwatchOSVersion.h; sourceTree = "<group>"; };
 		1FC73D281D244C93005F81DA /* SDwatchOSVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDwatchOSVersion.m; sourceTree = "<group>"; };
+		1FE53CB81D3FF468005739A5 /* SDtvOSVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDtvOSVersion.h; sourceTree = "<group>"; };
+		1FE53CB91D3FF468005739A5 /* SDtvOSVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDtvOSVersion.m; sourceTree = "<group>"; };
+		1FE53CBF1D3FF490005739A5 /* SDtvOSVersion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDtvOSVersion.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FE53CC21D3FF490005739A5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1FE53CC41D3FF490005739A5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1FE53CC51D3FF490005739A5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1FE53CC71D3FF490005739A5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1FE53CC81D3FF490005739A5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1FE53CCB1D3FF490005739A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1FE53CCD1D3FF490005739A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1FE53CCF1D3FF490005739A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FE53CD41D3FF491005739A5 /* SDtvOSVersionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SDtvOSVersionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FE53CD81D3FF491005739A5 /* SDtvOSVersionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDtvOSVersionTests.m; sourceTree = "<group>"; };
+		1FE53CDA1D3FF491005739A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A6DB5DE1B8E82D00065EA11 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9A6DB5DF1B8E82D00065EA11 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		9A6DB5E11B8E82D00065EA11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -136,6 +164,20 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		1FC73D091D244B87005F81DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FE53CBC1D3FF490005739A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FE53CD11D3FF491005739A5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -196,6 +238,38 @@
 			path = "SDwatchOSVersion Extension";
 			sourceTree = "<group>";
 		};
+		1FE53CC01D3FF490005739A5 /* SDtvOSVersion */ = {
+			isa = PBXGroup;
+			children = (
+				1FE53CC41D3FF490005739A5 /* AppDelegate.h */,
+				1FE53CC51D3FF490005739A5 /* AppDelegate.m */,
+				1FE53CC71D3FF490005739A5 /* ViewController.h */,
+				1FE53CC81D3FF490005739A5 /* ViewController.m */,
+				1FE53CCA1D3FF490005739A5 /* Main.storyboard */,
+				1FE53CCD1D3FF490005739A5 /* Assets.xcassets */,
+				1FE53CCF1D3FF490005739A5 /* Info.plist */,
+				1FE53CC11D3FF490005739A5 /* Supporting Files */,
+			);
+			path = SDtvOSVersion;
+			sourceTree = "<group>";
+		};
+		1FE53CC11D3FF490005739A5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1FE53CC21D3FF490005739A5 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1FE53CD71D3FF491005739A5 /* SDtvOSVersionTests */ = {
+			isa = PBXGroup;
+			children = (
+				1FE53CD81D3FF491005739A5 /* SDtvOSVersionTests.m */,
+				1FE53CDA1D3FF491005739A5 /* Info.plist */,
+			);
+			path = SDtvOSVersionTests;
+			sourceTree = "<group>";
+		};
 		9A6DB5DD1B8E82D00065EA11 /* SDiOSVersion */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +305,8 @@
 				9A95DA971B853CFF00F96CB5 /* SDMacVersion.m */,
 				1FC73D271D244C93005F81DA /* SDwatchOSVersion.h */,
 				1FC73D281D244C93005F81DA /* SDwatchOSVersion.m */,
+				1FE53CB81D3FF468005739A5 /* SDtvOSVersion.h */,
+				1FE53CB91D3FF468005739A5 /* SDtvOSVersion.m */,
 			);
 			path = SDVersion;
 			sourceTree = "<group>";
@@ -245,6 +321,8 @@
 				E2D975301B8265DF00675936 /* SDMacVersionTests */,
 				1FC73D011D244B87005F81DA /* SDwatchOSVersion */,
 				1FC73D101D244B87005F81DA /* SDwatchOSVersion Extension */,
+				1FE53CC01D3FF490005739A5 /* SDtvOSVersion */,
+				1FE53CD71D3FF491005739A5 /* SDtvOSVersionTests */,
 				9AA6624919BFABFC0055042F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -258,6 +336,8 @@
 				E2D9752D1B8265DF00675936 /* SDMacVersionTests.xctest */,
 				1FC73D001D244B87005F81DA /* SDwatchOSVersion.app */,
 				1FC73D0C1D244B87005F81DA /* SDwatchOSVersion Extension.appex */,
+				1FE53CBF1D3FF490005739A5 /* SDtvOSVersion.app */,
+				1FE53CD41D3FF491005739A5 /* SDtvOSVersionTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -338,6 +418,41 @@
 			productName = "SDwatchOSVersion Extension";
 			productReference = 1FC73D0C1D244B87005F81DA /* SDwatchOSVersion Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
+		};
+		1FE53CBE1D3FF490005739A5 /* SDtvOSVersion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FE53CDB1D3FF491005739A5 /* Build configuration list for PBXNativeTarget "SDtvOSVersion" */;
+			buildPhases = (
+				1FE53CBB1D3FF490005739A5 /* Sources */,
+				1FE53CBC1D3FF490005739A5 /* Frameworks */,
+				1FE53CBD1D3FF490005739A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SDtvOSVersion;
+			productName = SDtvOSVersion;
+			productReference = 1FE53CBF1D3FF490005739A5 /* SDtvOSVersion.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1FE53CD31D3FF491005739A5 /* SDtvOSVersionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FE53CDE1D3FF491005739A5 /* Build configuration list for PBXNativeTarget "SDtvOSVersionTests" */;
+			buildPhases = (
+				1FE53CD01D3FF491005739A5 /* Sources */,
+				1FE53CD11D3FF491005739A5 /* Frameworks */,
+				1FE53CD21D3FF491005739A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1FE53CD61D3FF491005739A5 /* PBXTargetDependency */,
+			);
+			name = SDtvOSVersionTests;
+			productName = SDtvOSVersionTests;
+			productReference = 1FE53CD41D3FF491005739A5 /* SDtvOSVersionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		9AA6624719BFABFC0055042F /* SDiOSVersion */ = {
 			isa = PBXNativeTarget;
@@ -426,6 +541,13 @@
 					1FC73D0B1D244B87005F81DA = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
+					1FE53CBE1D3FF490005739A5 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					1FE53CD31D3FF491005739A5 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 1FE53CBE1D3FF490005739A5;
+					};
 					9AA6624719BFABFC0055042F = {
 						CreatedOnToolsVersion = 6.0;
 					};
@@ -461,6 +583,8 @@
 				E2D9752C1B8265DF00675936 /* SDMacVersionTests */,
 				1FC73CFF1D244B87005F81DA /* SDwatchOSVersion */,
 				1FC73D0B1D244B87005F81DA /* SDwatchOSVersion Extension */,
+				1FE53CBE1D3FF490005739A5 /* SDtvOSVersion */,
+				1FE53CD31D3FF491005739A5 /* SDtvOSVersionTests */,
 			);
 		};
 /* End PBXProject section */
@@ -480,6 +604,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FC73D181D244B87005F81DA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FE53CBD1D3FF490005739A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FE53CCE1D3FF490005739A5 /* Assets.xcassets in Resources */,
+				1FE53CCC1D3FF490005739A5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FE53CD21D3FF491005739A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,6 +666,25 @@
 				1FC73D161D244B87005F81DA /* ExtensionDelegate.m in Sources */,
 				1FC73D131D244B87005F81DA /* InterfaceController.m in Sources */,
 				1FC73D291D244C93005F81DA /* SDwatchOSVersion.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FE53CBB1D3FF490005739A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FE53CC91D3FF490005739A5 /* ViewController.m in Sources */,
+				1FE53CC61D3FF490005739A5 /* AppDelegate.m in Sources */,
+				1FE53CC31D3FF490005739A5 /* main.m in Sources */,
+				1FE53CE11D3FF4A3005739A5 /* SDtvOSVersion.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FE53CD01D3FF491005739A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FE53CD91D3FF491005739A5 /* SDtvOSVersionTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,6 +739,11 @@
 			target = 1FC73CFF1D244B87005F81DA /* SDwatchOSVersion */;
 			targetProxy = 1FC73D1A1D244B87005F81DA /* PBXContainerItemProxy */;
 		};
+		1FE53CD61D3FF491005739A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1FE53CBE1D3FF490005739A5 /* SDtvOSVersion */;
+			targetProxy = 1FE53CD51D3FF491005739A5 /* PBXContainerItemProxy */;
+		};
 		9AA6626319BFABFC0055042F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9AA6624719BFABFC0055042F /* SDiOSVersion */;
@@ -599,6 +763,14 @@
 				1FC73D031D244B87005F81DA /* Base */,
 			);
 			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+		1FE53CCA1D3FF490005739A5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1FE53CCB1D3FF490005739A5 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		9A6DB5E01B8E82D00065EA11 /* LaunchScreen.xib */ = {
@@ -699,6 +871,78 @@
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
+		1FE53CDC1D3FF491005739A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ANALYZER_NONNULL = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = SDtvOSVersion/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dobrincusebastian.SDtvOSVersion;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Debug;
+		};
+		1FE53CDD1D3FF491005739A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ANALYZER_NONNULL = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = SDtvOSVersion/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dobrincusebastian.SDtvOSVersion;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Release;
+		};
+		1FE53CDF1D3FF491005739A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = SDtvOSVersionTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dobrincusebastian.SDtvOSVersionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SDtvOSVersion.app/SDtvOSVersion";
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Debug;
+		};
+		1FE53CE01D3FF491005739A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = SDtvOSVersionTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dobrincusebastian.SDtvOSVersionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SDtvOSVersion.app/SDtvOSVersion";
+				TVOS_DEPLOYMENT_TARGET = 9.2;
 			};
 			name = Release;
 		};
@@ -946,12 +1190,30 @@
 				1FC73D201D244B87005F81DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1FC73D231D244B87005F81DA /* Build configuration list for PBXNativeTarget "SDwatchOSVersion" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1FC73D1D1D244B87005F81DA /* Debug */,
 				1FC73D1E1D244B87005F81DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FE53CDB1D3FF491005739A5 /* Build configuration list for PBXNativeTarget "SDtvOSVersion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FE53CDC1D3FF491005739A5 /* Debug */,
+				1FE53CDD1D3FF491005739A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1FE53CDE1D3FF491005739A5 /* Build configuration list for PBXNativeTarget "SDtvOSVersionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FE53CDF1D3FF491005739A5 /* Debug */,
+				1FE53CE01D3FF491005739A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
