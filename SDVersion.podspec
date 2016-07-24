@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "SDVersion"
-  s.version      = "3.1"
+  s.version      = "3.2"
   s.summary      = "Objective-C library for detecting running device model and screen size."
   s.homepage     = "https://github.com/sebyddd/SDVersion"
   s.screenshots  = "https://dl.dropboxusercontent.com/s/bmfjwfe2ngnivwn/sdversion.png?dl=0"
