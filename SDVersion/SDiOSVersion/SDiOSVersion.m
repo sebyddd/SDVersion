@@ -14,6 +14,8 @@
     static NSDictionary *deviceNamesByCode = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
         deviceNamesByCode = @{
                               //iPhones
                               @"iPhone3,1" : @(iPhone4),
@@ -68,7 +70,7 @@
                               @"iPad6,4" : @(iPadPro9Dot7Inch),
                               @"iPad6,7" : @(iPadPro12Dot9Inch),
                               @"iPad6,8" : @(iPadPro12Dot9Inch),
-                              
+
                               //iPods
                               @"iPod1,1" : @(iPodTouch1Gen),
                               @"iPod2,1" : @(iPodTouch2Gen),
@@ -76,6 +78,7 @@
                               @"iPod4,1" : @(iPodTouch4Gen),
                               @"iPod5,1" : @(iPodTouch5Gen),
                               @"iPod7,1" : @(iPodTouch6Gen)};
+#pragma clang diagnostic pop
     });
     
     return deviceNamesByCode;
