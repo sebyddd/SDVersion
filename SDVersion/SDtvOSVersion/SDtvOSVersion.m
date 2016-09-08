@@ -14,7 +14,10 @@
     static NSDictionary *deviceNamesByCode = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
         deviceNamesByCode = @{ @"AppleTV5,3" : @(AppleTV4) };
+#pragma clang diagnostic pop
     });
     
     return deviceNamesByCode;

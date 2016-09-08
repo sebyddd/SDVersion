@@ -14,8 +14,13 @@
     static NSDictionary *deviceNamesByCode = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
         deviceNamesByCode = @{
                               //iPhones
+                              @"iPhone1,1" : @(iPhone),
+                              @"iPhone1,2" : @(iPhone3G),
+                              @"iPhone2,1" : @(iPhone3GS),
                               @"iPhone3,1" : @(iPhone4),
                               @"iPhone3,2" : @(iPhone4),
                               @"iPhone3,3" : @(iPhone4),
@@ -76,6 +81,7 @@
                               @"iPod4,1" : @(iPodTouch4Gen),
                               @"iPod5,1" : @(iPodTouch5Gen),
                               @"iPod7,1" : @(iPodTouch6Gen)};
+#pragma clang diagnostic pop
     });
     
     return deviceNamesByCode;
@@ -92,6 +98,8 @@
     return version;
 }
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 + (DeviceSize)resolutionSize
 {
     CGFloat screenHeight = 0;
@@ -113,7 +121,10 @@
     } else
         return UnknownSize;
 }
+#pragma clang diagnostic pop
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 + (DeviceSize)deviceSize
 {
     DeviceSize deviceSize = [self resolutionSize];
@@ -123,6 +134,7 @@
     
     return deviceSize;
 }
+#pragma clang diagnostic pop
 
 + (NSString*)deviceName
 {
@@ -139,6 +151,8 @@
 #define IS_ZOOMED_IPHONE_6 (MAX([[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width) == 568.0 && [UIScreen mainScreen].nativeScale > [UIScreen mainScreen].scale)
 #define IS_ZOOMED_IPHONE_6_PLUS (MAX([[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width) == 667.0 && [UIScreen mainScreen].nativeScale < [UIScreen mainScreen].scale)
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 + (BOOL)isZoomed {
     
     if ([self resolutionSize] == Screen4Dot7inch && [UIScreen mainScreen].nativeScale > [UIScreen mainScreen].scale) {
@@ -149,5 +163,6 @@
     
     return NO;
 }
+#pragma clang diagnostic pop
 
 @end

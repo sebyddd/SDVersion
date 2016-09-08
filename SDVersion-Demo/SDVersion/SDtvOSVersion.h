@@ -16,10 +16,13 @@ typedef NS_ENUM(NSInteger, DeviceVersion) {
     Simulator                            = 0
 };
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 static NSString *DeviceVersionNames[] = {
     [AppleTV4]          = @"Apple TV (4th Generation)",
     [Simulator]         = @"Simulator"
 };
+#pragma clang diagnostic pop
 
 @interface SDtvOSVersion : NSObject
 

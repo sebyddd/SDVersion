@@ -16,8 +16,11 @@
     static NSDictionary *deviceNamesByCode = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
         deviceNamesByCode = @{ @"Watch1,1" : @(AppleWatch38mm),
                                @"Watch1,2" : @(AppleWatch42mm) };
+#pragma clang diagnostic pop
     });
     
     return deviceNamesByCode;
@@ -34,6 +37,8 @@
     return version;
 }
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 + (DeviceSize)deviceSize
 {
     CGFloat screenHeight = CGRectGetHeight([WKInterfaceDevice currentDevice].screenBounds);
@@ -46,6 +51,7 @@
         return UnknownSize;
     }
 }
+#pragma clang diagnostic pop
 
 + (NSString*)deviceName
 {
@@ -58,6 +64,5 @@
     
     return code;
 }
-
 
 @end

@@ -16,11 +16,14 @@ typedef NS_ENUM(NSInteger, DeviceVersion) {
     Simulator      = 0,
 };
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 static NSString *DeviceVersionNames[] = {
     [AppleWatch38mm] = @"Apple Watch 38mm",
     [AppleWatch42mm] = @"Apple Watch 42mm",
     [Simulator]      = @"Simulator",
 };
+#pragma clang diagnostic pop
 
 typedef NS_ENUM(NSInteger, DeviceSize) {
     UnknownSize = 0,
@@ -29,11 +32,14 @@ typedef NS_ENUM(NSInteger, DeviceSize) {
     Screen42mm NS_ENUM_AVAILABLE_IOS(1.0) = 2,
 };
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 static NSString *DeviceSizeNames[] = {
     [UnknownSize] = @"Unknown Size",
     [Screen38mm]  = @"38mm",
     [Screen42mm]  = @"42mm",
 };
+#pragma clang diagnostic pop
 
 @interface SDwatchOSVersion : NSObject
 
