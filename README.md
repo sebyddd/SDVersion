@@ -37,16 +37,16 @@ SDVersion supports iOS, watchOS, tvOS, and macOS. Browse through the implementat
 ```objective-c
 
       // Check for device model
-      if ([SDVersion deviceVersion] == iPhone6S)
-           NSLog(@"You got the iPhone 6S. Sweet 🍭!");
-      else if ([SDVersion deviceVersion] == iPhone6Plus)
-           NSLog(@"iPhone 6 Plus? Bigger is better!");
+      if ([SDVersion deviceVersion] == iPhone7)
+           NSLog(@"You got the iPhone 7. Sweet 🍭!");
+      else if ([SDVersion deviceVersion] == iPhone6SPlus)
+           NSLog(@"iPhone 6S Plus? Bigger is better!");
       else if ([SDVersion deviceVersion] == iPadPro)
       	   NSLog(@"You own an iPad Pro 🌀!");
 
       // Check for device screen size
-      if ([SDVersion deviceSize] == Screen4inch)
-           NSLog(@"Your screen is 4 inches");
+      if ([SDVersion deviceSize] == Screen4Dot7inch)
+           NSLog(@"Your screen is 4.7 inches");
       
       // Check if screen is in zoom mode
       if ([SDVersion isZoomed])
@@ -54,11 +54,11 @@ SDVersion supports iOS, watchOS, tvOS, and macOS. Browse through the implementat
       
       // Get device name
       NSLog(@"%@", DeviceVersionNames[[SDVersion deviceVersion]]);
-      /* e.g: Outputs 'iPhone 6S Plus' */
+      /* e.g: Outputs 'iPhone 7 Plus' */
       
       // Check for iOS Version
-      if (iOSVersionGreaterThanOrEqual(@"9"))
-           NSLog(@"You are running iOS 9 or above!");
+      if (iOSVersionGreaterThanOrEqual(@"10"))
+           NSLog(@"You are running iOS 10 or above!");
     
 ```
 
@@ -109,6 +109,8 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
     iPhone6S
     iPhone6SPlus
     iPhoneSE
+    iPhone7
+    iPhone7Plus
     
     iPad1
     iPad2

@@ -20,27 +20,29 @@ typedef NS_ENUM(NSInteger, DeviceVersion){
     iPhone6Plus       = 9,
     iPhone6S          = 10,
     iPhone6SPlus      = 11,
-    iPhoneSE          = 12,
+    iPhone7           = 12,
+    iPhone7Plus       = 13,
+    iPhoneSE          = 14,
     
-    iPad1             = 13,
-    iPad2             = 14,
-    iPadMini          = 15,
-    iPad3             = 16,
-    iPad4             = 17,
-    iPadAir           = 18,
-    iPadMini2         = 19,
-    iPadAir2          = 20,
-    iPadMini3         = 21,
-    iPadMini4         = 22,
-    iPadPro12Dot9Inch = 23,
-    iPadPro9Dot7Inch  = 24,
+    iPad1             = 15,
+    iPad2             = 16,
+    iPadMini          = 17,
+    iPad3             = 18,
+    iPad4             = 19,
+    iPadAir           = 20,
+    iPadMini2         = 21,
+    iPadAir2          = 22,
+    iPadMini3         = 23,
+    iPadMini4         = 24,
+    iPadPro12Dot9Inch = 25,
+    iPadPro9Dot7Inch  = 26,
     
-    iPodTouch1Gen     = 25,
-    iPodTouch2Gen     = 26,
-    iPodTouch3Gen     = 27,
-    iPodTouch4Gen     = 28,
-    iPodTouch5Gen     = 29,
-    iPodTouch6Gen     = 30,
+    iPodTouch1Gen     = 27,
+    iPodTouch2Gen     = 28,
+    iPodTouch3Gen     = 29,
+    iPodTouch4Gen     = 30,
+    iPodTouch5Gen     = 31,
+    iPodTouch6Gen     = 32,
     
     Simulator         =  0
 };
@@ -55,8 +57,10 @@ static NSString *DeviceVersionNames[] = {
     [iPhone6Plus]       = @"iPhone 6 Plus",
     [iPhone6S]          = @"iPhone 6S",
     [iPhone6SPlus]      = @"iPhone 6S Plus",
+    [iPhone7]           = @"iPhone 7",
+    [iPhone7Plus]       = @"iPhone 7 Plus",
     [iPhoneSE]          = @"iPhone SE",
-    
+
     [iPad1]             = @"iPad 1",
     [iPad2]             = @"iPad 2",
     [iPadMini]          = @"iPad Mini",
@@ -69,14 +73,14 @@ static NSString *DeviceVersionNames[] = {
     [iPadMini4]         = @"iPad Mini 4",
     [iPadPro9Dot7Inch]  = @"iPad Pro",
     [iPadPro12Dot9Inch] = @"iPad Pro",
-    
+
     [iPodTouch1Gen]     = @"iPod Touch 1st Gen",
     [iPodTouch2Gen]     = @"iPod Touch 2nd Gen",
     [iPodTouch3Gen]     = @"iPod Touch 3rd Gen",
     [iPodTouch4Gen]     = @"iPod Touch 4th Gen",
     [iPodTouch5Gen]     = @"iPod Touch 5th Gen",
     [iPodTouch6Gen]     = @"iPod Touch 6th Gen",
-    
+
     [Simulator]         = @"Simulator"
 };
 
