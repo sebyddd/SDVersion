@@ -11,9 +11,8 @@
 #import <sys/utsname.h>
 
 typedef NS_ENUM(NSInteger, DeviceVersion) {
-    AppleTV4  NS_ENUM_AVAILABLE_IOS(9.0) = 1,
-    
-    Simulator                            = 0
+    AppleTV4          = 1,
+    Simulator         = 0
 };
 
 #pragma clang diagnostic push

@@ -20,10 +20,10 @@
     self.iphoneSizeLabel.text = [self.iphoneSizeLabel.text stringByAppendingString:[NSString stringWithFormat:@"%@", DeviceSizeNames[[SDiOSVersion deviceSize]]]];
     
     // Check for device model
-    if ([SDiOSVersion deviceVersion] == iPhone6)
-        NSLog(@"You got the iPhone 6. Nice!");
-    else if ([SDiOSVersion deviceVersion] == iPhone5S)
-        NSLog(@"You got the iPhone 5S. Good device!");
+    if ([SDiOSVersion deviceVersion] == iPhone7)
+        NSLog(@"You got the iPhone 7. Nice!");
+    else if ([SDiOSVersion deviceVersion] == iPhone6SPlus)
+        NSLog(@"You got the iPhone 6S Plus. Awesome device!");
     else if ([SDiOSVersion deviceVersion] == iPodTouch6Gen)
         NSLog(@"The latest iPod Touch. Cool! ❄️");
     
@@ -42,10 +42,10 @@
     }
     
     //Check for iOS Version
-    if (iOSVersionGreaterThanOrEqualTo(@"9"))
-        NSLog(@"You are running iOS 9️⃣ or above!");
-    else if (iOSVersionLessThanOrEqualTo(@"8.4"))
-        NSLog(@"You're on iOS 8.4 or below! ⏳");
+    if (iOSVersionGreaterThanOrEqualTo(@"10"))
+        NSLog(@"You are running iOS 1️⃣0️⃣ or above!");
+    else if (iOSVersionLessThanOrEqualTo(@"9.1"))
+        NSLog(@"You're on iOS 9.1 or below! ⏳");
 }
 
 
