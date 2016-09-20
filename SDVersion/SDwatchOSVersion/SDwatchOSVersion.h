@@ -9,9 +9,11 @@
 #import <WatchKit/WatchKit.h>
 
 typedef NS_ENUM(NSInteger, DeviceVersion) {
-    AppleWatch38mm = 1,
-    AppleWatch42mm = 2,
-    Simulator      = 0
+    
+    AppleWatch38mm NS_ENUM_AVAILABLE_IOS(1.0) = 1,
+    AppleWatch42mm NS_ENUM_AVAILABLE_IOS(1.0) = 2,
+    
+    Simulator      = 0,
 };
 
 #pragma clang diagnostic push
@@ -19,14 +21,15 @@ typedef NS_ENUM(NSInteger, DeviceVersion) {
 static NSString *DeviceVersionNames[] = {
     [AppleWatch38mm] = @"Apple Watch 38mm",
     [AppleWatch42mm] = @"Apple Watch 42mm",
-    [Simulator]      = @"Simulator"
+    [Simulator]      = @"Simulator",
 };
 #pragma clang diagnostic pop
 
-typedef NS_ENUM(NSInteger, DeviceSize){
+typedef NS_ENUM(NSInteger, DeviceSize) {
     UnknownSize = 0,
-    Screen38mm  = 1,
-    Screen42mm  = 2
+    
+    Screen38mm NS_ENUM_AVAILABLE_IOS(1.0) = 1,
+    Screen42mm NS_ENUM_AVAILABLE_IOS(1.0) = 2,
 };
 
 #pragma clang diagnostic push
@@ -34,7 +37,7 @@ typedef NS_ENUM(NSInteger, DeviceSize){
 static NSString *DeviceSizeNames[] = {
     [UnknownSize] = @"Unknown Size",
     [Screen38mm]  = @"38mm",
-    [Screen42mm]  = @"42mm"
+    [Screen42mm]  = @"42mm",
 };
 #pragma clang diagnostic pop
 

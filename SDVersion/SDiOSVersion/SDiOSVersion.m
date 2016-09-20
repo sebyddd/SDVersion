@@ -18,9 +18,6 @@
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
         deviceNamesByCode = @{
                               //iPhones
-                              @"iPhone1,1" : @(iPhone),
-                              @"iPhone1,2" : @(iPhone3G),
-                              @"iPhone2,1" : @(iPhone3GS),
                               @"iPhone3,1" : @(iPhone4),
                               @"iPhone3,2" : @(iPhone4),
                               @"iPhone3,3" : @(iPhone4),
