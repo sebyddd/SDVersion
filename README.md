@@ -293,10 +293,11 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
       /* e.g: Outputs '{2880, 1800}' */
 ```
 
-## Special thanks to
-- Jeff Kelley (Contribution to implementing watchOS support)
-- Tom Baranes (Contribution to SDMacVersion)
-- Yasir Turk (iOS Version Finder, StackOverflow)
+## Used by
+
+<p align="center">
+       <img src="https://dl.dropboxusercontent.com/s/yp3kwu2lobe9pvg/who-uses-sdversion.png?dl=0" alt="Who uses SDVersion">
+</p>
 
 ## License
 Usage is provided under the [MIT License](http://opensource.org/licenses/mit-license.php). See LICENSE for the full details.
