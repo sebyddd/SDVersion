@@ -11,14 +11,19 @@
 #import <sys/utsname.h>
 
 typedef NS_ENUM(NSInteger, DeviceVersion) {
-    AppleTV4          = 1,
-    Simulator         = 0
+    AppleTV4  NS_ENUM_AVAILABLE_IOS(9.0) = 1,
+    
+    Simulator                            = 0
 };
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 static NSString *DeviceVersionNames[] = {
     [AppleTV4]          = @"Apple TV (4th Generation)",
+    
     [Simulator]         = @"Simulator"
 };
+#pragma clang diagnostic pop
 
 @interface SDtvOSVersion : NSObject
 

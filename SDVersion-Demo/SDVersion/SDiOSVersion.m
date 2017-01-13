@@ -99,6 +99,8 @@
     return version;
 }
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 + (DeviceSize)resolutionSize
 {
     CGFloat screenHeight = 0;
@@ -120,7 +122,10 @@
     } else
         return UnknownSize;
 }
+#pragma clang diagnostic pop
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 + (DeviceSize)deviceSize
 {
     DeviceSize deviceSize = [self resolutionSize];
@@ -130,6 +135,7 @@
     
     return deviceSize;
 }
+#pragma clang diagnostic pop
 
 + (NSString*)deviceName
 {
@@ -146,6 +152,8 @@
 #define IS_ZOOMED_IPHONE_6 (MAX([[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width) == 568.0 && [UIScreen mainScreen].nativeScale > [UIScreen mainScreen].scale)
 #define IS_ZOOMED_IPHONE_6_PLUS (MAX([[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width) == 667.0 && [UIScreen mainScreen].nativeScale < [UIScreen mainScreen].scale)
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 + (BOOL)isZoomed {
     
     if ([self resolutionSize] == Screen4Dot7inch && [UIScreen mainScreen].nativeScale > [UIScreen mainScreen].scale) {
@@ -156,5 +164,6 @@
     
     return NO;
 }
+#pragma clang diagnostic pop
 
 @end
