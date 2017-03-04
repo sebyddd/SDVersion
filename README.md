@@ -60,6 +60,33 @@ SDVersion supports iOS, watchOS, tvOS, and macOS. Browse through the implementat
            NSLog(@"You are running iOS 10 or above!");
 ```
 
+<p align="center">
+ <img src="https://static1.squarespace.com/static/52428a0ae4b0c4a5c2a2cede/t/5479ce82e4b028a16123006d/1417268866072/Apple_Swift_Logo.png" alt="SDVersion Swift" width="40" height="40"/><br>
+Swift Version:
+</p>
+  
+
+```swift
+      // Check for device model
+      if SDiOSVersion.deviceVersion() == .iPhone7 {
+            print("You got the iPhone 7. Sweet 🍭!")
+      }
+
+      // Check for device screen size
+      if SDiOSVersion.deviceSize() == .Screen3Dot5inch {
+            print("Still on 3.5 inches!? 😮")
+      }
+
+      // Get device name
+      print(SDiOSVersion.deviceVersionName(SDiOSVersion.deviceVersion()))
+      /* e.g: Outputs 'iPhone 7 Plus' */
+
+      // Check for iOS Version
+      if SDiOSVersion.versionGreaterThan("10") {
+            print("You are running iOS 10 or above!")
+      }
+```
+
 ## Add to your project
 
 There are 2 ways you can add SDVersion to your project:
@@ -152,6 +179,11 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
 
       NSLog(@"%@", [SDVersion deviceSizeName:[SDVersion deviceSize]]);
       /* e.g: Outputs '4.7 inch' */
+```
+Or in Swift: 
+```swift
+      let deviceVersionName = SDiOSVersion.deviceVersionName(SDiOSVersion.deviceVersion())
+      let deviceSizeName = SDiOSVersion.deviceSizeName(SDiOSVersion.deviceSize())    
 ```
 
 ## watchOS
