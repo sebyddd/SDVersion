@@ -61,7 +61,9 @@ SDVersion supports iOS, watchOS, tvOS, and macOS. Browse through the implementat
 ```
 
 <p align="center">
- <img src="https://static1.squarespace.com/static/52428a0ae4b0c4a5c2a2cede/t/5479ce82e4b028a16123006d/1417268866072/Apple_Swift_Logo.png" alt="SDVersion Swift" width="40" height="40"/><br>
+ <a href="#how-it-works">
+        	<img src="https://static1.squarespace.com/static/52428a0ae4b0c4a5c2a2cede/t/5479ce82e4b028a16123006d/1417268866072/Apple_Swift_Logo.png" alt="SDVersion Swift" width="40" height="40"/><br>
+	</a>
 Swift Version:
 </p>
   
