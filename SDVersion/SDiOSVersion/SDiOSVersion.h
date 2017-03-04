@@ -8,8 +8,8 @@
 #import <Foundation/Foundation.h>
 
 typedef NS_ENUM(NSInteger, DeviceVersion){
-	UnknownDevice     = 0,
-	Simulator         = 1,
+    UnknownDevice     = 0,
+    Simulator         = 1,
 	
     iPhone4           = 3,
     iPhone4S          = 4,

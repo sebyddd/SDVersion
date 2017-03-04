@@ -187,7 +187,7 @@
              @(iPodTouch6Gen)     : @"iPod Touch 6th Gen",
              
              @(Simulator)         : @"Simulator",
-			 @(UnknownDevice)     : @"Unknown Device"
+             @(UnknownDevice)     : @"Unknown Device"
              }[@(deviceVersion)];
 }
 
