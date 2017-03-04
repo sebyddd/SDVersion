@@ -14,34 +14,24 @@ typedef NS_ENUM(NSInteger, DeviceVersion) {
     Simulator      = 0
 };
 
-static NSString *DeviceVersionNames[] = {
-    [AppleWatch38mm] = @"Apple Watch 38mm",
-    [AppleWatch42mm] = @"Apple Watch 42mm",
-    [Simulator]      = @"Simulator"
-};
-
 typedef NS_ENUM(NSInteger, DeviceSize){
     UnknownSize = 0,
     Screen38mm  = 1,
     Screen42mm  = 2
 };
 
-static NSString *DeviceSizeNames[] = {
-    [UnknownSize] = @"Unknown Size",
-    [Screen38mm]  = @"38mm",
-    [Screen42mm]  = @"42mm"
-};
-
 @interface SDwatchOSVersion : NSObject
 
-#define watchOSVersionEqualTo(v)                  ([[[WKInterfaceDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedSame)
-#define watchOSVersionGreaterThan(v)              ([[[WKInterfaceDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedDescending)
-#define watchOSVersionGreaterThanOrEqualTo(v)     ([[[WKInterfaceDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
-#define watchOSVersionLessThan(v)                 ([[[WKInterfaceDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
-#define watchOSVersionLessThanOrEqualTo(v)        ([[[WKInterfaceDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
-
 + (DeviceVersion)deviceVersion;
++ (NSString *)deviceVersionName:(DeviceVersion)deviceVersion;
 + (DeviceSize)deviceSize;
-+ (NSString*)deviceName;
++ (NSString *)deviceSizeName:(DeviceSize)deviceSize;
++ (NSString *)deviceName;
+
++ (BOOL)versionEqualTo:(NSString *)version;
++ (BOOL)versionGreaterThan:(NSString *)version;
++ (BOOL)versionGreaterThanOrEqualTo:(NSString *)version;
++ (BOOL)versionLessThan:(NSString *)version;
++ (BOOL)versionLessThanOrEqualTo:(NSString *)version;
 
 @end

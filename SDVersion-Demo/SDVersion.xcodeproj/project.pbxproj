@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0EA6B9761E6AB69300315612 /* iOSVersionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6B9751E6AB69300315612 /* iOSVersionTests.swift */; };
+		0EA6B9791E6AB6F600315612 /* MacVersionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6B9781E6AB6F600315612 /* MacVersionTests.swift */; };
 		1FC73D041D244B87005F81DA /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FC73D021D244B87005F81DA /* Interface.storyboard */; };
 		1FC73D061D244B87005F81DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FC73D051D244B87005F81DA /* Assets.xcassets */; };
 		1FC73D0D1D244B87005F81DA /* SDwatchOSVersion Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1FC73D0C1D244B87005F81DA /* SDwatchOSVersion Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -103,6 +105,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0EA6B9741E6AB69300315612 /* SDiOSVersionTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SDiOSVersionTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		0EA6B9751E6AB69300315612 /* iOSVersionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iOSVersionTests.swift; sourceTree = "<group>"; };
+		0EA6B9771E6AB6F500315612 /* SDMacVersionTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SDMacVersionTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		0EA6B9781E6AB6F600315612 /* MacVersionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacVersionTests.swift; sourceTree = "<group>"; };
 		1FC73D001D244B87005F81DA /* SDwatchOSVersion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDwatchOSVersion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FC73D031D244B87005F81DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		1FC73D051D244B87005F81DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -114,10 +120,10 @@
 		1FC73D151D244B87005F81DA /* ExtensionDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtensionDelegate.m; sourceTree = "<group>"; };
 		1FC73D171D244B87005F81DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1FC73D191D244B87005F81DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1FC73D271D244C93005F81DA /* SDwatchOSVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDwatchOSVersion.h; sourceTree = "<group>"; };
-		1FC73D281D244C93005F81DA /* SDwatchOSVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDwatchOSVersion.m; sourceTree = "<group>"; };
-		1FE53CB81D3FF468005739A5 /* SDtvOSVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDtvOSVersion.h; sourceTree = "<group>"; };
-		1FE53CB91D3FF468005739A5 /* SDtvOSVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDtvOSVersion.m; sourceTree = "<group>"; };
+		1FC73D271D244C93005F81DA /* SDwatchOSVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDwatchOSVersion.h; path = SDwatchOSVersion/SDwatchOSVersion.h; sourceTree = "<group>"; };
+		1FC73D281D244C93005F81DA /* SDwatchOSVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDwatchOSVersion.m; path = SDwatchOSVersion/SDwatchOSVersion.m; sourceTree = "<group>"; };
+		1FE53CB81D3FF468005739A5 /* SDtvOSVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDtvOSVersion.h; path = SDtvOSVersion/SDtvOSVersion.h; sourceTree = "<group>"; };
+		1FE53CB91D3FF468005739A5 /* SDtvOSVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDtvOSVersion.m; path = SDtvOSVersion/SDtvOSVersion.m; sourceTree = "<group>"; };
 		1FE53CBF1D3FF490005739A5 /* SDtvOSVersion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDtvOSVersion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FE53CC21D3FF490005739A5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1FE53CC41D3FF490005739A5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -141,10 +147,10 @@
 		9A6DB5E81B8E82D00065EA11 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		9A6DB5F11B8E82E00065EA11 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A6DB5F21B8E82E00065EA11 /* SDiOSVersionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDiOSVersionTests.m; sourceTree = "<group>"; };
-		9A95DA941B853CFF00F96CB5 /* SDiOSVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDiOSVersion.h; sourceTree = "<group>"; };
-		9A95DA951B853CFF00F96CB5 /* SDiOSVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDiOSVersion.m; sourceTree = "<group>"; };
-		9A95DA961B853CFF00F96CB5 /* SDMacVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDMacVersion.h; sourceTree = "<group>"; };
-		9A95DA971B853CFF00F96CB5 /* SDMacVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDMacVersion.m; sourceTree = "<group>"; };
+		9A95DA941B853CFF00F96CB5 /* SDiOSVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDiOSVersion.h; path = SDiOSVersion/SDiOSVersion.h; sourceTree = "<group>"; };
+		9A95DA951B853CFF00F96CB5 /* SDiOSVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDiOSVersion.m; path = SDiOSVersion/SDiOSVersion.m; sourceTree = "<group>"; };
+		9A95DA961B853CFF00F96CB5 /* SDMacVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDMacVersion.h; path = SDMacVersion/SDMacVersion.h; sourceTree = "<group>"; };
+		9A95DA971B853CFF00F96CB5 /* SDMacVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDMacVersion.m; path = SDMacVersion/SDMacVersion.m; sourceTree = "<group>"; };
 		9A95DA981B853CFF00F96CB5 /* SDVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDVersion.h; sourceTree = "<group>"; };
 		9AA6624819BFABFC0055042F /* SDiOSVersion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDiOSVersion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AA6626119BFABFC0055042F /* SDiOSVersionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SDiOSVersionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -291,6 +297,8 @@
 			children = (
 				9A6DB5F11B8E82E00065EA11 /* Info.plist */,
 				9A6DB5F21B8E82E00065EA11 /* SDiOSVersionTests.m */,
+				0EA6B9751E6AB69300315612 /* iOSVersionTests.swift */,
+				0EA6B9741E6AB69300315612 /* SDiOSVersionTests-Bridging-Header.h */,
 			);
 			path = SDiOSVersionTests;
 			sourceTree = "<group>";
@@ -308,7 +316,8 @@
 				1FE53CB81D3FF468005739A5 /* SDtvOSVersion.h */,
 				1FE53CB91D3FF468005739A5 /* SDtvOSVersion.m */,
 			);
-			path = SDVersion;
+			name = SDVersion;
+			path = ../SDVersion;
 			sourceTree = "<group>";
 		};
 		9AA6623F19BFABFC0055042F = {
@@ -370,6 +379,8 @@
 			children = (
 				E2D975331B8265E000675936 /* SDMacVersionTests.m */,
 				E2D975311B8265E000675936 /* Supporting Files */,
+				0EA6B9781E6AB6F600315612 /* MacVersionTests.swift */,
+				0EA6B9771E6AB6F500315612 /* SDMacVersionTests-Bridging-Header.h */,
 			);
 			path = SDMacVersionTests;
 			sourceTree = "<group>";
@@ -553,6 +564,7 @@
 					};
 					9AA6626019BFABFC0055042F = {
 						CreatedOnToolsVersion = 6.0;
+						LastSwiftMigration = 0820;
 						TestTargetID = 9AA6624719BFABFC0055042F;
 					};
 					E2D975171B8265DF00675936 = {
@@ -560,6 +572,7 @@
 					};
 					E2D9752C1B8265DF00675936 = {
 						CreatedOnToolsVersion = 6.4;
+						LastSwiftMigration = 0820;
 						TestTargetID = E2D975171B8265DF00675936;
 					};
 				};
@@ -703,6 +716,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EA6B9761E6AB69300315612 /* iOSVersionTests.swift in Sources */,
 				9A6DB5F41B8E82E00065EA11 /* SDiOSVersionTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -722,6 +736,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EA6B9791E6AB6F600315612 /* MacVersionTests.swift in Sources */,
 				E2D975341B8265E000675936 /* SDMacVersionTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1064,6 +1079,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1077,6 +1093,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dobrincusebastian.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SDiOSVersionTests/SDiOSVersionTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SDiOSVersion.app/SDiOSVersion";
 			};
 			name = Debug;
@@ -1085,6 +1104,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1094,6 +1114,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dobrincusebastian.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SDiOSVersionTests/SDiOSVersionTests-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SDiOSVersion.app/SDiOSVersion";
 			};
 			name = Release;
@@ -1141,6 +1163,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1158,6 +1181,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dobrincusebastian.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "SDMacVersionTests/SDMacVersionTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SDMacVersion.app/Contents/MacOS/SDMacVersion";
 			};
 			name = Debug;
@@ -1166,6 +1192,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1180,6 +1207,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dobrincusebastian.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "SDMacVersionTests/SDMacVersionTests-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SDMacVersion.app/Contents/MacOS/SDMacVersion";
 			};
 			name = Release;

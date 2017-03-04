@@ -32,10 +32,9 @@ SDVersion supports iOS, watchOS, tvOS, and macOS. Browse through the implementat
 	</a>
 </p>
 
-## How it works 
+## How it works
 
 ```objective-c
-
       // Check for device model
       if ([SDVersion deviceVersion] == iPhone7)
            NSLog(@"You got the iPhone 7. Sweet 🍭!");
@@ -47,37 +46,36 @@ SDVersion supports iOS, watchOS, tvOS, and macOS. Browse through the implementat
       // Check for device screen size
       if ([SDVersion deviceSize] == Screen4Dot7inch)
            NSLog(@"Your screen is 4.7 inches");
-      
+
       // Check if screen is in zoom mode
       if ([SDVersion isZoomed])
       	   NSLog(@"Your device is in Zoom Mode 🔎");
-      
+
       // Get device name
-      NSLog(@"%@", DeviceVersionNames[[SDVersion deviceVersion]]);
+      NSLog(@"%@", [SDVersion deviceVersionName:[SDVersion deviceVersion]]);
       /* e.g: Outputs 'iPhone 7 Plus' */
-      
+
       // Check for iOS Version
-      if (iOSVersionGreaterThanOrEqual(@"10"))
+      if ([SDVersion versionGreaterThanOrEqualTo:@"10"])
            NSLog(@"You are running iOS 10 or above!");
-    
 ```
 
 ## Add to your project
- 
+
 There are 2 ways you can add SDVersion to your project:
- 
+
 ### Manual installation
 
- 
- Simply import the 'SDVersion' into your project then import the following in the class you want to use it: 
+
+ Simply import the 'SDVersion' into your project then import the following in the class you want to use it:
  ```objective-c
        #import "SDVersion.h"
- ```      
- In Swift, you need to import in the bridging header the specific library version, not the library wrapper: 
+ ```
+ In Swift, you need to import in the bridging header the specific library version, not the library wrapper:
   ```objective-c
        #import "SDiOSVersion.h" // Or SDMacVersion.h
- ```     
- 
+ ```
+
 ### Installation with CocoaPods
 
 CocoaPods is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like SDVersion in your projects. See the "[Getting Started](http://guides.cocoapods.org/syntax/podfile.html)" guide for more information.
@@ -89,13 +87,13 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
 
 
 ## iOS
-      
+
 ### Available methods
 ```objective-c
     + (DeviceVersion)deviceVersion;
 	+ (DeviceSize)resolutionSize;
 	+ (DeviceSize)deviceSize;
-	+ (NSString*)deviceName;
+	+ (NSString *)deviceName;
 	+ (BOOL)isZoomed;
 ```
 ### Targetable models
@@ -111,7 +109,7 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
     iPhoneSE
     iPhone7
     iPhone7Plus
-    
+
     iPad1
     iPad2
     iPadMini
@@ -133,36 +131,36 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
     iPodTouch6Gen
 
     Simulator
-
 ### Targetable screen sizes
     Screen3Dot5inch
     Screen4inch
     Screen4Dot7inch
     Screen5Dot5inch
-
 ### Available iOS Version Finder methods
-    iOSVersionEqualTo(@"v")  //E.g: iOSVersionEqualTo(@"9.3.1")
-    iOSVersionGreaterThan(@"v")
-	iOSVersionGreaterThanOrEqualTo(@"v")
-	iOSVersionLessThan(@"v")
-	iOSVersionLessThanOrEqualTo(@"v")       
+  ```objective-c
+      + (BOOL)versionEqualTo:(NSString *)version;
+      + (BOOL)versionGreaterThan:(NSString *)version;
+      + (BOOL)versionGreaterThanOrEqualTo:(NSString *)version;
+      + (BOOL)versionLessThan:(NSString *)version;
+      + (BOOL)versionLessThanOrEqualTo:(NSString *)version;
+  ```       
 
 ### Helpers
 ```objective-c
-	  NSLog(@"%@", DeviceVersionNames[[SDVersion deviceVersion]]);
+	  NSLog(@"%@", [SDVersion deviceVersionName:[SDVersion deviceVersion]]);
       /* e.g: Outputs 'iPad Air 2' */
-      
-      NSLog(@"%@", DeviceSizeNames[[SDVersion deviceSize]]);
+
+      NSLog(@"%@", [SDVersion deviceSizeName:[SDVersion deviceSize]]);
       /* e.g: Outputs '4.7 inch' */
 ```
 
 ## watchOS
-      
+
 ### Available methods
 ```objective-c
     + (DeviceVersion)deviceVersion;
 	+ (DeviceSize)deviceSize;
-	+ (NSString*)deviceName;
+	+ (NSString *)deviceName;
 ```
 ### Targetable models
 	Apple Watch 38mm
@@ -175,27 +173,29 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
     Screen42mm
 
 ### Available watchOS Version Finder methods
-    watchOSVersionEqualTo(@"v")  //E.g: watchOSVersionEqualTo(@"2.2")
-    watchOSVersionGreaterThan(@"v")
-	watchOSVersionGreaterThanOrEqualTo(@"v")
-	watchOSVersionLessThan(@"v")
-	watchOSVersionLessThanOrEqualTo(@"v")       
+```objective-c
+    + (BOOL)versionEqualTo:(NSString *)version;
+    + (BOOL)versionGreaterThan:(NSString *)version;
+    + (BOOL)versionGreaterThanOrEqualTo:(NSString *)version;
+    + (BOOL)versionLessThan:(NSString *)version;
+    + (BOOL)versionLessThanOrEqualTo:(NSString *)version;
+```      
 
 ### Helpers
 ```objective-c
-	  NSLog(@"%@", DeviceVersionNames[[SDVersion deviceVersion]]);
+	  NSLog(@"%@", [SDVersion deviceVersionName:[SDVersion deviceVersion]]);
       /* e.g: Outputs 'Apple Watch 42mm' */
-      
-      NSLog(@"%@", DeviceSizeNames[[SDVersion deviceSize]]);
+
+      NSLog(@"%@", [SDVersion deviceSizeName:[SDVersion deviceSize]]);
       /* e.g: Outputs '42mm' */
 ```
 
 ## tvOS
-      
+
 ### Available methods
 ```objective-c
     + (DeviceVersion)deviceVersion;
-	+ (NSString*)deviceName;
+	+ (NSString *)deviceName;
 ```
 ### Targetable models
 	Apple TV (4th Generation)
@@ -203,21 +203,22 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
     Simulator
 
 ### Available tvOS Version Finder methods
-    tvOSVersionEqualTo(@"v")  //E.g: watchOSVersionEqualTo(@"2.2")
-    tvOSVersionGreaterThan(@"v")
-	tvOSVersionGreaterThanOrEqualTo(@"v")
-	tvOSVersionLessThan(@"v")
-	tvOSVersionLessThanOrEqualTo(@"v")       
+```objective-c
+    + (BOOL)versionEqualTo:(NSString *)version;
+    + (BOOL)versionGreaterThan:(NSString *)version;
+    + (BOOL)versionGreaterThanOrEqualTo:(NSString *)version;
+    + (BOOL)versionLessThan:(NSString *)version;
+    + (BOOL)versionLessThanOrEqualTo:(NSString *)version;
+```       
 
 ### Helpers
 ```objective-c
-	  NSLog(@"%@", DeviceVersionNames[[SDVersion deviceVersion]]);
+	  NSLog(@"%@", [SDVersion deviceVersionName:[SDVersion deviceVersion]]);
       /* e.g: Outputs 'Apple TV (4th Generation)' */
 ```
 
 ## Mac OS
 ```objective-c
-
       // Check for device model
       if ([SDVersion deviceVersion] == DeviceVersionIMac)
           NSLog(@"So you have a iMac? 💻");
@@ -233,15 +234,14 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
       // Check for screen resolution
       if ([SDVersion deviceScreenResolution] == DeviceScreenRetina)
           NSLog(@"Nice retina screen!");
-    
+
       // Get screen resolution in pixels
-      NSLog(@"%@", DeviceScreenResolutionNames[[SDVersion deviceScreenResolution]]);
+      NSLog(@"%@", [SDVersion deviceScreenResolutionName:[SDVersion deviceScreenResolution]]);
       /* e.g: Outputs '{2880, 1800}' */
-      
+
       // Check OSX Version (pass the minor version)
-      if(OSXVersionGreaterThanOrEqualTo(@"11"))
+      if([SDVersion versionGreaterThanOrEqualTo:@"11"])
            NSLog(@"Looks like you are running OSX 10.11 El Capitan or 🆙.");
-    
 ```
 
 ### Available methods
@@ -271,25 +271,26 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
 	Mac13Inch
 	Mac12Inch
 	Mac11Inch
-    
+
 ### Targetable screen resolutions
     DeviceScreenRetina,
 	DeviceScreenNoRetina
 
 ### Available OSX Version Finder methods
-    OSXVersionEqualTo(@"v")  //E.g: OSXVersionEqualTo(@"11") - OSX 10.11
-    OSXVersionGreaterThan(@"v")
-	OSXVersionGreaterThanOrEqualTo(@"v")
-	OSXVersionLessThan(@"v")
-	OSXVersionLessThanOrEqualTo(@"v")        
-	/* 'v' must be the minor OS Version. e.g: OSX 10.9 - 'v' is 9 */
-
+```objective-c
+    + (BOOL)versionEqualTo:(NSString *)version;
+    + (BOOL)versionGreaterThan:(NSString *)version;
+    + (BOOL)versionGreaterThanOrEqualTo:(NSString *)version;
+    + (BOOL)versionLessThan:(NSString *)version;
+    + (BOOL)versionLessThanOrEqualTo:(NSString *)version;
+    /* 'v' must be the minor OS Version. e.g: OSX 10.9 - 'v' is 9 */
+```
 ### Helpers
 ```objective-c
-	  NSLog(@"%@", DeviceSizeNames[[SDVersion deviceSize]]);
+	  NSLog(@"%@", [SDVersion deviceSizeName:[SDVersion deviceSize]]);
       /* e.g: Outputs '15 inch' */
-      
-      NSLog(@"%@",DeviceScreenResolutionNames[[SDVersion deviceScreenResolution]])
+
+      NSLog(@"%@",[SDVersion deviceScreenResolutionName:[SDVersion deviceScreenResolution]])
       /* e.g: Outputs '{2880, 1800}' */
 ```
 
