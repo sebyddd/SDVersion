@@ -23,8 +23,8 @@ class iOSVersionTests: XCTestCase {
     func testExample() {
         let deviceSizeName = SDiOSVersion.deviceSizeName(SDiOSVersion.deviceSize())
         XCTAssert((deviceSizeName != nil))
-        let deviceVersionName = SDiOSVersion.deviceVersionName(SDiOSVersion.deviceVersion())
+        let deviceVersionName = SDiOSVersion.deviceNameString()
         XCTAssert((deviceVersionName != nil))
     }
-    
+	
 }

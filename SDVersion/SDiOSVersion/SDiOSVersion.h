@@ -8,6 +8,9 @@
 #import <Foundation/Foundation.h>
 
 typedef NS_ENUM(NSInteger, DeviceVersion){
+	UnknownDevice     = 0,
+	Simulator         = 1,
+	
     iPhone4           = 3,
     iPhone4S          = 4,
     iPhone5           = 5,
@@ -39,9 +42,7 @@ typedef NS_ENUM(NSInteger, DeviceVersion){
     iPodTouch3Gen     = 29,
     iPodTouch4Gen     = 30,
     iPodTouch5Gen     = 31,
-    iPodTouch6Gen     = 32,
-    
-    Simulator         =  0
+    iPodTouch6Gen     = 32
 };
 
 typedef NS_ENUM(NSInteger, DeviceSize){
@@ -55,11 +56,11 @@ typedef NS_ENUM(NSInteger, DeviceSize){
 @interface SDiOSVersion : NSObject
 
 + (DeviceVersion)deviceVersion;
-+ (NSString *)deviceVersionName:(DeviceVersion)deviceVersion;
++ (NSString *)deviceNameForVersion:(DeviceVersion)deviceVersion;
 + (DeviceSize)resolutionSize;
 + (DeviceSize)deviceSize;
 + (NSString *)deviceSizeName:(DeviceSize)deviceSize;
-+ (NSString *)deviceName;
++ (NSString *)deviceNameString;
 + (BOOL)isZoomed;
 
 + (BOOL)versionEqualTo:(NSString *)version;

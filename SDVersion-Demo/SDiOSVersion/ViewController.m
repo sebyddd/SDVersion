@@ -14,7 +14,7 @@
     [super viewDidLoad];
     
     // Get device name as NSString
-    self.iphoneVersionLabel.text = [self.iphoneVersionLabel.text stringByAppendingString:[SDVersion deviceVersionName:[SDVersion deviceVersion]]];
+    self.iphoneVersionLabel.text = [self.iphoneVersionLabel.text stringByAppendingString:[SDVersion deviceNameString]];
 
     // Get device size using string conversion
     self.iphoneSizeLabel.text = [self.iphoneSizeLabel.text stringByAppendingString:[NSString stringWithFormat:@"%@", [SDVersion deviceSizeName:[SDVersion deviceSize]]]];

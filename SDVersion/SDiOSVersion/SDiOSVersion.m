@@ -145,19 +145,12 @@
              }[@(deviceSize)];
 }
 
-+ (NSString *)deviceName
++ (NSString *)deviceNameString
 {
-    struct utsname systemInfo;
-    uname(&systemInfo);
-    NSString *code = [NSString stringWithCString:systemInfo.machine encoding:NSUTF8StringEncoding];
-    if ([code isEqualToString:@"x86_64"] || [code isEqualToString:@"i386"]) {
-        code = @"Simulator";
-    }
-    
-    return code;
+    return [SDiOSVersion deviceNameForVersion:[SDiOSVersion deviceVersion]];
 }
 
-+ (NSString *)deviceVersionName:(DeviceVersion)deviceVersion
++ (NSString *)deviceNameForVersion:(DeviceVersion)deviceVersion
 {
     return @{
              @(iPhone4)           : @"iPhone 4",
@@ -193,15 +186,13 @@
              @(iPodTouch5Gen)     : @"iPod Touch 5th Gen",
              @(iPodTouch6Gen)     : @"iPod Touch 6th Gen",
              
-             @(Simulator)         : @"Simulator"
+             @(Simulator)         : @"Simulator",
+			 @(UnknownDevice)     : @"Unknown Device"
              }[@(deviceVersion)];
 }
 
-#define IS_ZOOMED_IPHONE_6 (MAX([[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width) == 568.0 && [UIScreen mainScreen].nativeScale > [UIScreen mainScreen].scale)
-#define IS_ZOOMED_IPHONE_6_PLUS (MAX([[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width) == 667.0 && [UIScreen mainScreen].nativeScale < [UIScreen mainScreen].scale)
-
-+ (BOOL)isZoomed {
-    
++ (BOOL)isZoomed
+{
     if ([self resolutionSize] == Screen4Dot7inch && [UIScreen mainScreen].nativeScale > [UIScreen mainScreen].scale) {
         return YES;
     }else if ([self resolutionSize] == Screen5Dot5inch && [UIScreen mainScreen].nativeScale < [UIScreen mainScreen].scale){
