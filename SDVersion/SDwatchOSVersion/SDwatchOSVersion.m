@@ -34,6 +34,15 @@
     return version;
 }
 
++ (NSString *)deviceVersionName:(DeviceVersion)deviceVersion
+{
+    return @{
+             @(AppleWatch38mm) : @"Apple Watch 38mm",
+             @(AppleWatch42mm) : @"Apple Watch 42mm",
+             @(Simulator)      : @"Simulator"
+             }[@(deviceVersion)];
+}
+
 + (DeviceSize)deviceSize
 {
     CGFloat screenHeight = CGRectGetHeight([WKInterfaceDevice currentDevice].screenBounds);
@@ -47,7 +56,16 @@
     }
 }
 
-+ (NSString*)deviceName
++ (NSString *)deviceSizeName:(DeviceSize)deviceSize
+{
+    return @{
+             @(UnknownSize) : @"Unknown Size",
+             @(Screen38mm)  : @"38mm",
+             @(Screen42mm)  : @"42mm"
+             }[@(deviceSize)];
+}
+
++ (NSString *)deviceName
 {
     struct utsname systemInfo;
     uname(&systemInfo);
@@ -59,5 +77,29 @@
     return code;
 }
 
++ (BOOL)versionEqualTo:(NSString *)version
+{
+    return ([[[WKInterfaceDevice currentDevice] systemVersion] compare:version options:NSNumericSearch] == NSOrderedSame);
+}
+
++ (BOOL)versionGreaterThan:(NSString *)version
+{
+    return ([[[WKInterfaceDevice currentDevice] systemVersion] compare:version options:NSNumericSearch] == NSOrderedDescending);
+}
+
++ (BOOL)versionGreaterThanOrEqualTo:(NSString *)version
+{
+    return ([[[WKInterfaceDevice currentDevice] systemVersion] compare:version options:NSNumericSearch] != NSOrderedAscending);
+}
+
++ (BOOL)versionLessThan:(NSString *)version
+{
+    return ([[[WKInterfaceDevice currentDevice] systemVersion] compare:version options:NSNumericSearch] == NSOrderedAscending);
+}
+
++ (BOOL)versionLessThanOrEqualTo:(NSString *)version
+{
+    return ([[[WKInterfaceDevice currentDevice] systemVersion] compare:version options:NSNumericSearch] != NSOrderedDescending);
+}
 
 @end

@@ -22,16 +22,16 @@
     [super viewDidLoad];
     
     // Get device name as NSString
-    self.tvVersionLabel.text = [self.tvVersionLabel.text stringByAppendingString:DeviceVersionNames[[SDtvOSVersion deviceVersion]]];
+    self.tvVersionLabel.text = [self.tvVersionLabel.text stringByAppendingString:[SDtvOSVersion deviceVersionName:[SDtvOSVersion deviceVersion]]];
     
     // Check for device model
     if ([SDtvOSVersion deviceVersion] == AppleTV4)
         NSLog(@"You got the fourth-generation Apple TV. Nice!");
     
     //Check for tvOS Version
-    if (tvOSVersionGreaterThanOrEqualTo(@"10"))
+    if ([SDtvOSVersion versionGreaterThanOrEqualTo:@"10"])
         NSLog(@"You are running tvOS 🔟 or above!");
-    else if (tvOSVersionLessThanOrEqualTo(@"9.2"))
+    else if ([SDtvOSVersion versionLessThanOrEqualTo:@"9.2"])
         NSLog(@"You're on tvOS 9.2 or below! ⏳");
 }
 

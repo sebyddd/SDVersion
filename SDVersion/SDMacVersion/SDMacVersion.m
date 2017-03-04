@@ -109,8 +109,33 @@ static NSString * const SDMacResolution  = @"SDMacResolution";
 	return [[[self deviceInformationForModel:[self currentModel]] objectForKey:SDMacScreenSize] integerValue];
 }
 
++ (NSString *)deviceSizeName:(DeviceSize)deviceSize
+{
+    return @{
+             @(UnknownSize)   : @"Unknown Size",
+             @(Mac27Inch)     : @"27 inch",
+             @(Mac24Inch)     : @"24 inch",
+             @(Mac21Dot5Inch) : @"21.5 inch",
+             @(Mac20Inch)     : @"20 inch",
+             @(Mac17Inch)     : @"17 inch",
+             @(Mac15Inch)     : @"15 inch",
+             @(Mac13Inch)     : @"13 inch",
+             @(Mac12Inch)     : @"12 inch",
+             @(Mac11Inch)     : @"11 inch"
+             }[@(deviceSize)];
+}
+
 + (DeviceScreenResolution)deviceScreenResolution {
 	return [[[self deviceInformationForModel:[self currentModel]] objectForKey:SDMacResolution] integerValue];
+}
+
++ (NSString *)deviceScreenResolutionName:(DeviceScreenResolution)deviceScreenResolution
+{
+    return @{
+             @(UnknownResolution)    : @"Unknown resolution",
+             @(DeviceScreenRetina)   : @"Retina screen",
+             @(DeviceScreenNoRetina) : @"Non-retina screen"
+             }[@(deviceScreenResolution)];
 }
 
 + (NSString *)deviceVersionString {
@@ -126,6 +151,31 @@ static NSString * const SDMacResolution  = @"SDMacResolution";
     if ([[[self deviceInformationForModel:[self currentModel]] objectForKey:SDMacResolution] integerValue] == DeviceScreenRetina)
         return NSMakeSize(pixelSize.width*2, pixelSize.height*2);
 	return pixelSize;
+}
+
++ (BOOL)versionEqualTo:(NSString *)version
+{
+    return ([[@([[NSProcessInfo processInfo]operatingSystemVersion].minorVersion) stringValue] compare:version options:NSNumericSearch] == NSOrderedSame);
+}
+
++ (BOOL)versionGreaterThan:(NSString *)version
+{
+    return ([[@([[NSProcessInfo processInfo]operatingSystemVersion].minorVersion) stringValue] compare:version options:NSNumericSearch] == NSOrderedDescending);
+}
+
++ (BOOL)versionGreaterThanOrEqualTo:(NSString *)version
+{
+    return ([[@([[NSProcessInfo processInfo]operatingSystemVersion].minorVersion) stringValue] compare:version options:NSNumericSearch] != NSOrderedAscending);
+}
+
++ (BOOL)versionLessThan:(NSString *)version
+{
+    return ([[@([[NSProcessInfo processInfo]operatingSystemVersion].minorVersion) stringValue] compare:version options:NSNumericSearch] == NSOrderedAscending);
+}
+
++ (BOOL)versionLessThanOrEqualTo:(NSString *)version
+{
+    return ([[@([[NSProcessInfo processInfo]operatingSystemVersion].minorVersion) stringValue]compare:version options:NSNumericSearch] != NSOrderedDescending);
 }
 
 #pragma mark - Helpers

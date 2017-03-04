@@ -6,6 +6,9 @@
 //
 
 #import "SDiOSVersion.h"
+#import <CoreGraphics/CoreGraphics.h>
+#import <UIKit/UIKit.h>
+#import <sys/utsname.h>
 
 @implementation SDiOSVersion
 
@@ -103,7 +106,7 @@
 {
     CGFloat screenHeight = 0;
     
-    if (iOSVersionGreaterThanOrEqualTo(@"8")) {
+    if ([SDiOSVersion versionGreaterThanOrEqualTo:@"8"]) {
         screenHeight = MAX([[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width);
     } else {
         screenHeight = [[UIScreen mainScreen] bounds].size.height;
@@ -131,7 +134,18 @@
     return deviceSize;
 }
 
-+ (NSString*)deviceName
++ (NSString *)deviceSizeName:(DeviceSize)deviceSize
+{
+    return @{
+             @(UnknownSize)     : @"Unknown Size",
+             @(Screen3Dot5inch) : @"3.5 inch",
+             @(Screen4inch)     : @"4 inch",
+             @(Screen4Dot7inch) : @"4.7 inch",
+             @(Screen5Dot5inch) : @"5.5 inch"
+             }[@(deviceSize)];
+}
+
++ (NSString *)deviceName
 {
     struct utsname systemInfo;
     uname(&systemInfo);
@@ -141,6 +155,46 @@
     }
     
     return code;
+}
+
++ (NSString *)deviceVersionName:(DeviceVersion)deviceVersion
+{
+    return @{
+             @(iPhone4)           : @"iPhone 4",
+             @(iPhone4S)          : @"iPhone 4S",
+             @(iPhone5)           : @"iPhone 5",
+             @(iPhone5C)          : @"iPhone 5C",
+             @(iPhone5S)          : @"iPhone 5S",
+             @(iPhone6)           : @"iPhone 6",
+             @(iPhone6Plus)       : @"iPhone 6 Plus",
+             @(iPhone6S)          : @"iPhone 6S",
+             @(iPhone6SPlus)      : @"iPhone 6S Plus",
+             @(iPhone7)           : @"iPhone 7",
+             @(iPhone7Plus)       : @"iPhone 7 Plus",
+             @(iPhoneSE)          : @"iPhone SE",
+             
+             @(iPad1)             : @"iPad 1",
+             @(iPad2)             : @"iPad 2",
+             @(iPadMini)          : @"iPad Mini",
+             @(iPad3)             : @"iPad 3",
+             @(iPad4)             : @"iPad 4",
+             @(iPadAir)           : @"iPad Air",
+             @(iPadMini2)         : @"iPad Mini 2",
+             @(iPadAir2)          : @"iPad Air 2",
+             @(iPadMini3)         : @"iPad Mini 3",
+             @(iPadMini4)         : @"iPad Mini 4",
+             @(iPadPro9Dot7Inch)  : @"iPad Pro",
+             @(iPadPro12Dot9Inch) : @"iPad Pro",
+             
+             @(iPodTouch1Gen)     : @"iPod Touch 1st Gen",
+             @(iPodTouch2Gen)     : @"iPod Touch 2nd Gen",
+             @(iPodTouch3Gen)     : @"iPod Touch 3rd Gen",
+             @(iPodTouch4Gen)     : @"iPod Touch 4th Gen",
+             @(iPodTouch5Gen)     : @"iPod Touch 5th Gen",
+             @(iPodTouch6Gen)     : @"iPod Touch 6th Gen",
+             
+             @(Simulator)         : @"Simulator"
+             }[@(deviceVersion)];
 }
 
 #define IS_ZOOMED_IPHONE_6 (MAX([[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width) == 568.0 && [UIScreen mainScreen].nativeScale > [UIScreen mainScreen].scale)
@@ -155,6 +209,31 @@
     }
     
     return NO;
+}
+
++ (BOOL)versionEqualTo:(NSString *)version
+{
+    return ([[[UIDevice currentDevice] systemVersion] compare:version options:NSNumericSearch] == NSOrderedSame);
+}
+
++ (BOOL)versionGreaterThan:(NSString *)version
+{
+    return ([[[UIDevice currentDevice] systemVersion] compare:version options:NSNumericSearch] == NSOrderedDescending);
+}
+
++ (BOOL)versionGreaterThanOrEqualTo:(NSString *)version
+{
+    return ([[[UIDevice currentDevice] systemVersion] compare:version options:NSNumericSearch] != NSOrderedAscending);
+}
+
++ (BOOL)versionLessThan:(NSString *)version
+{
+    return ([[[UIDevice currentDevice] systemVersion] compare:version options:NSNumericSearch] == NSOrderedAscending);
+}
+
++ (BOOL)versionLessThanOrEqualTo:(NSString *)version
+{
+    return ([[[UIDevice currentDevice] systemVersion] compare:version options:NSNumericSearch] != NSOrderedDescending);
 }
 
 @end

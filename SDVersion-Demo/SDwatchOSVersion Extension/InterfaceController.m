@@ -16,10 +16,10 @@
     [super awakeWithContext:context];
 
     // Get device name as NSString
-    [self.watchVersionLabel setText:[@"Watch Version: " stringByAppendingString:DeviceVersionNames[[SDwatchOSVersion deviceVersion]]]];
+    [self.watchVersionLabel setText:[@"Watch Version: " stringByAppendingString:[SDwatchOSVersion deviceVersionName:[SDwatchOSVersion deviceVersion]]]];
     
     // Get device size using string conversion
-    [self.watchSizeLabel setText:[@"Watch Size: " stringByAppendingString:DeviceSizeNames[[SDwatchOSVersion deviceSize]]]];
+    [self.watchSizeLabel setText:[@"Watch Size: " stringByAppendingString:[SDwatchOSVersion deviceSizeName:[SDwatchOSVersion deviceSize]]]];
     
     if ([SDwatchOSVersion deviceVersion] == AppleWatch42mm)
         NSLog(@"You got the Apple Watch 42mm. Nice!");
@@ -33,9 +33,9 @@
         NSLog(@"Your screen size is 42mm");
     
     //Check for iOS Version
-    if (watchOSVersionGreaterThanOrEqualTo(@"3"))
+    if ([SDwatchOSVersion versionGreaterThanOrEqualTo:@"3"])
         NSLog(@"You are running watchOS 3️⃣ or above!");
-    else if (watchOSVersionLessThanOrEqualTo(@"2.2"))
+    else if ([SDwatchOSVersion versionLessThanOrEqualTo:@"2.2"])
         NSLog(@"You're on watchOS 2.2 or below! ⏳");
 }
 

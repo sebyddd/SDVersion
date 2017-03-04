@@ -31,7 +31,15 @@
     return version;
 }
 
-+ (NSString*)deviceName
++ (NSString *)deviceVersionName:(DeviceVersion)deviceVersion
+{
+    return @{
+             @(AppleTV4)          : @"Apple TV (4th Generation)",
+             @(Simulator)         : @"Simulator"
+             }[@(deviceVersion)];
+}
+
++ (NSString *)deviceName
 {
     struct utsname systemInfo;
     uname(&systemInfo);
@@ -41,6 +49,31 @@
     }
     
     return code;
+}
+
++ (BOOL)versionEqualTo:(NSString *)version
+{
+    return ([[[UIDevice currentDevice] systemVersion] compare:version options:NSNumericSearch] == NSOrderedSame);
+}
+
++ (BOOL)versionGreaterThan:(NSString *)version
+{
+    return ([[[UIDevice currentDevice] systemVersion] compare:version options:NSNumericSearch] == NSOrderedDescending);
+}
+
++ (BOOL)versionGreaterThanOrEqualTo:(NSString *)version
+{
+    return ([[[UIDevice currentDevice] systemVersion] compare:version options:NSNumericSearch] != NSOrderedAscending);
+}
+
++ (BOOL)versionLessThan:(NSString *)version
+{
+    return ([[[UIDevice currentDevice] systemVersion] compare:version options:NSNumericSearch] == NSOrderedAscending);
+}
+
++ (BOOL)versionLessThanOrEqualTo:(NSString *)version
+{
+    return ([[[UIDevice currentDevice] systemVersion] compare:version options:NSNumericSearch] != NSOrderedDescending);
 }
 
 @end

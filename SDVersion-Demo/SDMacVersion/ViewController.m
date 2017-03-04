@@ -16,17 +16,17 @@
     
     // Get device info
     NSString *deviceVersion    = [SDVersion deviceVersionString];                                // Eg.: MacBookPro
-    NSString *deviceSize       = DeviceSizeNames[[SDVersion deviceSize]];                   // Eg.: 15 inch
+    NSString *deviceSize       = [SDVersion deviceSizeName:[SDVersion deviceSize]];                   // Eg.: 15 inch
     NSString *devicePixelSize  = NSStringFromSize([SDVersion deviceScreenResolutionPixelSize]);  // Eg.: Retina screen
-    NSString *deviceResolution = DeviceScreenResolutionNames[[SDVersion deviceScreenResolution]]; // Eg.: {2880, 1800}
+    NSString *deviceResolution = [SDVersion deviceScreenResolutionName:[SDVersion deviceScreenResolution]]; // Eg.: {2880, 1800}
     
     
     // Check OSX Version
-    if (OSXVersionLessThanOrEqualTo(@"10"))
+    if ([SDVersion versionLessThanOrEqualTo:@"10"])
         NSLog(@"You're running Yosemite or below.");
-    else if(OSXVersionGreaterThanOrEqualTo(@"11"))
+    else if([SDVersion versionGreaterThanOrEqualTo:@"11"])
         NSLog(@"Looks like you are running OSX 10.11 El Capitan or 🆙.");
-    else if (OSXVersionEqualTo(@"9"))
+    else if ([SDVersion versionEqualTo:@"9"])
         NSLog(@"Mavericks, what the hell ⁉️");
     
     
