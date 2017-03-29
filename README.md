@@ -153,6 +153,7 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
     iPadMini4
     iPadPro9Dot7Inch
     iPadPro12Dot9Inch
+    iPad5
 
 	iPodTouch1Gen
     iPodTouch2Gen
@@ -201,6 +202,10 @@ Or in Swift:
 ### Targetable models
 	Apple Watch 38mm
     Apple Watch 42mm
+    Apple Watch 38mm Series 1
+    Apple Watch 42mm Series 1
+    Apple Watch 38mm Series 2
+    Apple Watch 42mm Series 2
 
     Simulator
 
