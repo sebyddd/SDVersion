@@ -17,7 +17,11 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         deviceNamesByCode = @{ @"Watch1,1" : @(AppleWatch38mm),
-                               @"Watch1,2" : @(AppleWatch42mm) };
+                               @"Watch1,2" : @(AppleWatch42mm),
+                               @"Watch2,6" : @(AppleWatch38mmSeries1),
+                               @"Watch2,7" : @(AppleWatch42mmSeries1),
+                               @"Watch2,3" : @(AppleWatch38mmSeries1),
+                               @"Watch2,4" : @(AppleWatch42mmSeries2) };
     });
     
     return deviceNamesByCode;
@@ -37,9 +41,13 @@
 + (NSString *)deviceVersionName:(DeviceVersion)deviceVersion
 {
     return @{
-             @(AppleWatch38mm) : @"Apple Watch 38mm",
-             @(AppleWatch42mm) : @"Apple Watch 42mm",
-             @(Simulator)      : @"Simulator"
+             @(AppleWatch38mm)        : @"Apple Watch 38mm",
+             @(AppleWatch42mm)        : @"Apple Watch 42mm",
+             @(AppleWatch38mmSeries1) : @"Apple Watch Series 1 38mm",
+             @(AppleWatch42mmSeries1) : @"Apple Watch Series 1 42mm",
+             @(AppleWatch38mmSeries2) : @"Apple Watch Series 2 38mm",
+             @(AppleWatch42mmSeries2) : @"Apple Watch Series 2 42mm",
+             @(Simulator)             : @"Simulator"
              }[@(deviceVersion)];
 }
 

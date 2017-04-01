@@ -9,12 +9,17 @@
 #import <WatchKit/WatchKit.h>
 
 typedef NS_ENUM(NSInteger, DeviceVersion) {
-    AppleWatch38mm = 1,
-    AppleWatch42mm = 2,
-    Simulator      = 0
+    AppleWatch38mm        = 1,
+    AppleWatch42mm        = 2,
+    AppleWatch38mmSeries1 = 3,
+    AppleWatch42mmSeries1 = 4,
+    AppleWatch38mmSeries2 = 5,
+    AppleWatch42mmSeries2 = 6,
+    
+    Simulator = 0
 };
 
-typedef NS_ENUM(NSInteger, DeviceSize){
+typedef NS_ENUM(NSInteger, DeviceSize) {
     UnknownSize = 0,
     Screen38mm  = 1,
     Screen42mm  = 2
