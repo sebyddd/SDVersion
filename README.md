@@ -328,7 +328,7 @@ Or in Swift:
 ```
 ### Helpers
 ```objective-c
-	  NSLog(@"%@", [SDVersion deviceSizeName:[SDVersion deviceSize]]);
+      NSLog(@"%@", [SDVersion deviceSizeName:[SDVersion deviceSize]]);
       /* e.g: Outputs '15 inch' */
 
       NSLog(@"%@",[SDVersion deviceScreenResolutionName:[SDVersion deviceScreenResolution]])
