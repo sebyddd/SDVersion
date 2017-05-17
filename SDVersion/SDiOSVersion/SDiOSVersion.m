@@ -130,11 +130,15 @@
 {
     DeviceSize deviceSize = [self resolutionSize];
     if ([self isZoomed]) {
-        deviceSize = Screen5Dot5inch;
+        if (deviceSize == Screen4inch) {
+            deviceSize = Screen4Dot7inch;
+        } else if (deviceSize == Screen4Dot7inch) {
+            deviceSize = Screen5Dot5inch;
+        }
     }
-    
     return deviceSize;
 }
+
 
 + (NSString *)deviceSizeName:(DeviceSize)deviceSize
 {
@@ -196,9 +200,9 @@
 
 + (BOOL)isZoomed
 {
-    if ([self resolutionSize] == Screen4Dot7inch && [UIScreen mainScreen].nativeScale > [UIScreen mainScreen].scale) {
+    if ([self resolutionSize] == Screen4inch && [UIScreen mainScreen].nativeScale > 2) {
         return YES;
-    }else if ([self resolutionSize] == Screen5Dot5inch && [UIScreen mainScreen].nativeScale < [UIScreen mainScreen].scale){
+    }else if ([self resolutionSize] == Screen4Dot7inch && [UIScreen mainScreen].scale == 3){
         return YES;
     }
     
