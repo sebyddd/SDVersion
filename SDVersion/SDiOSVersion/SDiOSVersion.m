@@ -186,7 +186,7 @@
              @(iPadPro12Dot9Inch)    : @"iPad Pro",
              @(iPad5)                : @"iPad 5",
              @(iPadPro10Dot5Inch)    : @"iPad Pro",
-             @(iPadPro12Dot9Inch2Gen): @"iPadPro",
+             @(iPadPro12Dot9Inch2Gen): @"iPad Pro",
              
              @(iPodTouch1Gen)        : @"iPod Touch 1st Gen",
              @(iPodTouch2Gen)        : @"iPod Touch 2nd Gen",
