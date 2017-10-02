@@ -183,6 +183,7 @@
              @(iPhone7)              : @"iPhone 7",
              @(iPhone7Plus)          : @"iPhone 7 Plus",
              @(iPhone8)              : @"iPhone 8",
+             @(iPhone8Plus)          : @"iPhone 8 Plus",
              @(iPhoneX)              : @"iPhone X",
              @(iPhoneSE)             : @"iPhone SE",
              
