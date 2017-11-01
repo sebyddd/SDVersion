@@ -9,6 +9,7 @@
 
 typedef NS_ENUM(NSInteger, DeviceVersion) {
     AppleTV4          = 1,
+    AppleTV4K         = 2,
     Simulator         = 0
 };
 
