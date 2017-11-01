@@ -7,6 +7,10 @@
 
 #import "SDtvOSVersion.h"
 
+#import <CoreGraphics/CoreGraphics.h>
+#import <UIKit/UIKit.h>
+#import <sys/utsname.h>
+
 @implementation SDtvOSVersion
 
 + (NSDictionary*)deviceNamesByCode

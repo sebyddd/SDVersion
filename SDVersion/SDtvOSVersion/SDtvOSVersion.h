@@ -6,9 +6,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CoreGraphics/CoreGraphics.h>
-#import <UIKit/UIKit.h>
-#import <sys/utsname.h>
 
 typedef NS_ENUM(NSInteger, DeviceVersion) {
     AppleTV4          = 1,
