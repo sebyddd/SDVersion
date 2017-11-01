@@ -18,10 +18,10 @@
         deviceNamesByCode = @{
                               @"Watch1,1" : @(AppleWatch38mm),
                               @"Watch1,2" : @(AppleWatch42mm),
-                              @"Watch2,3" : @(AppleWatch38mmSeries1),
-                              @"Watch2,4" : @(AppleWatch42mmSeries2),
                               @"Watch2,6" : @(AppleWatch38mmSeries1),
                               @"Watch2,7" : @(AppleWatch42mmSeries1),
+                              @"Watch2,3" : @(AppleWatch38mmSeries2),
+                              @"Watch2,4" : @(AppleWatch42mmSeries2),
                               @"Watch3,1" : @(AppleWatch38mmSeries3),
                               @"Watch3,2" : @(AppleWatch42mmSeries3),
                               @"Watch3,3" : @(AppleWatch38mmSeries3),
