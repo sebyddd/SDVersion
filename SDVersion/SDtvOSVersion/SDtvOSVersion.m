@@ -7,6 +7,10 @@
 
 #import "SDtvOSVersion.h"
 
+#import <CoreGraphics/CoreGraphics.h>
+#import <UIKit/UIKit.h>
+#import <sys/utsname.h>
+
 @implementation SDtvOSVersion
 
 + (NSDictionary*)deviceNamesByCode
@@ -14,7 +18,10 @@
     static NSDictionary *deviceNamesByCode = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        deviceNamesByCode = @{ @"AppleTV5,3" : @(AppleTV4) };
+        deviceNamesByCode = @{
+                              @"AppleTV5,3" : @(AppleTV4),
+                              @"AppleTV6,2" : @(AppleTV4K),
+                              };
     });
     
     return deviceNamesByCode;
@@ -35,6 +42,7 @@
 {
     return @{
              @(AppleTV4)          : @"Apple TV (4th Generation)",
+             @(AppleTV4K)         : @"Apple TV 4K",
              @(Simulator)         : @"Simulator"
              }[@(deviceVersion)];
 }

@@ -2,7 +2,6 @@
 //  SDwatchOSVersion.h
 //  SDVersion
 //
-//  Created by Jeff Kelley on 6/29/16.
 //  Copyright © 2016 Sebastian Dobrincu. All rights reserved.
 //
 
@@ -15,6 +14,8 @@ typedef NS_ENUM(NSInteger, DeviceVersion) {
     AppleWatch42mmSeries1 = 4,
     AppleWatch38mmSeries2 = 5,
     AppleWatch42mmSeries2 = 6,
+    AppleWatch38mmSeries3 = 7,
+    AppleWatch42mmSeries3 = 8,
     
     Simulator = 0
 };

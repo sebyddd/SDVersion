@@ -2,7 +2,6 @@
 //  SDwatchOSVersion.m
 //  SDVersion
 //
-//  Created by Jeff Kelley on 6/29/16.
 //  Copyright © 2016 Sebastian Dobrincu. All rights reserved.
 //
 
@@ -16,12 +15,18 @@
     static NSDictionary *deviceNamesByCode = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        deviceNamesByCode = @{ @"Watch1,1" : @(AppleWatch38mm),
-                               @"Watch1,2" : @(AppleWatch42mm),
-                               @"Watch2,6" : @(AppleWatch38mmSeries1),
-                               @"Watch2,7" : @(AppleWatch42mmSeries1),
-                               @"Watch2,3" : @(AppleWatch38mmSeries1),
-                               @"Watch2,4" : @(AppleWatch42mmSeries2) };
+        deviceNamesByCode = @{
+                              @"Watch1,1" : @(AppleWatch38mm),
+                              @"Watch1,2" : @(AppleWatch42mm),
+                              @"Watch2,6" : @(AppleWatch38mmSeries1),
+                              @"Watch2,7" : @(AppleWatch42mmSeries1),
+                              @"Watch2,3" : @(AppleWatch38mmSeries2),
+                              @"Watch2,4" : @(AppleWatch42mmSeries2),
+                              @"Watch3,1" : @(AppleWatch38mmSeries3),
+                              @"Watch3,2" : @(AppleWatch42mmSeries3),
+                              @"Watch3,3" : @(AppleWatch38mmSeries3),
+                              @"Watch3,4" : @(AppleWatch42mmSeries3),
+                              };
     });
     
     return deviceNamesByCode;
@@ -47,6 +52,8 @@
              @(AppleWatch42mmSeries1) : @"Apple Watch Series 1 42mm",
              @(AppleWatch38mmSeries2) : @"Apple Watch Series 2 38mm",
              @(AppleWatch42mmSeries2) : @"Apple Watch Series 2 42mm",
+             @(AppleWatch38mmSeries3) : @"Apple Watch Series 3 38mm",
+             @(AppleWatch42mmSeries3) : @"Apple Watch Series 3 42mm",
              @(Simulator)             : @"Simulator"
              }[@(deviceVersion)];
 }
