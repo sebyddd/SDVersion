@@ -134,8 +134,9 @@
         return Screen5Dot5inch;
     } else if (screenHeight == 812) {
         return Screen5Dot8inch;
-    } else
+    } else {
         return UnknownSize;
+    }
 }
 
 + (DeviceSize)deviceSize
@@ -219,7 +220,7 @@
 {
     if ([self resolutionSize] == Screen4inch && [UIScreen mainScreen].nativeScale > 2) {
         return YES;
-    }else if ([self resolutionSize] == Screen4Dot7inch && [UIScreen mainScreen].scale == 3){
+    } else if ([self resolutionSize] == Screen4Dot7inch && [UIScreen mainScreen].scale != [UIScreen mainScreen].nativeScale) {
         return YES;
     }
     
