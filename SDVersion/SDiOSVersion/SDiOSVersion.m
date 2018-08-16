@@ -143,6 +143,10 @@
         return Screen5Dot5inch;
     } else if (screenHeight == 812) {
         return Screen5Dot8inch;
+    //} else if (screenHeight == 2732) {
+        //ipad 12.9
+    //} else if (screenHeight == 2224) {
+        //ipad 10.5
     } else
         return UnknownSize;
 }
