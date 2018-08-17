@@ -142,13 +142,13 @@
     } else if(screenHeight == 736) {
         return Screen5Dot5inch;
     } else if (screenHeight == 812) {
-        return Screen5Dot8inch;
-    //} else if (screenHeight == 1366) {
-        //ipad 12.9
-    //} else if (screenHeight == 1112) {
-        //ipad 10.5
-    //} else if (screenHeight == 1024) {
-        //ipad 9.7
+        return Screen5Dot8inch; 
+    } else if (screenHeight == 1366) {
+        return Screen12Dot9inch;
+    } else if (screenHeight == 1112) {
+        return Screen10Dot5inch;
+    } else if (screenHeight == 1024) {
+        return Screen9Dot7inch;
     } else
         return UnknownSize;
 }
