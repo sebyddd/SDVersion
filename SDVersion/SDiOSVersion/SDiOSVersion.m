@@ -116,12 +116,13 @@
 
 + (DeviceSize)resolutionSize
 {
+    CGSize screenSize = [UIScreen mainScreen].bounds.size;
     CGFloat screenHeight = 0;
     
     if ([SDiOSVersion versionGreaterThanOrEqualTo:@"8"]) {
-        screenHeight = MAX([[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width);
+        screenHeight = MAX(screenSize.height, screenSize.width);
     } else {
-        screenHeight = [[UIScreen mainScreen] bounds].size.height;
+        screenHeight = screenSize.height;
     }
     
     if (screenHeight == 480) {
