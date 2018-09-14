@@ -116,7 +116,9 @@
 
 + (DeviceSize)resolutionSize
 {
-    CGSize screenSize = [UIScreen mainScreen].bounds.size;
+    UIScreen *screen = [UIScreen mainScreen];
+    CGSize screenSize = screen.bounds.size;
+    CGFloat screenScale = screen.scale;
     CGFloat screenHeight = 0;
     
     if ([SDiOSVersion versionGreaterThanOrEqualTo:@"8"]) {
@@ -135,6 +137,10 @@
         return Screen5Dot5inch;
     } else if (screenHeight == 812) {
         return Screen5Dot8inch;
+    } else if (screenHeight == 896 && screenScale == 2) {
+        return Screen6Dot1inch;
+    } else if (screenHeight == 896 && screenScale == 3) {
+        return Screen6Dot5inch;
     } else
         return UnknownSize;
 }
@@ -161,6 +167,8 @@
              @(Screen4Dot7inch) : @"4.7 inch",
              @(Screen5Dot5inch) : @"5.5 inch",
              @(Screen5Dot8inch) : @"5.8 inch",
+             @(Screen6Dot1inch) : @"6.1 inch",
+             @(Screen6Dot5inch) : @"6.5 inch"
              }[@(deviceSize)];
 }
 
