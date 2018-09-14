@@ -10,7 +10,7 @@
 typedef NS_ENUM(NSInteger, DeviceVersion){
     UnknownDevice         = 0,
     Simulator             = 1,
-	
+    
     iPhone4               = 3,
     iPhone4S              = 4,
     iPhone5               = 5,
@@ -57,7 +57,9 @@ typedef NS_ENUM(NSInteger, DeviceSize){
     Screen4inch     = 2,
     Screen4Dot7inch = 3,
     Screen5Dot5inch = 4,
-    Screen5Dot8inch = 5
+    Screen5Dot8inch = 5,
+    Screen6Dot1inch = 6,
+    Screen6Dot5inch = 7
 };
 
 @interface SDiOSVersion : NSObject
