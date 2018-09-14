@@ -48,6 +48,10 @@
                               @"iPhone10,5" : @(iPhone8Plus),
                               @"iPhone10,3" : @(iPhoneX),
                               @"iPhone10,6" : @(iPhoneX),
+                              @"iPhone11,8" : @(iPhoneXR),
+                              @"iPhone11,2" : @(iPhoneXS),
+                              @"iPhone11,4" : @(iPhoneXSMax),
+                              @"iPhone11,6" : @(iPhoneXSMax),
                               @"i386"       : @(Simulator),
                               @"x86_64"     : @(Simulator),
                               
@@ -116,14 +120,30 @@
 
 + (DeviceSize)resolutionSize
 {
-    CGFloat screenHeight = 0;
-    
+    DeviceSize deviseSize;
+
+    // iOS > 8 does a better differentiation by using UIScreen.nativeBounds,
+    // this was not available in earlier versions. The nice thing is that nativeBounds
+    // really only matters on newer devices (iPhone R and Xs Max report the same UIScreen.bounds value)
     if ([SDiOSVersion versionGreaterThanOrEqualTo:@"8"]) {
-        screenHeight = MAX([[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width);
+        deviseSize = [self resolutionSizeForIOSGreaterThan8];
     } else {
-        screenHeight = [[UIScreen mainScreen] bounds].size.height;
+        deviseSize = [self resolutionSizeForIOSLessThan8];
     }
     
+    return deviseSize;
+}
+
++ (DeviceSize)resolutionSizeForIOSLessThan8
+{
+    if ([SDiOSVersion versionGreaterThanOrEqualTo:@"8"]) {
+        [NSException raise:@"Wrong iOS Version For Checking" format:@"The version of iOS %ld is greater than iOS 8 which is required for this function", (long)[SDiOSVersion version]];
+    }
+    
+    CGFloat screenHeight = 0;
+    
+    screenHeight = [[UIScreen mainScreen] bounds].size.height;
+
     if (screenHeight == 480) {
         return Screen3Dot5inch;
     } else if(screenHeight == 568) {
@@ -134,8 +154,38 @@
         return Screen5Dot5inch;
     } else if (screenHeight == 812) {
         return Screen5Dot8inch;
+    } else if (screenHeight == 896) {
+        return Screen6Dot1inch;
     } else
-        return UnknownSize;
+    return UnknownSize;
+}
+
++ (DeviceSize)resolutionSizeForIOSGreaterThan8
+{
+    if ([SDiOSVersion versionLessThan:@"8"]) {
+        [NSException raise:@"Wrong iOS Version For Checking" format:@"The version of iOS %ld is less than iOS 8 which is required for this function", (long)[SDiOSVersion version]];
+    }
+
+    CGFloat screenHeight = 0;
+    
+    screenHeight = [[UIScreen mainScreen] nativeBounds].size.height;
+    
+    if (screenHeight == 480 || screenHeight == 960) {
+        return Screen3Dot5inch;
+    } else if(screenHeight == 1136) {
+        return Screen4inch;
+    } else if(screenHeight == 1334) {
+        return  Screen4Dot7inch;
+    } else if(screenHeight == 2208) {
+        return Screen5Dot5inch;
+    } else if (screenHeight == 2436) {
+        return Screen5Dot8inch;
+    } else if (screenHeight == 1792) {
+        return Screen6Dot1inch;
+    } else if (screenHeight == 2688) {
+        return Screen6Dot5inch;
+    } else
+    return UnknownSize;
 }
 
 + (DeviceSize)deviceSize
@@ -160,6 +210,8 @@
              @(Screen4Dot7inch) : @"4.7 inch",
              @(Screen5Dot5inch) : @"5.5 inch",
              @(Screen5Dot8inch) : @"5.8 inch",
+             @(Screen6Dot1inch) : @"6.1 inch",
+             @(Screen6Dot5inch) : @"6.5 inch",
              }[@(deviceSize)];
 }
 
@@ -186,6 +238,9 @@
              @(iPhone8Plus)          : @"iPhone 8 Plus",
              @(iPhoneX)              : @"iPhone X",
              @(iPhoneSE)             : @"iPhone SE",
+             @(iPhoneXS)             : @"iPhone XS",
+             @(iPhoneXR)             : @"iPhone XR",
+             @(iPhoneXSMax)          : @"iPhone XS Max",
              
              @(iPad1)                : @"iPad 1",
              @(iPad2)                : @"iPad 2",
