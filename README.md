@@ -216,12 +216,18 @@ Or in Swift:
     Apple Watch 42mm Series 1
     Apple Watch 38mm Series 2
     Apple Watch 42mm Series 2
+    Apple Watch 38mm Series 3
+    Apple Watch 42mm Series 3
+    Apple Watch 40mm Series 4
+    Apple Watch 44mm Series 4
 
     Simulator
 
 ### Targetable screen sizes
     Screen38mm
+    Screen40mm
     Screen42mm
+    Screen44mm
 
 ### Available watchOS Version Finder methods
 ```objective-c
