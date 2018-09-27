@@ -26,29 +26,32 @@ typedef NS_ENUM(NSInteger, DeviceVersion){
     iPhone8Plus           = 15,
     iPhoneX               = 16,
     iPhoneSE              = 17,
+    iPhoneXR              = 18,
+    iPhoneXS              = 19,
+    iPhoneXSMax           = 20,
     
-    iPad1                 = 18,
-    iPad2                 = 19,
-    iPadMini              = 20,
-    iPad3                 = 21,
-    iPad4                 = 22,
-    iPadAir               = 23,
-    iPadMini2             = 24,
-    iPadAir2              = 25,
-    iPadMini3             = 26,
-    iPadMini4             = 27,
-    iPadPro12Dot9Inch     = 28,
-    iPadPro9Dot7Inch      = 29,
-    iPad5                 = 30,
-    iPadPro12Dot9Inch2Gen = 31,
-    iPadPro10Dot5Inch     = 32,
+    iPad1                 = 21,
+    iPad2                 = 22,
+    iPadMini              = 23,
+    iPad3                 = 24,
+    iPad4                 = 25,
+    iPadAir               = 26,
+    iPadMini2             = 27,
+    iPadAir2              = 28,
+    iPadMini3             = 29,
+    iPadMini4             = 30,
+    iPadPro12Dot9Inch     = 31,
+    iPadPro9Dot7Inch      = 32,
+    iPad5                 = 33,
+    iPadPro12Dot9Inch2Gen = 34,
+    iPadPro10Dot5Inch     = 35,
     
-    iPodTouch1Gen         = 33,
-    iPodTouch2Gen         = 34,
-    iPodTouch3Gen         = 35,
-    iPodTouch4Gen         = 36,
-    iPodTouch5Gen         = 37,
-    iPodTouch6Gen         = 38
+    iPodTouch1Gen         = 36,
+    iPodTouch2Gen         = 37,
+    iPodTouch3Gen         = 38,
+    iPodTouch4Gen         = 39,
+    iPodTouch5Gen         = 40,
+    iPodTouch6Gen         = 41
 };
 
 typedef NS_ENUM(NSInteger, DeviceSize){
@@ -56,11 +59,13 @@ typedef NS_ENUM(NSInteger, DeviceSize){
     Screen3Dot5inch = 1,
     Screen4inch     = 2,
     Screen4Dot7inch = 3,
-    Screen5Dot5inch = 4,
-    Screen5Dot8inch = 5,
-    Screen9Dot7inch = 6,
-    Screen10Dot5inch = 7,	
-    Screen12Dot9inch = 8,
+    Screen5Dot5inch = 4, // plus
+    Screen5Dot8inch = 5, // X / XS
+    Screen6Dot1inch = 6, // XR scale 2
+    Screen6Dot5inch = 7, // XS Max scale 3
+    Screen9Dot7inch = 8,
+    Screen10Dot5inch = 9,
+    Screen12Dot9inch = 10,
 };
 
 @interface SDiOSVersion : NSObject
