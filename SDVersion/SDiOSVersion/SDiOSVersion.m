@@ -48,6 +48,10 @@
                               @"iPhone10,5" : @(iPhone8Plus),
                               @"iPhone10,3" : @(iPhoneX),
                               @"iPhone10,6" : @(iPhoneX),
+                              @"iPhone11,2" : @(iPhoneXS),
+                              @"iPhone11,4" : @(iPhoneXSMax),
+                              @"iPhone11,6" : @(iPhoneXSMax),
+                              @"iPhone11,8" : @(iPhoneXR),
                               @"i386"       : @(Simulator),
                               @"x86_64"     : @(Simulator),
                               
@@ -89,6 +93,8 @@
                               @"iPad7,2"  : @(iPadPro12Dot9Inch2Gen),
                               @"iPad7,3"  : @(iPadPro10Dot5Inch),
                               @"iPad7,4"  : @(iPadPro10Dot5Inch),
+                              @"iPad7,5"  : @(iPad6),
+                              @"iPad7,6"  : @(iPad6),
 
                               //iPods
                               @"iPod1,1" : @(iPodTouch1Gen),
@@ -109,7 +115,7 @@
     uname(&systemInfo);
     NSString *code = [NSString stringWithCString:systemInfo.machine encoding:NSUTF8StringEncoding];
     
-    DeviceVersion version = (DeviceVersion)[[self.deviceNamesByCode objectForKey:code] integerValue];
+    DeviceVersion version = (DeviceVersion)[[[SDiOSVersion deviceNamesByCode] objectForKey:code] integerValue];
     
     return version;
 }
@@ -126,22 +132,28 @@
     
     if (screenHeight == 480) {
         return Screen3Dot5inch;
-    } else if(screenHeight == 568) {
+    } else if (screenHeight == 568) {
         return Screen4inch;
-    } else if(screenHeight == 667) {
+    } else if (screenHeight == 667) {
         return  Screen4Dot7inch;
-    } else if(screenHeight == 736) {
+    } else if (screenHeight == 736) {
         return Screen5Dot5inch;
     } else if (screenHeight == 812) {
         return Screen5Dot8inch;
+    } else if (screenHeight == 896) {
+        if ([SDiOSVersion deviceVersion] == iPhoneXSMax) {
+            return Screen6Dot5inch;
+        } else {
+            return Screen6Dot1inch;
+        }
     } else
         return UnknownSize;
 }
 
 + (DeviceSize)deviceSize
 {
-    DeviceSize deviceSize = [self resolutionSize];
-    if ([self isZoomed]) {
+    DeviceSize deviceSize = [SDiOSVersion resolutionSize];
+    if ([SDiOSVersion isZoomed]) {
         if (deviceSize == Screen4inch) {
             deviceSize = Screen4Dot7inch;
         } else if (deviceSize == Screen4Dot7inch) {
@@ -160,6 +172,8 @@
              @(Screen4Dot7inch) : @"4.7 inch",
              @(Screen5Dot5inch) : @"5.5 inch",
              @(Screen5Dot8inch) : @"5.8 inch",
+             @(Screen6Dot1inch) : @"6.1 inch",
+             @(Screen6Dot5inch) : @"6.5 inch"
              }[@(deviceSize)];
 }
 
@@ -180,12 +194,15 @@
              @(iPhone6Plus)          : @"iPhone 6 Plus",
              @(iPhone6S)             : @"iPhone 6S",
              @(iPhone6SPlus)         : @"iPhone 6S Plus",
+             @(iPhoneSE)             : @"iPhone SE",
              @(iPhone7)              : @"iPhone 7",
              @(iPhone7Plus)          : @"iPhone 7 Plus",
              @(iPhone8)              : @"iPhone 8",
              @(iPhone8Plus)          : @"iPhone 8 Plus",
              @(iPhoneX)              : @"iPhone X",
-             @(iPhoneSE)             : @"iPhone SE",
+             @(iPhoneXS)             : @"iPhone XS",
+             @(iPhoneXSMax)          : @"iPhone XS Max",
+             @(iPhoneXR)             : @"iPhone XR",
              
              @(iPad1)                : @"iPad 1",
              @(iPad2)                : @"iPad 2",
@@ -202,6 +219,7 @@
              @(iPad5)                : @"iPad 5",
              @(iPadPro10Dot5Inch)    : @"iPad Pro 10.5 inch",
              @(iPadPro12Dot9Inch2Gen): @"iPad Pro 12.9 inch",
+             @(iPad6)                : @"iPad 6",
              
              @(iPodTouch1Gen)        : @"iPod Touch 1st Gen",
              @(iPodTouch2Gen)        : @"iPod Touch 2nd Gen",
@@ -217,9 +235,9 @@
 
 + (BOOL)isZoomed
 {
-    if ([self resolutionSize] == Screen4inch && [UIScreen mainScreen].nativeScale > 2) {
+    if ([SDiOSVersion resolutionSize] == Screen4inch && [UIScreen mainScreen].nativeScale > 2) {
         return YES;
-    }else if ([self resolutionSize] == Screen4Dot7inch && [UIScreen mainScreen].scale == 3){
+    } else if ([SDiOSVersion resolutionSize] == Screen4Dot7inch && [UIScreen mainScreen].scale == 3){
         return YES;
     }
     
