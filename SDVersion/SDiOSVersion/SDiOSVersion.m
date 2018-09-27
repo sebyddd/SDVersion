@@ -48,6 +48,12 @@
                               @"iPhone10,5" : @(iPhone8Plus),
                               @"iPhone10,3" : @(iPhoneX),
                               @"iPhone10,6" : @(iPhoneX),
+                              
+                              @"iPhone11,2" : @(iPhoneXS),
+                              @"iPhone11,4" : @(iPhoneXSMax),
+                              @"iPhone11,6" : @(iPhoneXSMax),
+                              @"iPhone11,8" : @(iPhoneXR),
+
                               @"i386"       : @(Simulator),
                               @"x86_64"     : @(Simulator),
                               
@@ -142,7 +148,11 @@
     } else if(screenHeight == 736) {
         return Screen5Dot5inch;
     } else if (screenHeight == 812) {
-        return Screen5Dot8inch; 
+        return Screen5Dot8inch; // X / XS
+    } else if ((screenHeight == 896) && ([UIScreen mainScreen].scale == 2)) {
+        return Screen6Dot1inch; // XR
+    } else if ((screenHeight == 896) && ([UIScreen mainScreen].scale == 3)) {
+        return Screen6Dot5inch; // XS MAX
     } else if (screenHeight == 1366) {
         return Screen12Dot9inch;
     } else if (screenHeight == 1112) {
