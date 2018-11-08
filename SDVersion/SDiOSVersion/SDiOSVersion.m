@@ -48,6 +48,10 @@
                               @"iPhone10,5" : @(iPhone8Plus),
                               @"iPhone10,3" : @(iPhoneX),
                               @"iPhone10,6" : @(iPhoneX),
+                              @"iPhone11,2" : @(iPhoneXS),
+                              @"iPhone11,4" : @(iPhoneXSMax),
+                              @"iPhone11,6" : @(iPhoneXSMax),
+                              @"iPhone11,8" : @(iPhoneXR),
                               @"i386"       : @(Simulator),
                               @"x86_64"     : @(Simulator),
                               
@@ -89,7 +93,7 @@
                               @"iPad7,2"  : @(iPadPro12Dot9Inch2Gen),
                               @"iPad7,3"  : @(iPadPro10Dot5Inch),
                               @"iPad7,4"  : @(iPadPro10Dot5Inch),
-
+                              
                               //iPods
                               @"iPod1,1" : @(iPodTouch1Gen),
                               @"iPod2,1" : @(iPodTouch2Gen),
@@ -103,7 +107,7 @@
     return deviceNamesByCode;
 }
 
-+ (DeviceVersion)deviceVersion
++ (DeviceVersion) deviceVersion
 {
     struct utsname systemInfo;
     uname(&systemInfo);
@@ -186,6 +190,9 @@
              @(iPhone8Plus)          : @"iPhone 8 Plus",
              @(iPhoneX)              : @"iPhone X",
              @(iPhoneSE)             : @"iPhone SE",
+             @(iPhoneXS)             : @"iPhone XS",
+             @(iPhoneXSMax)          : @"iPhone XS Max",
+             @(iPhoneXR)              : @"iPhone XR",
              
              @(iPad1)                : @"iPad 1",
              @(iPad2)                : @"iPad 2",
