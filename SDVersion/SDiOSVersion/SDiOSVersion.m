@@ -93,7 +93,11 @@
                               @"iPad7,2"  : @(iPadPro12Dot9Inch2Gen),
                               @"iPad7,3"  : @(iPadPro10Dot5Inch),
                               @"iPad7,4"  : @(iPadPro10Dot5Inch),
+                              @"iPad7,5" : @(iPad6),
+                              @"iPad7,6" : @(iPad6),
                               @"iPad8,5"  : @(iPadPro12Dot9Inch),
+                              @"iPad11,3" : @(iPadAir3),
+                              @"iPad8,1" : @(iPadPro11Inch),
 
                               //iPods
                               @"iPod1,1" : @(iPodTouch1Gen),
