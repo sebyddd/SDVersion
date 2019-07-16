@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+//current count is 44 enum
 typedef NS_ENUM(NSInteger, DeviceVersion){
     UnknownDevice         = 0,
     Simulator             = 1,
@@ -25,6 +25,9 @@ typedef NS_ENUM(NSInteger, DeviceVersion){
     iPhone8               = 14,
     iPhone8Plus           = 15,
     iPhoneX               = 16,
+    iPhoneXs              = 39,
+    iPhoneXsMax           = 40,
+    iPhoneXr              = 41,
     iPhoneSE              = 17,
     
     iPad1                 = 18,
@@ -42,6 +45,9 @@ typedef NS_ENUM(NSInteger, DeviceVersion){
     iPad5                 = 30,
     iPadPro12Dot9Inch2Gen = 31,
     iPadPro10Dot5Inch     = 32,
+    iPad6                 = 42,
+    iPadPro11Inch3Gen     = 43,
+    iPadPro12Dot9Inch3Gen = 44,
     
     iPodTouch1Gen         = 33,
     iPodTouch2Gen         = 34,
