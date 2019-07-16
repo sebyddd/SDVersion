@@ -48,6 +48,10 @@
                               @"iPhone10,5" : @(iPhone8Plus),
                               @"iPhone10,3" : @(iPhoneX),
                               @"iPhone10,6" : @(iPhoneX),
+                              @"iPhone11,2" : @(iPhoneXs),
+                              @"iPhone11,4" : @(iPhoneXsMax),
+                              @"iPhone11,6" : @(iPhoneXsMax),
+                              @"iPhone11,8" : @(iPhoneXr),
                               @"i386"       : @(Simulator),
                               @"x86_64"     : @(Simulator),
                               
@@ -89,6 +93,16 @@
                               @"iPad7,2"  : @(iPadPro12Dot9Inch2Gen),
                               @"iPad7,3"  : @(iPadPro10Dot5Inch),
                               @"iPad7,4"  : @(iPadPro10Dot5Inch),
+                              @"iPad7,5"  : @(iPad6),
+                              @"iPad7,6"  : @(iPad6),
+                              @"iPad8,1"  : @(iPadPro11Inch3Gen),
+                              @"iPad8,2"  : @(iPadPro11Inch3Gen),
+                              @"iPad8,3"  : @(iPadPro11Inch3Gen),
+                              @"iPad8,4"  : @(iPadPro11Inch3Gen),
+                              @"iPad8,5"  : @(iPadPro12Dot9Inch3Gen),
+                              @"iPad8,6"  : @(iPadPro12Dot9Inch3Gen),
+                              @"iPad8,7"  : @(iPadPro12Dot9Inch3Gen),
+                              @"iPad8,8"  : @(iPadPro12Dot9Inch3Gen),
 
                               //iPods
                               @"iPod1,1" : @(iPodTouch1Gen),
@@ -96,7 +110,8 @@
                               @"iPod3,1" : @(iPodTouch3Gen),
                               @"iPod4,1" : @(iPodTouch4Gen),
                               @"iPod5,1" : @(iPodTouch5Gen),
-                              @"iPod7,1" : @(iPodTouch6Gen)};
+                              @"iPod7,1" : @(iPodTouch6Gen)
+        };
 #pragma clang diagnostic pop
     });
     
