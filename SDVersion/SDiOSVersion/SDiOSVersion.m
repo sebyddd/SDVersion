@@ -200,6 +200,9 @@
              @(iPhone8)              : @"iPhone 8",
              @(iPhone8Plus)          : @"iPhone 8 Plus",
              @(iPhoneX)              : @"iPhone X",
+             @(iPhoneXs)             : @"iPhone XS",
+             @(iPhoneXsMax)          : @"iPhone XS Max",
+             @(iPhoneXr)             : @"iPhone XR",
              @(iPhoneSE)             : @"iPhone SE",
              
              @(iPad1)                : @"iPad 1",
@@ -217,6 +220,9 @@
              @(iPad5)                : @"iPad 5",
              @(iPadPro10Dot5Inch)    : @"iPad Pro 10.5 inch",
              @(iPadPro12Dot9Inch2Gen): @"iPad Pro 12.9 inch",
+             @(iPad6)                : @"iPad 6",
+             @(iPadPro11Inch3Gen)    : @"iPad Pro 11 inch 3rd Gen",
+             @(iPadPro12Dot9Inch3Gen): @"iPad Pro 12.9 inch 3rd Gen",
              
              @(iPodTouch1Gen)        : @"iPod Touch 1st Gen",
              @(iPodTouch2Gen)        : @"iPod Touch 2nd Gen",
