@@ -18,6 +18,8 @@ typedef NS_ENUM(NSInteger, DeviceVersion) {
     AppleWatch42mmSeries3 = 8,
     AppleWatch40mmSeries4 = 9,
     AppleWatch44mmSeries4 = 10,
+    AppleWatch40mmSeries5 = 11,
+    AppleWatch44mmSeries5 = 12,
     
     Simulator = 0
 };

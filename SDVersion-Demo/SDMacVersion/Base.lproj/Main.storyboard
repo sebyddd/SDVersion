@@ -1,7 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="15A235d" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7706"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14868"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -650,11 +652,14 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="SDVersion" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" title="SDVersion" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="355"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <connections>
+                            <outlet property="delegate" destination="B8D-0N-5wS" id="RdN-Jm-OeG"/>
+                        </connections>
                     </window>
                     <connections>
                         <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
@@ -662,7 +667,7 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="96" y="316.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
@@ -676,63 +681,70 @@
                             <imageView translatesAutoresizingMaskIntoConstraints="NO" id="c47-We-KXa">
                                 <rect key="frame" x="0.0" y="178" width="480" height="110"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="480" id="G9C-oz-fR1"/>
                                     <constraint firstAttribute="height" constant="110" id="HgO-F6-oqd"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="110" id="UTB-rb-Mcb"/>
                                     <constraint firstAttribute="width" constant="480" id="cmq-hc-8mq"/>
                                 </constraints>
-                                <animations/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="logo" id="zET-9h-oHo"/>
                             </imageView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nY5-uy-aSQ">
-                                <rect key="frame" x="154" y="130" width="172" height="25"/>
-                                <animations/>
+                                <rect key="frame" x="149" y="135" width="182" height="20"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Mac model: " id="94G-tE-RaQ">
-                                    <font key="font" size="17" name="SanFranciscoDisplay-Regular"/>
+                                    <font key="font" metaFont="system" size="17"/>
                                     <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="woj-1m-Hg7">
-                                <rect key="frame" x="154" y="62" width="172" height="25"/>
-                                <animations/>
+                                <rect key="frame" x="149" y="77" width="182" height="20"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Mac screen resolution: " id="s0w-ot-O8G">
-                                    <font key="font" size="17" name="SanFranciscoDisplay-Regular"/>
+                                    <font key="font" metaFont="system" size="17"/>
                                     <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wN0-Bl-Va4">
-                                <rect key="frame" x="154" y="27" width="166" height="25"/>
-                                <animations/>
+                                <rect key="frame" x="149" y="47" width="176" height="20"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Mac screen pixel size: " id="Gl0-Fh-ULm">
-                                    <font key="font" size="17" name="SanFranciscoDisplay-Regular"/>
+                                    <font key="font" metaFont="system" size="17"/>
                                     <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZU2-Y5-LlG">
-                                <rect key="frame" x="154" y="97" width="95" height="25"/>
-                                <animations/>
+                                <rect key="frame" x="149" y="107" width="102" height="20"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Mac screen: " id="c0g-9y-PK3">
-                                    <font key="font" size="17" name="SanFranciscoDisplay-Regular"/>
+                                    <font key="font" metaFont="system" size="17"/>
                                     <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                         </subviews>
                         <constraints>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ZU2-Y5-LlG" secondAttribute="trailing" constant="20" symbolic="YES" id="42c-oU-Q7g"/>
                             <constraint firstItem="c47-We-KXa" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="15" id="8td-KN-kEN"/>
+                            <constraint firstItem="woj-1m-Hg7" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="151" id="BZe-5D-Enq"/>
                             <constraint firstItem="ZU2-Y5-LlG" firstAttribute="leading" secondItem="nY5-uy-aSQ" secondAttribute="leading" id="F1q-9d-vqI"/>
+                            <constraint firstItem="c47-We-KXa" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="15" id="F3W-qb-EWZ"/>
                             <constraint firstItem="ZU2-Y5-LlG" firstAttribute="top" secondItem="nY5-uy-aSQ" secondAttribute="bottom" constant="8" id="FO8-So-xUl"/>
+                            <constraint firstItem="nY5-uy-aSQ" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="151" id="HHD-ia-l5v"/>
+                            <constraint firstItem="nY5-uy-aSQ" firstAttribute="top" secondItem="c47-We-KXa" secondAttribute="bottom" constant="23" id="I20-eH-MI0"/>
                             <constraint firstItem="wN0-Bl-Va4" firstAttribute="top" secondItem="woj-1m-Hg7" secondAttribute="bottom" constant="10" id="Jjz-FI-03Q"/>
+                            <constraint firstItem="wN0-Bl-Va4" firstAttribute="top" secondItem="woj-1m-Hg7" secondAttribute="bottom" constant="10" id="O8L-zn-sip"/>
+                            <constraint firstItem="ZU2-Y5-LlG" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="151" id="Vbd-VW-q09"/>
                             <constraint firstAttribute="centerX" secondItem="nY5-uy-aSQ" secondAttribute="centerX" id="bLl-Yw-itk"/>
                             <constraint firstAttribute="centerX" secondItem="c47-We-KXa" secondAttribute="centerX" id="dBU-db-HoR"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wN0-Bl-Va4" secondAttribute="trailing" constant="20" symbolic="YES" id="eMc-xQ-yzp"/>
+                            <constraint firstItem="wN0-Bl-Va4" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="151" id="frG-s8-rOY"/>
                             <constraint firstItem="wN0-Bl-Va4" firstAttribute="leading" secondItem="nY5-uy-aSQ" secondAttribute="leading" id="l8M-Fd-qfV"/>
+                            <constraint firstItem="ZU2-Y5-LlG" firstAttribute="top" secondItem="nY5-uy-aSQ" secondAttribute="bottom" constant="8" id="mF5-0i-en2"/>
                             <constraint firstItem="wN0-Bl-Va4" firstAttribute="leading" secondItem="woj-1m-Hg7" secondAttribute="leading" id="oT8-FW-3I2"/>
                             <constraint firstAttribute="centerX" secondItem="woj-1m-Hg7" secondAttribute="centerX" id="rXP-yA-DOs"/>
+                            <constraint firstItem="woj-1m-Hg7" firstAttribute="top" secondItem="ZU2-Y5-LlG" secondAttribute="bottom" constant="10" id="ubv-lH-keH"/>
                             <constraint firstItem="woj-1m-Hg7" firstAttribute="top" secondItem="ZU2-Y5-LlG" secondAttribute="bottom" constant="10" id="yK6-cr-DeU"/>
                             <constraint firstItem="nY5-uy-aSQ" firstAttribute="top" secondItem="c47-We-KXa" secondAttribute="bottom" constant="23" id="z1J-mr-V0J"/>
                         </constraints>
-                        <animations/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.backgroundColor" value="YES"/>
                         </userDefinedRuntimeAttributes>

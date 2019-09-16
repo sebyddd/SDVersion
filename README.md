@@ -128,45 +128,53 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
 	+ (BOOL)isZoomed;
 ```
 ### Targetable models
-	iPhone4
-    iPhone4S
-    iPhone5
-    iPhone5C
-    iPhone5S
-    iPhone6
-    iPhone6Plus
-    iPhone6S
-    iPhone6SPlus
-    iPhoneSE
-    iPhone7
-    iPhone7Plus
-    iPhone8
-    iPhone8Plus
-    iPhoneX
-    iPhoneXS
-    iPhoneXR
-    iPhoneXSMax
+	iPhone4               
+	iPhone4S              
+	iPhone5               
+	iPhone5C              
+	iPhone5S              
+	iPhone6               
+	iPhone6Plus           
+	iPhone6S              
+	iPhone6SPlus          
+	iPhone7               
+	iPhone7Plus           
+	iPhone8               
+	iPhone8Plus           
+	iPhoneX               
+	iPhoneSE              
+	iPhoneXS              
+	iPhoneXR              
+	iPhoneXSMax
+	iPhone11
+	iPhone11Pro
+	iPhone11ProMax
 
-    iPad1
-    iPad2
-    iPadMini
-    iPad3
-    iPad4
-    iPadAir
-    iPadMini2
-    iPadAir2
-    iPadMini3
-    iPadMini4
-    iPadPro9Dot7Inch
-    iPadPro12Dot9Inch
-    iPad5
-
-	iPodTouch1Gen
-    iPodTouch2Gen
-    iPodTouch3Gen
-    iPodTouch4Gen
-    iPodTouch5Gen
-    iPodTouch6Gen
+	iPad1                 
+	iPad2                 
+	iPadMini              
+	iPad3                 
+	iPad4                 
+	iPadAir               
+	iPadMini2             
+	iPadAir2              
+	iPadMini3             
+	iPadMini4             
+	iPadPro12Dot9Inch     
+	iPadPro9Dot7Inch      
+	iPad5                     
+	iPadPro12Dot9Inch2Gen 
+	iPadPro10Dot5Inch     
+	iPadPro11Inch         
+	iPadAir3
+	iPad6 
+	              
+	iPodTouch1Gen         
+	iPodTouch2Gen         
+	iPodTouch3Gen         
+	iPodTouch4Gen         
+	iPodTouch5Gen         
+	iPodTouch6Gen
 
     Simulator
 ### Targetable screen sizes
@@ -220,7 +228,8 @@ Or in Swift:
     Apple Watch 42mm Series 3
     Apple Watch 40mm Series 4
     Apple Watch 44mm Series 4
-
+    Apple Watch 40mm Series 5
+    Apple Watch 44mm Series 5
     Simulator
 
 ### Targetable screen sizes

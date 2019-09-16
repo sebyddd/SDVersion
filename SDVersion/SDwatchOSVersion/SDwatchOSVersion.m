@@ -29,7 +29,9 @@
                               @"Watch4,1" : @(AppleWatch40mmSeries4),
                               @"Watch4,2" : @(AppleWatch44mmSeries4),
                               @"Watch4,3" : @(AppleWatch40mmSeries4),
-                              @"Watch4,4" : @(AppleWatch44mmSeries4)
+                              @"Watch4,4" : @(AppleWatch44mmSeries4),
+                              @"Watch5,3" : @(AppleWatch40mmSeries5),
+                              @"Watch5,4" : @(AppleWatch44mmSeries5)
                               };
     });
     
@@ -69,6 +71,8 @@
              @(AppleWatch42mmSeries3) : @"Apple Watch Series 3 42mm",
              @(AppleWatch40mmSeries4) : @"Apple Watch Series 4 40mm",
              @(AppleWatch44mmSeries4) : @"Apple Watch Series 4 44mm",
+             @(AppleWatch40mmSeries5) : @"Apple Watch Series 5 40mm",
+             @(AppleWatch44mmSeries5) : @"Apple Watch Series 5 44mm",
              @(Simulator)             : @"Simulator"
              }[@(deviceVersion)];
 }

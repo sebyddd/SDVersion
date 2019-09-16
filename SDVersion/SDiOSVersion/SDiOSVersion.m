@@ -52,6 +52,9 @@
                               @"iPhone11,2" : @(iPhoneXS),
                               @"iPhone11,4" : @(iPhoneXSMax),
                               @"iPhone11,6" : @(iPhoneXSMax),
+                              @"iPhone12,1" : @(iPhone11),
+                              @"iPhone12,3" : @(iPhone11Pro),
+                              @"iPhone12,5" : @(iPhone11ProMax),
                               @"i386"       : @(Simulator),
                               @"x86_64"     : @(Simulator),
                               
@@ -254,6 +257,10 @@
              @(iPhoneXS)             : @"iPhone XS",
              @(iPhoneXR)             : @"iPhone XR",
              @(iPhoneXSMax)          : @"iPhone XS Max",
+             @(iPhone11)             : @"iPhone11",
+             @(iPhone11Pro)          : @"iPhone11Pro",
+             @(iPhone11ProMax)       : @"iPhone11ProMax",
+             
              
              @(iPad1)                : @"iPad 1",
              @(iPad2)                : @"iPad 2",
@@ -270,6 +277,7 @@
              @(iPad5)                : @"iPad 5",
              @(iPadPro10Dot5Inch)    : @"iPad Pro 10.5 inch",
              @(iPadPro12Dot9Inch2Gen): @"iPad Pro 12.9 inch",
+             @(iPad6)                : @"iPad 6",
              
              @(iPodTouch1Gen)        : @"iPod Touch 1st Gen",
              @(iPodTouch2Gen)        : @"iPod Touch 2nd Gen",
