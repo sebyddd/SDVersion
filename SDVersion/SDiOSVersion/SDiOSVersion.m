@@ -48,6 +48,13 @@
                               @"iPhone10,5" : @(iPhone8Plus),
                               @"iPhone10,3" : @(iPhoneX),
                               @"iPhone10,6" : @(iPhoneX),
+                              @"iPhone11,8" : @(iPhoneXR),
+                              @"iPhone11,2" : @(iPhoneXS),
+                              @"iPhone11,4" : @(iPhoneXSMax),
+                              @"iPhone11,6" : @(iPhoneXSMax),
+                              @"iPhone12,1" : @(iPhone11),
+                              @"iPhone12,3" : @(iPhone11Pro),
+                              @"iPhone12,5" : @(iPhone11ProMax),
                               @"i386"       : @(Simulator),
                               @"x86_64"     : @(Simulator),
                               
@@ -89,14 +96,32 @@
                               @"iPad7,2"  : @(iPadPro12Dot9Inch2Gen),
                               @"iPad7,3"  : @(iPadPro10Dot5Inch),
                               @"iPad7,4"  : @(iPadPro10Dot5Inch),
-
+                              @"iPad7,5"  : @(iPad6),
+                              @"iPad7,6"  : @(iPad6),
+                              @"iPad7,11" : @(iPad7),
+                              @"iPad7,12" : @(iPad7),
+                              @"iPad8,1"  : @(iPadPro11Inch3Gen),
+                              @"iPad8,2"  : @(iPadPro11Inch3Gen),
+                              @"iPad8,3"  : @(iPadPro11Inch3Gen),
+                              @"iPad8,4"  : @(iPadPro11Inch3Gen),
+                              @"iPad8,5"  : @(iPadPro12Dot9Inch3Gen),
+                              @"iPad8,6"  : @(iPadPro12Dot9Inch3Gen),
+                              @"iPad8,7"  : @(iPadPro12Dot9Inch3Gen),
+                              @"iPad8,8"  : @(iPadPro12Dot9Inch3Gen),
+                              @"iPad11,1" : @(iPadMini5),
+                              @"iPad11,2" : @(iPadMini5),
+                              @"iPad11,4" : @(iPadAir3),
+                              @"iPad11,5" : @(iPadAir3),
+                              
                               //iPods
                               @"iPod1,1" : @(iPodTouch1Gen),
                               @"iPod2,1" : @(iPodTouch2Gen),
                               @"iPod3,1" : @(iPodTouch3Gen),
                               @"iPod4,1" : @(iPodTouch4Gen),
                               @"iPod5,1" : @(iPodTouch5Gen),
-                              @"iPod7,1" : @(iPodTouch6Gen)};
+                              @"iPod7,1" : @(iPodTouch6Gen),
+                              @"iPod9,1" : @(iPodTouch7Gen),
+                              };
 #pragma clang diagnostic pop
     });
     
@@ -116,13 +141,29 @@
 
 + (DeviceSize)resolutionSize
 {
+    DeviceSize deviseSize;
+    
+    // iOS > 8 does a better differentiation by using UIScreen.nativeBounds,
+    // this was not available in earlier versions. The nice thing is that nativeBounds
+    // really only matters on newer devices (iPhone R and Xs Max report the same UIScreen.bounds value)
+    if ([SDiOSVersion versionGreaterThanOrEqualTo:@"8"]) {
+        deviseSize = [self resolutionSizeForIOSGreaterThan8];
+    } else {
+        deviseSize = [self resolutionSizeForIOSLessThan8];
+    }
+    
+    return deviseSize;
+}
+
++ (DeviceSize)resolutionSizeForIOSLessThan8
+{
+    if ([SDiOSVersion versionGreaterThanOrEqualTo:@"8"]) {
+        [NSException raise:@"Wrong iOS Version For Checking" format:@"The version of iOS %ld is greater than iOS 8 which is required for this function", (long)[SDiOSVersion version]];
+    }
+    
     CGFloat screenHeight = 0;
     
-    if ([SDiOSVersion versionGreaterThanOrEqualTo:@"8"]) {
-        screenHeight = MAX([[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width);
-    } else {
-        screenHeight = [[UIScreen mainScreen] bounds].size.height;
-    }
+    screenHeight = [[UIScreen mainScreen] bounds].size.height;
     
     if (screenHeight == 480) {
         return Screen3Dot5inch;
@@ -134,6 +175,36 @@
         return Screen5Dot5inch;
     } else if (screenHeight == 812) {
         return Screen5Dot8inch;
+    } else if (screenHeight == 896) {
+        return ([SDiOSVersion deviceVersion] == iPhoneXSMax) ? Screen6Dot5inch : Screen6Dot1inch;
+    } else
+        return UnknownSize;
+}
+
++ (DeviceSize)resolutionSizeForIOSGreaterThan8
+{
+    if ([SDiOSVersion versionLessThan:@"8"]) {
+        [NSException raise:@"Wrong iOS Version For Checking" format:@"The version of iOS %ld is less than iOS 8 which is required for this function", (long)[SDiOSVersion version]];
+    }
+    
+    CGFloat screenHeight = 0;
+    
+    screenHeight = [[UIScreen mainScreen] nativeBounds].size.height;
+    
+    if (screenHeight == 480 || screenHeight == 960) {
+        return Screen3Dot5inch;
+    } else if(screenHeight == 1136) {
+        return Screen4inch;
+    } else if(screenHeight == 1334) {
+        return  Screen4Dot7inch;
+    } else if(screenHeight == 2208) {
+        return Screen5Dot5inch;
+    } else if (screenHeight == 2436) {
+        return Screen5Dot8inch;
+    } else if (screenHeight == 1792) {
+        return Screen6Dot1inch;
+    } else if (screenHeight == 2688) {
+        return Screen6Dot5inch;
     } else
         return UnknownSize;
 }
@@ -160,6 +231,8 @@
              @(Screen4Dot7inch) : @"4.7 inch",
              @(Screen5Dot5inch) : @"5.5 inch",
              @(Screen5Dot8inch) : @"5.8 inch",
+             @(Screen6Dot1inch) : @"6.1 inch",
+             @(Screen6Dot5inch) : @"6.5 inch",
              }[@(deviceSize)];
 }
 
@@ -176,6 +249,7 @@
              @(iPhone5)              : @"iPhone 5",
              @(iPhone5C)             : @"iPhone 5C",
              @(iPhone5S)             : @"iPhone 5S",
+             @(iPhoneSE)             : @"iPhone SE",
              @(iPhone6)              : @"iPhone 6",
              @(iPhone6Plus)          : @"iPhone 6 Plus",
              @(iPhone6S)             : @"iPhone 6S",
@@ -185,7 +259,12 @@
              @(iPhone8)              : @"iPhone 8",
              @(iPhone8Plus)          : @"iPhone 8 Plus",
              @(iPhoneX)              : @"iPhone X",
-             @(iPhoneSE)             : @"iPhone SE",
+             @(iPhoneXS)             : @"iPhone XS",
+             @(iPhoneXSMax)          : @"iPhone XS Max",
+             @(iPhoneXR)             : @"iPhone Xʀ",
+             @(iPhone11)             : @"iPhone 11",
+             @(iPhone11Pro)          : @"iPhone 11 Pro",
+             @(iPhone11ProMax)       : @"iPhone 11 Pro Max",
              
              @(iPad1)                : @"iPad 1",
              @(iPad2)                : @"iPad 2",
@@ -198,10 +277,17 @@
              @(iPadMini3)            : @"iPad Mini 3",
              @(iPadMini4)            : @"iPad Mini 4",
              @(iPadPro9Dot7Inch)     : @"iPad Pro 9.7 inch",
-             @(iPadPro12Dot9Inch)    : @"iPad Pro 12.9 inch",
+             @(iPadPro12Dot9Inch)    : @"iPad Pro 12.9 inch 1st Gen",
              @(iPad5)                : @"iPad 5",
              @(iPadPro10Dot5Inch)    : @"iPad Pro 10.5 inch",
-             @(iPadPro12Dot9Inch2Gen): @"iPad Pro 12.9 inch",
+             @(iPadPro12Dot9Inch2Gen): @"iPad Pro 12.9 inch 2nd Gen",
+             @(iPad6)                : @"iPad 6",
+             @(iPad7)                : @"iPad 7",
+             @(iPadAir3)             : @"iPad Air 3rd Gen",
+             @(iPadMini5)            : @"iPad Mini 5",
+             @(iPadPro11Inch3Gen)    : @"iPad Pro 11 inch 3rd Gen",
+             @(iPadPro12Dot9Inch3Gen): @"iPad Pro 12.9 inch 3rd Gen",
+             @(iPadPro12Dot9Inch3Gen): @"iPad Pro 12.9 inch 3rd Gen",
              
              @(iPodTouch1Gen)        : @"iPod Touch 1st Gen",
              @(iPodTouch2Gen)        : @"iPod Touch 2nd Gen",
@@ -209,6 +295,7 @@
              @(iPodTouch4Gen)        : @"iPod Touch 4th Gen",
              @(iPodTouch5Gen)        : @"iPod Touch 5th Gen",
              @(iPodTouch6Gen)        : @"iPod Touch 6th Gen",
+             @(iPodTouch7Gen)        : @"iPod Touch 7th Gen",
              
              @(Simulator)            : @"Simulator",
              @(UnknownDevice)        : @"Unknown Device"
