@@ -10,7 +10,7 @@
 typedef NS_ENUM(NSInteger, DeviceVersion){
     UnknownDevice         = 0,
     Simulator             = 1,
-	
+
     iPhone4               = 3,
     iPhone4S              = 4,
     iPhone5               = 5,
@@ -29,29 +29,38 @@ typedef NS_ENUM(NSInteger, DeviceVersion){
     iPhoneXS              = 18,
     iPhoneXR              = 19,
     iPhoneXSMax           = 20,
-    
-    iPad1                 = 21,
-    iPad2                 = 22,
-    iPadMini              = 23,
-    iPad3                 = 24,
-    iPad4                 = 25,
-    iPadAir               = 26,
-    iPadMini2             = 27,
-    iPadAir2              = 28,
-    iPadMini3             = 29,
-    iPadMini4             = 30,
-    iPadPro12Dot9Inch     = 31,
-    iPadPro9Dot7Inch      = 32,
-    iPad5                 = 33,
-    iPadPro12Dot9Inch2Gen = 34,
-    iPadPro10Dot5Inch     = 35,
-    
-    iPodTouch1Gen         = 36,
-    iPodTouch2Gen         = 37,
-    iPodTouch3Gen         = 38,
-    iPodTouch4Gen         = 39,
-    iPodTouch5Gen         = 40,
-    iPodTouch6Gen         = 41
+    iPhone11              = 20,
+    iPhone11Pro           = 21,
+    iPhone11ProMax        = 22,
+
+    iPad1                 = 23,
+    iPad2                 = 24,
+    iPadMini              = 25,
+    iPad3                 = 26,
+    iPad4                 = 27,
+    iPadAir               = 28,
+    iPadMini2             = 29,
+    iPadAir2              = 30,
+    iPadMini3             = 31,
+    iPadMini4             = 32,
+    iPadPro12Dot9Inch     = 33,
+    iPadPro9Dot7Inch      = 34,
+    iPad5                 = 35,
+    iPadPro12Dot9Inch2Gen = 36,
+    iPadPro10Dot5Inch     = 37,
+    iPad6                 = 38,
+    iPad7                 = 39,
+    iPadAir3              = 40,
+    iPadMini5             = 41,
+    iPadPro11Inch         = 42,
+    iPadPro12Dot9Inch3Gen = 43,
+
+    iPodTouch1Gen         = 44,
+    iPodTouch2Gen         = 45,
+    iPodTouch3Gen         = 46,
+    iPodTouch4Gen         = 47,
+    iPodTouch5Gen         = 48,
+    iPodTouch6Gen         = 49
 };
 
 typedef NS_ENUM(NSInteger, DeviceSize){
