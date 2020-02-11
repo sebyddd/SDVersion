@@ -10,6 +10,10 @@
 
 @implementation ViewController
 
+- (BOOL)prefersStatusBarHidden {
+    return true;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -36,6 +40,12 @@
         NSLog(@"Your screen size is 4.7 inches");
     else if([SDVersion deviceSize] == Screen5Dot5inch)
         NSLog(@"Your screen size is 5.5 inches");
+    else if([SDVersion deviceSize] == Screen5Dot8inch)
+        NSLog(@"Your screen size is 5.8 inches");
+    else if([SDVersion deviceSize] == Screen6Dot1inch)
+        NSLog(@"Your screen size is 6.1 inches");
+    else if([SDVersion deviceSize] == Screen6Dot5inch)
+        NSLog(@"Your screen size is 6.5 inches");
     
     if ([SDVersion isZoomed]) {
         NSLog(@"Your device is in Zoom Mode!");
@@ -47,6 +57,5 @@
     else if ([SDVersion versionLessThanOrEqualTo:@"9.1"])
         NSLog(@"You're on iOS 9.1 or below! ⏳");
 }
-
 
 @end
