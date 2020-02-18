@@ -99,8 +99,10 @@
                               @"iPad7,5" : @(iPad6),
                               @"iPad7,6" : @(iPad6),
                               @"iPad8,5"  : @(iPadPro12Dot9Inch),
+                              @"iPad11,1" : @(iPadMini5),
                               @"iPad11,3" : @(iPadAir3),
                               @"iPad8,1" : @(iPadPro11Inch),
+                              @"iPad7,12" : @(iPad7),
 
                               //iPods
                               @"iPod1,1" : @(iPodTouch1Gen),
@@ -278,6 +280,10 @@
              @(iPadPro10Dot5Inch)    : @"iPad Pro 10.5 inch",
              @(iPadPro12Dot9Inch2Gen): @"iPad Pro 12.9 inch",
              @(iPad6)                : @"iPad 6",
+             @(iPadAir3)             : @"iPadAir3",
+             @(iPad7)                : @"iPad 7",
+             @(iPadPro11Inch)        : @"iPadPro11Inch",
+             @(iPadMini5)            : @"iPadMini5",
              
              @(iPodTouch1Gen)        : @"iPod Touch 1st Gen",
              @(iPodTouch2Gen)        : @"iPod Touch 2nd Gen",
