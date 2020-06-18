@@ -32,6 +32,7 @@ typedef NS_ENUM(NSInteger, DeviceVersion){
     iPhone11              = 21,
     iPhone11Pro           = 22,
     iPhone11ProMax        = 23,
+    iPhoneSE2             = 24,
     
     iPad1                 = 100,
     iPad2                 = 101,
