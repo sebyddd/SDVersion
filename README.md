@@ -149,6 +149,7 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
 	iPhone11
 	iPhone11Pro
 	iPhone11ProMax
+  iPhoneSE2
 
 	iPad1                 
 	iPad2                 
@@ -167,7 +168,9 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
 	iPadPro10Dot5Inch     
 	iPadPro11Inch         
 	iPadAir3
-	iPad6 
+	iPad6
+  iPadPro12Dot9Inch4Gen
+  iPadPro11Inch2Gen 
 	              
 	iPodTouch1Gen         
 	iPodTouch2Gen         
