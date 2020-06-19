@@ -7,10 +7,10 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "SDVersion"
-  s.version      = "4.3.2"
-  s.summary      = "Lightweight Cocoa library for detecting the running device's model and screen size."
-  s.homepage     = "https://github.com/sebyddd/SDVersion"
+  s.name         = "MCVersion"
+  s.version      = "4.3.3"
+  s.summary      = "Lightweight Cocoa library for detecting the running device's model and screen size. 作者不更新，我的一些库依赖SDVersion，故发一个MC版本，见谅"
+  s.homepage     = "https://github.com/poholo/SDVersion"
   s.screenshots  = "https://dl.dropboxusercontent.com/s/bmfjwfe2ngnivwn/sdversion.png?dl=0"
 
 
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
   s.platform     = :osx
   s.platform     = :watchos
   s.platform     = :tvos
-  s.ios.deployment_target = '7.0'
+  s.ios.deployment_target = '10.0'
   s.osx.deployment_target = '10.9'
   s.watchos.deployment_target = '2.0'
   s.tvos.deployment_target = '9.0'
@@ -36,7 +36,7 @@ Pod::Spec.new do |s|
   s.osx.source_files = "SDVersion/SDMacVersion/*.{h,m}"
   s.watchos.source_files = "SDVersion/SDwatchOSVersion/*.{h,m}"
   s.tvos.source_files = "SDVersion/SDtvOSVersion/*.{h,m}"
-  s.source       = { :git => 'https://github.com/sebyddd/SDVersion.git', :tag => "#{s.version}" }
+  s.source       = { :git => 'https://github.com/poholo/SDVersion.git', :tag => "#{s.version}" }
   s.source_files  = "SDVersion/*.{h,m}"
 
   s.requires_arc = true
