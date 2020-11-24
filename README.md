@@ -132,6 +132,7 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
 	+ (BOOL)isZoomed;
 ```
 ### Targetable models
+```
 	iPhone4               
 	iPhone4S              
 	iPhone5               
@@ -191,8 +192,10 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
   iPodTouch6Gen   
   iPodTouch7Gen   
 
-    Simulator
+  Simulator
+```
 ### Targetable screen sizes
+```
     Screen3Dot5inch
     Screen4inch
     Screen4Dot7inch
@@ -200,6 +203,7 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
     Screen5Dot8inch
     Screen6Dot1inch
     Screen6Dot5inch
+```
 
     
 ### Available iOS Version Finder methods
@@ -234,6 +238,7 @@ Or in Swift:
 	+ (NSString *)deviceName;
 ```
 ### Targetable models
+```
 	Apple Watch 38mm
     Apple Watch 42mm
     Apple Watch 38mm Series 1
@@ -249,12 +254,15 @@ Or in Swift:
     Apple Watch 40mm Series 6
     Apple Watch 44mm Series 6
     Simulator
+```
 
 ### Targetable screen sizes
+```
     Screen38mm
     Screen40mm
     Screen42mm
     Screen44mm
+```
 
 ### Available watchOS Version Finder methods
 ```objective-c
@@ -337,6 +345,7 @@ Or in Swift:
     + (DeviceScreenResolution)deviceScreenResolution;
 ```
 ### Targetable models
+```
 	DeviceVersionIMac
 	DeviceVersionMacMini
 	DeviceVersionMacPro
@@ -344,8 +353,10 @@ Or in Swift:
 	DeviceVersionMacBookAir
 	DeviceVersionMacBookPro
 	DeviceVersionXserve
+```
 
 ### Targetable screen sizes
+```
     Mac27Inch
 	Mac24Inch
 	Mac21Dot5Inch
@@ -355,10 +366,13 @@ Or in Swift:
 	Mac13Inch
 	Mac12Inch
 	Mac11Inch
+```
 
 ### Targetable screen resolutions
+```
     DeviceScreenRetina,
 	DeviceScreenNoRetina
+```
 
 ### Available OSX Version Finder methods
 ```objective-c
