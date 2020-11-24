@@ -150,6 +150,10 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
 	iPhone11Pro
 	iPhone11ProMax
   iPhoneSE2
+  iPhone12      
+  iPhone12Pro   
+  iPhone12ProMax
+  iPhone12Mini  
 
 	iPad1                 
 	iPad2                 
@@ -171,6 +175,8 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
 	iPad6
   iPadPro12Dot9Inch4Gen
   iPadPro11Inch2Gen 
+  iPad8   
+  iPadAir4
 	              
 	iPodTouch1Gen         
 	iPodTouch2Gen         
@@ -178,6 +184,8 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
 	iPodTouch4Gen         
 	iPodTouch5Gen         
 	iPodTouch6Gen
+  iPodTouch6Gen   
+  iPodTouch7Gen   
 
     Simulator
 ### Targetable screen sizes
@@ -188,6 +196,7 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
     Screen5Dot8inch
     Screen6Dot1inch
     Screen6Dot5inch
+
     
 ### Available iOS Version Finder methods
   ```objective-c
@@ -233,6 +242,8 @@ Or in Swift:
     Apple Watch 44mm Series 4
     Apple Watch 40mm Series 5
     Apple Watch 44mm Series 5
+    Apple Watch 40mm Series 6
+    Apple Watch 44mm Series 6
     Simulator
 
 ### Targetable screen sizes

@@ -56,6 +56,10 @@
                               @"iPhone12,3" : @(iPhone11Pro),
                               @"iPhone12,5" : @(iPhone11ProMax),
                               @"iPhone12,8" : @(iPhoneSE2),
+                              @"iPhone13,2" : @(iPhone12),
+                              @"iPhone13,3" : @(iPhone12Pro),
+                              @"iPhone13,4" : @(iPhone12ProMax),
+                              @"iPhone13,1" : @(iPhone12Mini),
                               @"i386"       : @(Simulator),
                               @"x86_64"     : @(Simulator),
                               
@@ -115,6 +119,8 @@
                               @"iPad11,2" : @(iPadMini5),
                               @"iPad11,3" : @(iPadAir3),
                               @"iPad11,4" : @(iPadAir3),
+                              @"iPad11,7" : @(iPad8),
+                              @"iPad13,2" : @(iPadAir4),
 
                               //iPods
                               @"iPod1,1" : @(iPodTouch1Gen),
@@ -122,7 +128,9 @@
                               @"iPod3,1" : @(iPodTouch3Gen),
                               @"iPod4,1" : @(iPodTouch4Gen),
                               @"iPod5,1" : @(iPodTouch5Gen),
-                              @"iPod7,1" : @(iPodTouch6Gen)};
+                              @"iPod7,1" : @(iPodTouch6Gen),
+                              @"iPod9,1" : @(iPodTouch7Gen)
+        };
 #pragma clang diagnostic pop
     });
     
@@ -275,7 +283,10 @@
              @(iPhone11Pro)          : @"iPhone11Pro",
              @(iPhone11ProMax)       : @"iPhone11ProMax",
              @(iPhoneSE2)            : @"iPhoneSE2",
-             
+             @(iPhone12)             : @"iPhone12",
+             @(iPhone12Pro)          : @"iPhone12Pro",
+             @(iPhone12ProMax)       : @"iPhone12ProMax",
+             @(iPhone12Mini)         : @"iPhone12Mini",
              
              @(iPad1)                : @"iPad 1",
              @(iPad2)                : @"iPad 2",
@@ -299,14 +310,17 @@
              @(iPadPro11Inch)        : @"iPadPro11Inch",
              @(iPadMini5)            : @"iPadMini5",
              @(iPadPro11Inch2Gen)    : @"iPadpro11Inch2Gen",
+             @(iPad8)                : @"iPad8",
+             @(iPadAir4)             : @"iPadAir4",
              
              @(iPodTouch1Gen)        : @"iPod Touch 1st Gen",
              @(iPodTouch2Gen)        : @"iPod Touch 2nd Gen",
              @(iPodTouch3Gen)        : @"iPod Touch 3rd Gen",
              @(iPodTouch4Gen)        : @"iPod Touch 4th Gen",
              @(iPodTouch5Gen)        : @"iPod Touch 5th Gen",
-             @(iPodTouch6Gen)        : @"iPod Touch 6th Gen",
-             
+             @(iPodTouch6Gen)        : @"iPod Touch 6th Gen",             
+             @(iPodTouch7Gen)        : @"iPod Touch 7th Gen",
+
              @(Simulator)            : @"Simulator",
              @(UnknownDevice)        : @"Unknown Device"
              }[@(deviceVersion)];

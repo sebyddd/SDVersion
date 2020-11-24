@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "MCVersion"
-  s.version      = "4.3.3"
+  s.version      = "4.3.4"
   s.summary      = "Lightweight Cocoa library for detecting the running device's model and screen size. 作者不更新，我的一些库依赖SDVersion，故发一个MC版本，见谅"
   s.homepage     = "https://github.com/poholo/SDVersion"
   s.screenshots  = "https://dl.dropboxusercontent.com/s/bmfjwfe2ngnivwn/sdversion.png?dl=0"
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = "MIT (example)"
+  s.license      = "MIT"
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "Sebastian Dobrincu" => "me@dobrincu.co" }
   s.platform     = :ios
