@@ -60,6 +60,12 @@
                               @"iPhone13,3" : @(iPhone12Pro),
                               @"iPhone13,4" : @(iPhone12ProMax),
                               @"iPhone13,1" : @(iPhone12Mini),
+                              
+                              @"iPhone14,5" : @(iPhone13),
+                              @"iPhone14,2" : @(iPhone13Pro),
+                              @"iPhone14,3" : @(iPhone13ProMax),
+                              @"iPhone14,4" : @(iPhone13Mini),
+                              
                               @"i386"       : @(Simulator),
                               @"x86_64"     : @(Simulator),
                               
@@ -121,6 +127,11 @@
                               @"iPad11,4" : @(iPadAir3),
                               @"iPad11,7" : @(iPad8),
                               @"iPad13,2" : @(iPadAir4),
+                              @"iPad14,1" : @(iPadMini6),
+                              @"iPad13,10": @(iPadPro12Dot9Inch5Gen),
+                              @"iPad13,5" : @(iPadPro11Inch3Gen),
+                              @"iPad12,2" : @(iPad9),
+                              
 
                               //iPods
                               @"iPod1,1" : @(iPodTouch1Gen),
@@ -216,13 +227,29 @@
         return  Screen4Dot7inch;
     } else if(screenHeight == 2208) {
         return Screen5Dot5inch;
+    } else if(screenHeight == 2340) {
+        return Screen5Dot4inch;
     } else if (screenHeight == 2436) {
         return Screen5Dot8inch;
-    } else if (screenHeight == 1792) {
+    } else if (screenHeight == 1792 || screenHeight == 2532) {
         return Screen6Dot1inch;
     } else if (screenHeight == 2688) {
         return Screen6Dot5inch;
-    } else
+    } else if (screenHeight == 2778) {
+        return Screen6Dot7inch;
+    } else if (screenHeight == 2266) {
+        return Screen8Dot3inch;
+    } else if (screenHeight == 2048) {
+        return Screen9Dot7inch;
+    } else if (screenHeight == 2160) {
+        return Screen10Dot2inch;
+    } else if (screenHeight == 2360) {
+        return Screen10Dot9inch;
+    } else if (screenHeight == 2388) {
+        return Screen11inch;
+    } else if (screenHeight == 2732) {
+        return Screen12Dot9inch;
+    }
     return UnknownSize;
 }
 
@@ -246,10 +273,19 @@
              @(Screen3Dot5inch) : @"3.5 inch",
              @(Screen4inch)     : @"4 inch",
              @(Screen4Dot7inch) : @"4.7 inch",
+             @(Screen5Dot4inch) : @"5.4 inch",
              @(Screen5Dot5inch) : @"5.5 inch",
              @(Screen5Dot8inch) : @"5.8 inch",
              @(Screen6Dot1inch) : @"6.1 inch",
              @(Screen6Dot5inch) : @"6.5 inch",
+             @(Screen6Dot7inch) : @"6.7 inch",
+             @(Screen8Dot3inch) : @"8.3 inch",
+             @(Screen9Dot7inch) : @"9.7 inch",
+             @(Screen10Dot2inch): @"10.2 inch",
+             @(Screen10Dot9inch): @"10.9 inch",
+             @(Screen11inch)    : @"11 inch",
+             @(Screen12Dot9inch): @"12.9 inch",
+             
              }[@(deviceSize)];
 }
 
@@ -287,6 +323,10 @@
              @(iPhone12Pro)          : @"iPhone12Pro",
              @(iPhone12ProMax)       : @"iPhone12ProMax",
              @(iPhone12Mini)         : @"iPhone12Mini",
+             @(iPhone13)             : @"iPhone13",
+             @(iPhone13Pro)          : @"iPhone13Pro",
+             @(iPhone13ProMax)       : @"iPhone13ProMax",
+             @(iPhone13Mini)         : @"iPhone13Mini",
              
              @(iPad1)                : @"iPad 1",
              @(iPad2)                : @"iPad 2",
@@ -312,6 +352,10 @@
              @(iPadPro11Inch2Gen)    : @"iPadpro11Inch2Gen",
              @(iPad8)                : @"iPad8",
              @(iPadAir4)             : @"iPadAir4",
+             @(iPadMini6)            : @"iPadMini6",
+             @(iPadPro12Dot9Inch5Gen): @"iPadPro12Dot9Inch5Gen",
+             @(iPadPro11Inch3Gen)    : @"iPadPro11Inch3Gen",
+             @(iPad9)                : @"iPad9",
              
              @(iPodTouch1Gen)        : @"iPod Touch 1st Gen",
              @(iPodTouch2Gen)        : @"iPod Touch 2nd Gen",
