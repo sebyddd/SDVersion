@@ -136,7 +136,6 @@
 		1FE53CD41D3FF491005739A5 /* SDtvOSVersionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SDtvOSVersionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FE53CD81D3FF491005739A5 /* SDtvOSVersionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDtvOSVersionTests.m; sourceTree = "<group>"; };
 		1FE53CDA1D3FF491005739A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		33C4BD2F2702B7BC0014D8AC /* SDVersion.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = SDVersion.podspec; path = ../SDVersion.podspec; sourceTree = "<group>"; };
 		9A6DB5DE1B8E82D00065EA11 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9A6DB5DF1B8E82D00065EA11 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		9A6DB5E11B8E82D00065EA11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -324,7 +323,6 @@
 		9AA6623F19BFABFC0055042F = {
 			isa = PBXGroup;
 			children = (
-				33C4BD2F2702B7BC0014D8AC /* SDVersion.podspec */,
 				9A95DA931B853CFF00F96CB5 /* SDVersion */,
 				9A6DB5DD1B8E82D00065EA11 /* SDiOSVersion */,
 				9A6DB5F01B8E82E00065EA11 /* SDiOSVersionTests */,
