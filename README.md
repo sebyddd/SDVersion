@@ -154,11 +154,18 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
 	iPhone11
 	iPhone11Pro
 	iPhone11ProMax
-  iPhoneSE2
-  iPhone12      
-  iPhone12Pro   
-  iPhone12ProMax
-  iPhone12Mini  
+    iPhoneSE2
+    iPhone12      
+    iPhone12Pro   
+    iPhone12ProMax
+    iPhone12Mini  
+    iPhone13      
+    iPhone13Pro   
+    iPhone13ProMax
+    iPhone13Mini  
+
+
+
 
 	iPad1                 
 	iPad2                 
@@ -178,10 +185,14 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
 	iPadPro11Inch         
 	iPadAir3
 	iPad6
-  iPadPro12Dot9Inch4Gen
-  iPadPro11Inch2Gen 
-  iPad8   
-  iPadAir4
+    iPadPro12Dot9Inch4Gen
+    iPadPro11Inch2Gen 
+    iPad8   
+    iPadAir4
+    iPadMini6             
+    iPadPro12Dot9Inch5Gen 
+    iPadPro11Inch3Gen     
+    iPad9                     
 	              
 	iPodTouch1Gen         
 	iPodTouch2Gen         
@@ -189,20 +200,28 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
 	iPodTouch4Gen         
 	iPodTouch5Gen         
 	iPodTouch6Gen
-  iPodTouch6Gen   
-  iPodTouch7Gen   
+    iPodTouch6Gen   
+    iPodTouch7Gen   
 
-  Simulator
+    Simulator
 ```
 ### Targetable screen sizes
 ```
-    Screen3Dot5inch
-    Screen4inch
-    Screen4Dot7inch
-    Screen5Dot5inch
-    Screen5Dot8inch
-    Screen6Dot1inch
-    Screen6Dot5inch
+    Screen3Dot5inch,
+    Screen4inch    ,
+    Screen4Dot7inch,
+    Screen5Dot5inch,
+    Screen5Dot4inch,
+    Screen5Dot8inch,
+    Screen6Dot1inch,
+    Screen6Dot5inch,
+    Screen6Dot7inch,
+    Screen8Dot3inch,
+    Screen9Dot7inch,
+    Screen10Dot2inch,
+    Screen10Dot9inch,
+    Screen11inch,
+    Screen12Dot9inch
 ```
 
     
@@ -251,8 +270,13 @@ Or in Swift:
     Apple Watch 44mm Series 4
     Apple Watch 40mm Series 5
     Apple Watch 44mm Series 5
+    Apple Watch 40mm SE     
+    Apple Watch 44mm SE  
     Apple Watch 40mm Series 6
-    Apple Watch 44mm Series 6
+    Apple Watch 44mm Series 6   
+    Apple Watch 41mm Series7
+    Apple Watch 45mm Series7
+    
     Simulator
 ```
 
@@ -260,8 +284,10 @@ Or in Swift:
 ```
     Screen38mm
     Screen40mm
+    Screen41mm
     Screen42mm
     Screen44mm
+    Screen45mm
 ```
 
 ### Available watchOS Version Finder methods
@@ -290,8 +316,11 @@ Or in Swift:
 	+ (NSString *)deviceName;
 ```
 ### Targetable models
-	Apple TV (4th Generation)
-
+    Apple TV (4th Generation)
+    Apple TV 4K
+    Apple TV 4K(2nd Generation)
+    Apple TV 4K(2nd Generation 1080p)
+    
     Simulator
 
 ### Available tvOS Version Finder methods

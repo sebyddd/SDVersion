@@ -32,8 +32,12 @@
                               @"Watch4,4" : @(AppleWatch44mmSeries4),
                               @"Watch5,3" : @(AppleWatch40mmSeries5),
                               @"Watch5,4" : @(AppleWatch44mmSeries5),
+                              @"Watch5,9" : @(AppleWatch40mmSE),
+                              @"Watch5,12" : @(AppleWatch44mmSE),
                               @"Watch6,1" : @(AppleWatch40mmSeries6),
-                              @"Watch6,2" : @(AppleWatch44mmSeries6)
+                              @"Watch6,2" : @(AppleWatch44mmSeries6),
+                              @"Watch6,6" : @(AppleWatch41mmSeries7),
+                              @"Watch6,9" : @(AppleWatch45mmSeries7),
                               };
     });
     
@@ -75,8 +79,12 @@
              @(AppleWatch44mmSeries4) : @"Apple Watch Series 4 44mm",
              @(AppleWatch40mmSeries5) : @"Apple Watch Series 5 40mm",
              @(AppleWatch44mmSeries5) : @"Apple Watch Series 5 44mm",
+             @(AppleWatch40mmSE)      : @"Apple Watch Series SE 40mm",
+             @(AppleWatch44mmSE)      : @"Apple Watch Series SE 44mm",
              @(AppleWatch40mmSeries6) : @"Apple Watch Series 6 40mm",
              @(AppleWatch44mmSeries6) : @"Apple Watch Series 6 44mm",
+             @(AppleWatch41mmSeries7) : @"Apple Watch Series 7 41mm",
+             @(AppleWatch45mmSeries7) : @"Apple Watch Series 7 45mm",
              @(Simulator)             : @"Simulator"
              }[@(deviceVersion)];
 }
@@ -93,6 +101,10 @@
         return Screen40mm;
     } else if(screenHeight == 170) {
         return Screen38mm;
+    } else if(screenHeight == 215) {
+        return Screen41mm;
+    } else if(screenHeight == 242) {
+        return Screen45mm;
     } else {
         return UnknownSize;
     }
@@ -104,8 +116,10 @@
              @(UnknownSize) : @"Unknown Size",
              @(Screen38mm)  : @"38mm",
              @(Screen40mm)  : @"40mm",
+             @(Screen41mm)  : @"41mm",
              @(Screen42mm)  : @"42mm",
-             @(Screen44mm)  : @"44mm"
+             @(Screen44mm)  : @"44mm",
+             @(Screen45mm)  : @"45mm"
              }[@(deviceSize)];
 }
 
@@ -115,7 +129,7 @@
     uname(&systemInfo);
     NSString *code = [NSString stringWithCString:systemInfo.machine encoding:NSUTF8StringEncoding];
     if ([code isEqualToString:@"x86_64"] || [code isEqualToString:@"i386"]) {
-        code = @"Simulator";
+        code = [NSString stringWithFormat:@"%@ Simulator", code];
     }
     
     return code;

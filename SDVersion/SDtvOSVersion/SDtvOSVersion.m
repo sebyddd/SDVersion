@@ -21,6 +21,7 @@
         deviceNamesByCode = @{
                               @"AppleTV5,3" : @(AppleTV4),
                               @"AppleTV6,2" : @(AppleTV4K),
+                              @"AppleTV11,1" : @(AppleTV4K2Gen)
                               };
     });
     
@@ -52,6 +53,7 @@
     return @{
              @(AppleTV4)          : @"Apple TV (4th Generation)",
              @(AppleTV4K)         : @"Apple TV 4K",
+             @(AppleTV4K2Gen)     : @"Apple TV 4K(2nd Generation)",
              @(Simulator)         : @"Simulator"
              }[@(deviceVersion)];
 }

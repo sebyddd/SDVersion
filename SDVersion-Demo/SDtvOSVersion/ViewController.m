@@ -24,6 +24,8 @@
     // Get device name as NSString
     self.tvVersionLabel.text = [self.tvVersionLabel.text stringByAppendingString:[SDtvOSVersion deviceVersionName:[SDtvOSVersion deviceVersion]]];
     
+    NSLog([SDtvOSVersion deviceName]);
+    
     // Check for device model
     if ([SDtvOSVersion deviceVersion] == AppleTV4)
         NSLog(@"You got the fourth-generation Apple TV. Nice!");
