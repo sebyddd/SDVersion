@@ -34,7 +34,7 @@ SDVersion supports iOS, watchOS, tvOS, and macOS. Browse through the implementat
 
 ```
 update log
-4.3.6 增加2022年春季设备
+4.3.7 增加2022年春季设备
 
 ```
 
