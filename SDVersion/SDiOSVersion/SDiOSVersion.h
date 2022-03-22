@@ -41,6 +41,7 @@ typedef NS_ENUM(NSInteger, DeviceVersion){
     iPhone13Pro           = 30,
     iPhone13ProMax        = 31,
     iPhone13Mini          = 32,
+    iPhoneSE3             = 33,
     
     
     iPad1                 = 100,
@@ -71,6 +72,7 @@ typedef NS_ENUM(NSInteger, DeviceVersion){
     iPadPro12Dot9Inch5Gen = 125,
     iPadPro11Inch3Gen     = 126,
     iPad9                 = 127,
+    iPadAir5              = 128,
 //    iPadPro9Dot7Inch      = 127,
     
     

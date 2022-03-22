@@ -32,6 +32,12 @@ SDVersion supports iOS, watchOS, tvOS, and macOS. Browse through the implementat
 	</a>
 </p>
 
+```
+update log
+4.3.6 增加2022年春季设备
+
+```
+
 ## How it works
 
 ```objective-c
@@ -133,27 +139,27 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
 ```
 ### Targetable models
 ```
-	iPhone4               
-	iPhone4S              
-	iPhone5               
-	iPhone5C              
-	iPhone5S              
-	iPhone6               
-	iPhone6Plus           
-	iPhone6S              
-	iPhone6SPlus          
-	iPhone7               
-	iPhone7Plus           
-	iPhone8               
-	iPhone8Plus           
-	iPhoneX               
-	iPhoneSE              
-	iPhoneXS              
-	iPhoneXR              
-	iPhoneXSMax
-	iPhone11
-	iPhone11Pro
-	iPhone11ProMax
+    iPhone4               
+    iPhone4S              
+    iPhone5               
+    iPhone5C              
+    iPhone5S              
+    iPhone6               
+    iPhone6Plus           
+    iPhone6S              
+    iPhone6SPlus          
+    iPhone7               
+    iPhone7Plus           
+    iPhone8               
+    iPhone8Plus           
+    iPhoneX               
+    iPhoneSE              
+    iPhoneXS              
+    iPhoneXR              
+    iPhoneXSMax
+    iPhone11
+    iPhone11Pro
+    iPhone11ProMax
     iPhoneSE2
     iPhone12      
     iPhone12Pro   
@@ -162,29 +168,30 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
     iPhone13      
     iPhone13Pro   
     iPhone13ProMax
-    iPhone13Mini  
+    iPhone13Mini
+    iPhoneSE3  
 
 
 
 
-	iPad1                 
-	iPad2                 
-	iPadMini              
-	iPad3                 
-	iPad4                 
-	iPadAir               
-	iPadMini2             
-	iPadAir2              
-	iPadMini3             
-	iPadMini4             
-	iPadPro12Dot9Inch     
-	iPadPro9Dot7Inch      
-	iPad5                     
-	iPadPro12Dot9Inch2Gen 
-	iPadPro10Dot5Inch     
-	iPadPro11Inch         
-	iPadAir3
-	iPad6
+    iPad1                 
+    iPad2                 
+    iPadMini              
+    iPad3                 
+    iPad4                 
+    iPadAir               
+    iPadMini2             
+    iPadAir2              
+    iPadMini3             
+    iPadMini4             
+    iPadPro12Dot9Inch     
+    iPadPro9Dot7Inch      
+    iPad5                     
+    iPadPro12Dot9Inch2Gen 
+    iPadPro10Dot5Inch     
+    iPadPro11Inch         
+    iPadAir3
+    iPad6
     iPadPro12Dot9Inch4Gen
     iPadPro11Inch2Gen 
     iPad8   
@@ -192,14 +199,15 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
     iPadMini6             
     iPadPro12Dot9Inch5Gen 
     iPadPro11Inch3Gen     
-    iPad9                     
-	              
-	iPodTouch1Gen         
-	iPodTouch2Gen         
-	iPodTouch3Gen         
-	iPodTouch4Gen         
-	iPodTouch5Gen         
-	iPodTouch6Gen
+    iPad9 
+    iPadAir5                    
+                  
+    iPodTouch1Gen         
+    iPodTouch2Gen         
+    iPodTouch3Gen         
+    iPodTouch4Gen         
+    iPodTouch5Gen         
+    iPodTouch6Gen
     iPodTouch6Gen   
     iPodTouch7Gen   
 
@@ -253,12 +261,12 @@ Or in Swift:
 ### Available methods
 ```objective-c
     + (DeviceVersion)deviceVersion;
-	+ (DeviceSize)deviceSize;
-	+ (NSString *)deviceName;
+    + (DeviceSize)deviceSize;
+    + (NSString *)deviceName;
 ```
 ### Targetable models
 ```
-	Apple Watch 38mm
+    Apple Watch 38mm
     Apple Watch 42mm
     Apple Watch 38mm Series 1
     Apple Watch 42mm Series 1
@@ -334,7 +342,7 @@ Or in Swift:
 
 ### Helpers
 ```objective-c
-	  NSLog(@"%@", [SDVersion deviceVersionName:[SDVersion deviceVersion]]);
+      NSLog(@"%@", [SDVersion deviceVersionName:[SDVersion deviceVersion]]);
       /* e.g: Outputs 'Apple TV (4th Generation)' */
 ```
 
@@ -375,32 +383,32 @@ Or in Swift:
 ```
 ### Targetable models
 ```
-	DeviceVersionIMac
-	DeviceVersionMacMini
-	DeviceVersionMacPro
-	DeviceVersionMacBook
-	DeviceVersionMacBookAir
-	DeviceVersionMacBookPro
-	DeviceVersionXserve
+    DeviceVersionIMac
+    DeviceVersionMacMini
+    DeviceVersionMacPro
+    DeviceVersionMacBook
+    DeviceVersionMacBookAir
+    DeviceVersionMacBookPro
+    DeviceVersionXserve
 ```
 
 ### Targetable screen sizes
 ```
     Mac27Inch
-	Mac24Inch
-	Mac21Dot5Inch
-	Mac20Inch
-	Mac17Inch
-	Mac15Inch
-	Mac13Inch
-	Mac12Inch
-	Mac11Inch
+    Mac24Inch
+    Mac21Dot5Inch
+    Mac20Inch
+    Mac17Inch
+    Mac15Inch
+    Mac13Inch
+    Mac12Inch
+    Mac11Inch
 ```
 
 ### Targetable screen resolutions
 ```
     DeviceScreenRetina,
-	DeviceScreenNoRetina
+    DeviceScreenNoRetina
 ```
 
 ### Available OSX Version Finder methods

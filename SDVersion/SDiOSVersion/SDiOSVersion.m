@@ -65,6 +65,7 @@
                               @"iPhone14,2" : @(iPhone13Pro),
                               @"iPhone14,3" : @(iPhone13ProMax),
                               @"iPhone14,4" : @(iPhone13Mini),
+                              @"iPhone14,6" : @(iPhoneSE3),
                               
                               @"i386"       : @(Simulator),
                               @"x86_64"     : @(Simulator),
@@ -131,6 +132,8 @@
                               @"iPad13,10": @(iPadPro12Dot9Inch5Gen),
                               @"iPad13,5" : @(iPadPro11Inch3Gen),
                               @"iPad12,2" : @(iPad9),
+                              @"iPad13,17": @(iPadAir5),
+                              
                               
 
                               //iPods
@@ -327,6 +330,7 @@
              @(iPhone13Pro)          : @"iPhone13Pro",
              @(iPhone13ProMax)       : @"iPhone13ProMax",
              @(iPhone13Mini)         : @"iPhone13Mini",
+             @(iPhoneSE3)            : @"iPhoneSE3",
              
              @(iPad1)                : @"iPad 1",
              @(iPad2)                : @"iPad 2",
@@ -343,7 +347,7 @@
              @(iPad5)                : @"iPad 5",
              @(iPadPro10Dot5Inch)    : @"iPad Pro 10.5 inch",
              @(iPadPro12Dot9Inch2Gen): @"iPad Pro 12.9 inch",
-             @(iPadPro12Dot9Inch4Gen):@"iPad Pro 12.9 inch 4",
+             @(iPadPro12Dot9Inch4Gen): @"iPad Pro 12.9 inch 4",
              @(iPad6)                : @"iPad 6",
              @(iPadAir3)             : @"iPadAir3",
              @(iPad7)                : @"iPad 7",
@@ -356,6 +360,7 @@
              @(iPadPro12Dot9Inch5Gen): @"iPadPro12Dot9Inch5Gen",
              @(iPadPro11Inch3Gen)    : @"iPadPro11Inch3Gen",
              @(iPad9)                : @"iPad9",
+             @(iPadAir5)             : @"iPadAir5",
              
              @(iPodTouch1Gen)        : @"iPod Touch 1st Gen",
              @(iPodTouch2Gen)        : @"iPod Touch 2nd Gen",
