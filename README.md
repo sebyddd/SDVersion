@@ -170,6 +170,10 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
     iPhone13ProMax
     iPhone13Mini
     iPhoneSE3  
+    iPhone14        
+    iPhone14Plus    
+    iPhone14Pro     
+    iPhone14ProMax  
 
 
 
@@ -284,6 +288,11 @@ Or in Swift:
     Apple Watch 44mm Series 6   
     Apple Watch 41mm Series7
     Apple Watch 45mm Series7
+    AppleWatch40mmSE2     ,
+    AppleWatch44mmSE2     ,
+    AppleWatch41mmSeries8 ,
+    AppleWatch45mmSeries8 ,
+    AppleWatch49mmUltra ,
     
     Simulator
 ```
@@ -296,6 +305,7 @@ Or in Swift:
     Screen42mm
     Screen44mm
     Screen45mm
+    Screen49mm
 ```
 
 ### Available watchOS Version Finder methods

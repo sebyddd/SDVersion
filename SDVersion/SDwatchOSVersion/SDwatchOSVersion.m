@@ -38,6 +38,11 @@
                               @"Watch6,2" : @(AppleWatch44mmSeries6),
                               @"Watch6,6" : @(AppleWatch41mmSeries7),
                               @"Watch6,9" : @(AppleWatch45mmSeries7),
+                              @"Watch6,13" : @(AppleWatch40mmSE2),
+                              @"Watch6,13" : @(AppleWatch44mmSE2),
+                              @"Watch6,14" : @(AppleWatch41mmSeries8),
+                              @"Watch6,15" : @(AppleWatch45mmSeries8),
+                              @"Watch6,18" : @(AppleWatch49mmUltra),
                               };
     });
     
@@ -85,6 +90,11 @@
              @(AppleWatch44mmSeries6) : @"Apple Watch Series 6 44mm",
              @(AppleWatch41mmSeries7) : @"Apple Watch Series 7 41mm",
              @(AppleWatch45mmSeries7) : @"Apple Watch Series 7 45mm",
+             @(AppleWatch40mmSE2)     : @"Apple Watch Series SE2 40mm",
+             @(AppleWatch44mmSE2)     : @"Apple Watch Series SE2 44mm",
+             @(AppleWatch41mmSeries8) : @"Apple Watch Series 8 41mm",
+             @(AppleWatch45mmSeries8) : @"Apple Watch Series 8 45mm",
+             @(AppleWatch49mmUltra)   : @"Apple Watch 49mm Ultra",
              @(Simulator)             : @"Simulator"
              }[@(deviceVersion)];
 }
@@ -105,6 +115,8 @@
         return Screen41mm;
     } else if(screenHeight == 242) {
         return Screen45mm;
+    } else if(screenHeight == 251) {
+        return Screen49mm;
     } else {
         return UnknownSize;
     }
@@ -119,7 +131,8 @@
              @(Screen41mm)  : @"41mm",
              @(Screen42mm)  : @"42mm",
              @(Screen44mm)  : @"44mm",
-             @(Screen45mm)  : @"45mm"
+             @(Screen45mm)  : @"45mm",
+             @(Screen49mm)  : @"49mm"
              }[@(deviceSize)];
 }
 

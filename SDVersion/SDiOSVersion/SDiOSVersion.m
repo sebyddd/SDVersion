@@ -66,6 +66,10 @@
                               @"iPhone14,3" : @(iPhone13ProMax),
                               @"iPhone14,4" : @(iPhone13Mini),
                               @"iPhone14,6" : @(iPhoneSE3),
+                              @"iPhone14,7" : @(iPhone14),
+                              @"iPhone14,8" : @(iPhone14Plus),
+                              @"iPhone15,2" : @(iPhone14Pro),
+                              @"iPhone15,3" : @(iPhone14ProMax),
                               
                               @"i386"       : @(Simulator),
                               @"x86_64"     : @(Simulator),
@@ -217,7 +221,7 @@
     if ([SDiOSVersion versionLessThan:@"8"]) {
         [NSException raise:@"Wrong iOS Version For Checking" format:@"The version of iOS %ld is less than iOS 8 which is required for this function", (long)[SDiOSVersion version]];
     }
-
+    
     CGFloat screenHeight = 0;
     
     screenHeight = [[UIScreen mainScreen] nativeBounds].size.height;
@@ -234,11 +238,11 @@
         return Screen5Dot4inch;
     } else if (screenHeight == 2436) {
         return Screen5Dot8inch;
-    } else if (screenHeight == 1792 || screenHeight == 2532) {
+    } else if (screenHeight == 1792 || screenHeight == 2532 || screenHeight == 2556) {
         return Screen6Dot1inch;
     } else if (screenHeight == 2688) {
         return Screen6Dot5inch;
-    } else if (screenHeight == 2778) {
+    } else if (screenHeight == 2778 || screenHeight == 2796) {
         return Screen6Dot7inch;
     } else if (screenHeight == 2266) {
         return Screen8Dot3inch;
@@ -331,6 +335,10 @@
              @(iPhone13ProMax)       : @"iPhone13ProMax",
              @(iPhone13Mini)         : @"iPhone13Mini",
              @(iPhoneSE3)            : @"iPhoneSE3",
+             @(iPhone14)             : @"iPhone14",
+             @(iPhone14Plus)         : @"iPhone14Plus",
+             @(iPhone14Pro)          : @"iPhone14Pro",
+             @(iPhone14ProMax)       : @"iPhone14ProMax",
              
              @(iPad1)                : @"iPad 1",
              @(iPad2)                : @"iPad 2",

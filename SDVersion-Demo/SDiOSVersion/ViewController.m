@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"SDVersion!!!!!!!!!!";
     
     // Get device name as NSString
     self.iphoneVersionLabel.text = [self.iphoneVersionLabel.text stringByAppendingString:[SDVersion deviceNameString]];

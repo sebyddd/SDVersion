@@ -26,6 +26,11 @@ typedef NS_ENUM(NSInteger, DeviceVersion) {
     AppleWatch44mmSeries6 ,
     AppleWatch41mmSeries7 ,
     AppleWatch45mmSeries7 ,
+    AppleWatch40mmSE2     ,
+    AppleWatch44mmSE2     ,
+    AppleWatch41mmSeries8 ,
+    AppleWatch45mmSeries8 ,
+    AppleWatch49mmUltra ,
     
     Simulator = 0
 };
@@ -38,6 +43,7 @@ typedef NS_ENUM(NSInteger, DeviceSize) {
     Screen42mm,
     Screen44mm,
     Screen45mm,
+    Screen49mm,
 };
 
 @interface SDwatchOSVersion : NSObject
