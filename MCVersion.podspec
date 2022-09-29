@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "MCVersion"
-  s.version      = "4.3.7"
+  s.version      = "4.3.8"
   s.summary      = "Lightweight Cocoa library for detecting the running device's model and screen size. 作者不更新，我的一些库依赖SDVersion，故发一个MC版本，见谅. 22春季设备更新"
   s.homepage     = "https://github.com/poholo/SDVersion"
   s.screenshots  = "https://dl.dropboxusercontent.com/s/bmfjwfe2ngnivwn/sdversion.png?dl=0"
