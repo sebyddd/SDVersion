@@ -32,6 +32,12 @@ SDVersion supports iOS, watchOS, tvOS, and macOS. Browse through the implementat
 	</a>
 </p>
 
+```
+update log
+4.3.7 增加2022年春季设备
+
+```
+
 ## How it works
 
 ```objective-c
@@ -111,8 +117,12 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
 
 ### Podfile
 ```ruby
-        pod 'SDVersion'
+        pod 'SDVersion', git:'https://github.com/poholo/SDVersion.git'
+        or 
+        pod 'MCVersion'
 ```
+
+
 
 
 ## iOS
@@ -128,46 +138,105 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
 	+ (BOOL)isZoomed;
 ```
 ### Targetable models
-	iPhone4
-    iPhone4S
-    iPhone5
-    iPhone5C
-    iPhone5S
-    iPhone6
-    iPhone6Plus
-    iPhone6S
-    iPhone6SPlus
-    iPhoneSE
-    iPhone7
-    iPhone7Plus
+```
+    iPhone4               
+    iPhone4S              
+    iPhone5               
+    iPhone5C              
+    iPhone5S              
+    iPhone6               
+    iPhone6Plus           
+    iPhone6S              
+    iPhone6SPlus          
+    iPhone7               
+    iPhone7Plus           
+    iPhone8               
+    iPhone8Plus           
+    iPhoneX               
+    iPhoneSE              
+    iPhoneXS              
+    iPhoneXR              
+    iPhoneXSMax
+    iPhone11
+    iPhone11Pro
+    iPhone11ProMax
+    iPhoneSE2
+    iPhone12      
+    iPhone12Pro   
+    iPhone12ProMax
+    iPhone12Mini  
+    iPhone13      
+    iPhone13Pro   
+    iPhone13ProMax
+    iPhone13Mini
+    iPhoneSE3  
+    iPhone14        
+    iPhone14Plus    
+    iPhone14Pro     
+    iPhone14ProMax  
 
-    iPad1
-    iPad2
-    iPadMini
-    iPad3
-    iPad4
-    iPadAir
-    iPadMini2
-    iPadAir2
-    iPadMini3
-    iPadMini4
-    iPadPro9Dot7Inch
-    iPadPro12Dot9Inch
-    iPad5
 
-	iPodTouch1Gen
-    iPodTouch2Gen
-    iPodTouch3Gen
-    iPodTouch4Gen
-    iPodTouch5Gen
+
+
+    iPad1                 
+    iPad2                 
+    iPadMini              
+    iPad3                 
+    iPad4                 
+    iPadAir               
+    iPadMini2             
+    iPadAir2              
+    iPadMini3             
+    iPadMini4             
+    iPadPro12Dot9Inch     
+    iPadPro9Dot7Inch      
+    iPad5                     
+    iPadPro12Dot9Inch2Gen 
+    iPadPro10Dot5Inch     
+    iPadPro11Inch         
+    iPadAir3
+    iPad6
+    iPadPro12Dot9Inch4Gen
+    iPadPro11Inch2Gen 
+    iPad8   
+    iPadAir4
+    iPadMini6             
+    iPadPro12Dot9Inch5Gen 
+    iPadPro11Inch3Gen     
+    iPad9 
+    iPadAir5                    
+                  
+    iPodTouch1Gen         
+    iPodTouch2Gen         
+    iPodTouch3Gen         
+    iPodTouch4Gen         
+    iPodTouch5Gen         
     iPodTouch6Gen
+    iPodTouch6Gen   
+    iPodTouch7Gen   
 
     Simulator
+```
 ### Targetable screen sizes
-    Screen3Dot5inch
-    Screen4inch
-    Screen4Dot7inch
-    Screen5Dot5inch
+```
+    Screen3Dot5inch,
+    Screen4inch    ,
+    Screen4Dot7inch,
+    Screen5Dot5inch,
+    Screen5Dot4inch,
+    Screen5Dot8inch,
+    Screen6Dot1inch,
+    Screen6Dot5inch,
+    Screen6Dot7inch,
+    Screen8Dot3inch,
+    Screen9Dot7inch,
+    Screen10Dot2inch,
+    Screen10Dot9inch,
+    Screen11inch,
+    Screen12Dot9inch
+```
+
+    
 ### Available iOS Version Finder methods
   ```objective-c
       + (BOOL)versionEqualTo:(NSString *)version;
@@ -196,22 +265,48 @@ Or in Swift:
 ### Available methods
 ```objective-c
     + (DeviceVersion)deviceVersion;
-	+ (DeviceSize)deviceSize;
-	+ (NSString *)deviceName;
+    + (DeviceSize)deviceSize;
+    + (NSString *)deviceName;
 ```
 ### Targetable models
-	Apple Watch 38mm
+```
+    Apple Watch 38mm
     Apple Watch 42mm
     Apple Watch 38mm Series 1
     Apple Watch 42mm Series 1
     Apple Watch 38mm Series 2
     Apple Watch 42mm Series 2
-
+    Apple Watch 38mm Series 3
+    Apple Watch 42mm Series 3
+    Apple Watch 40mm Series 4
+    Apple Watch 44mm Series 4
+    Apple Watch 40mm Series 5
+    Apple Watch 44mm Series 5
+    Apple Watch 40mm SE     
+    Apple Watch 44mm SE  
+    Apple Watch 40mm Series 6
+    Apple Watch 44mm Series 6   
+    Apple Watch 41mm Series7
+    Apple Watch 45mm Series7
+    AppleWatch40mmSE2     ,
+    AppleWatch44mmSE2     ,
+    AppleWatch41mmSeries8 ,
+    AppleWatch45mmSeries8 ,
+    AppleWatch49mmUltra ,
+    
     Simulator
+```
 
 ### Targetable screen sizes
+```
     Screen38mm
+    Screen40mm
+    Screen41mm
     Screen42mm
+    Screen44mm
+    Screen45mm
+    Screen49mm
+```
 
 ### Available watchOS Version Finder methods
 ```objective-c
@@ -239,8 +334,11 @@ Or in Swift:
 	+ (NSString *)deviceName;
 ```
 ### Targetable models
-	Apple TV (4th Generation)
-
+    Apple TV (4th Generation)
+    Apple TV 4K
+    Apple TV 4K(2nd Generation)
+    Apple TV 4K(2nd Generation 1080p)
+    
     Simulator
 
 ### Available tvOS Version Finder methods
@@ -254,7 +352,7 @@ Or in Swift:
 
 ### Helpers
 ```objective-c
-	  NSLog(@"%@", [SDVersion deviceVersionName:[SDVersion deviceVersion]]);
+      NSLog(@"%@", [SDVersion deviceVersionName:[SDVersion deviceVersion]]);
       /* e.g: Outputs 'Apple TV (4th Generation)' */
 ```
 
@@ -294,28 +392,34 @@ Or in Swift:
     + (DeviceScreenResolution)deviceScreenResolution;
 ```
 ### Targetable models
-	DeviceVersionIMac
-	DeviceVersionMacMini
-	DeviceVersionMacPro
-	DeviceVersionMacBook
-	DeviceVersionMacBookAir
-	DeviceVersionMacBookPro
-	DeviceVersionXserve
+```
+    DeviceVersionIMac
+    DeviceVersionMacMini
+    DeviceVersionMacPro
+    DeviceVersionMacBook
+    DeviceVersionMacBookAir
+    DeviceVersionMacBookPro
+    DeviceVersionXserve
+```
 
 ### Targetable screen sizes
+```
     Mac27Inch
-	Mac24Inch
-	Mac21Dot5Inch
-	Mac20Inch
-	Mac17Inch
-	Mac15Inch
-	Mac13Inch
-	Mac12Inch
-	Mac11Inch
+    Mac24Inch
+    Mac21Dot5Inch
+    Mac20Inch
+    Mac17Inch
+    Mac15Inch
+    Mac13Inch
+    Mac12Inch
+    Mac11Inch
+```
 
 ### Targetable screen resolutions
+```
     DeviceScreenRetina,
-	DeviceScreenNoRetina
+    DeviceScreenNoRetina
+```
 
 ### Available OSX Version Finder methods
 ```objective-c

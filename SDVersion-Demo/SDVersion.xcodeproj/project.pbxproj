@@ -136,6 +136,9 @@
 		1FE53CD41D3FF491005739A5 /* SDtvOSVersionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SDtvOSVersionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FE53CD81D3FF491005739A5 /* SDtvOSVersionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDtvOSVersionTests.m; sourceTree = "<group>"; };
 		1FE53CDA1D3FF491005739A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		337CEC232703285D0086B6DC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		337CEC24270329EC0086B6DC /* SDVersion.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = SDVersion.podspec; path = ../SDVersion.podspec; sourceTree = "<group>"; };
+		337CEC25270329F60086B6DC /* MCVersion.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = MCVersion.podspec; path = ../MCVersion.podspec; sourceTree = "<group>"; };
 		9A6DB5DE1B8E82D00065EA11 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9A6DB5DF1B8E82D00065EA11 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		9A6DB5E11B8E82D00065EA11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -323,6 +326,9 @@
 		9AA6623F19BFABFC0055042F = {
 			isa = PBXGroup;
 			children = (
+				337CEC25270329F60086B6DC /* MCVersion.podspec */,
+				337CEC24270329EC0086B6DC /* SDVersion.podspec */,
+				337CEC232703285D0086B6DC /* README.md */,
 				9A95DA931B853CFF00F96CB5 /* SDVersion */,
 				9A6DB5DD1B8E82D00065EA11 /* SDiOSVersion */,
 				9A6DB5F01B8E82E00065EA11 /* SDiOSVersionTests */,
@@ -543,7 +549,7 @@
 		9AA6624019BFABFC0055042F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Sebastian Dobrincu";
 				TargetAttributes = {
 					1FC73CFF1D244B87005F81DA = {
@@ -564,7 +570,7 @@
 					};
 					9AA6626019BFABFC0055042F = {
 						CreatedOnToolsVersion = 6.0;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 1000;
 						TestTargetID = 9AA6624719BFABFC0055042F;
 					};
 					E2D975171B8265DF00675936 = {
@@ -582,6 +588,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -974,12 +981,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -1027,12 +1036,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -1070,11 +1081,12 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				IBSC_WARNINGS = YES;
 				INFOPLIST_FILE = SDiOSVersion/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dobrincusebastian.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1086,11 +1098,12 @@
 				CODE_SIGN_IDENTITY = "";
 				IBSC_WARNINGS = YES;
 				INFOPLIST_FILE = SDiOSVersion/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dobrincusebastian.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -1114,7 +1127,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SDiOSVersionTests/SDiOSVersionTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SDiOSVersion.app/SDiOSVersion";
 			};
 			name = Debug;
@@ -1134,7 +1148,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dobrincusebastian.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SDiOSVersionTests/SDiOSVersionTests-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SDiOSVersion.app/SDiOSVersion";
 			};
 			name = Release;
@@ -1153,7 +1168,7 @@
 				);
 				INFOPLIST_FILE = SDMacVersion/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dobrincusebastian.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -1171,7 +1186,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = SDMacVersion/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dobrincusebastian.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;

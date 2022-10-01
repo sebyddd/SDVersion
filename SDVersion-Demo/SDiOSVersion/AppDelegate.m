@@ -12,7 +12,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [[UIApplication sharedApplication] setStatusBarHidden:YES];
+    
+    #if __IPHONE_OS_VERSION_MAX_ALLOWED < 90000
+        [[UIApplication sharedApplication] setStatusBarHidden:YES];
+    #endif
+    
     return YES;
 }
 

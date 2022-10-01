@@ -1,11 +1,28 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mbZ-3p-fVs">
+    <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="rlD-eH-pbx">
+            <objects>
+                <navigationController id="mbZ-3p-fVs" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rit-Sx-hMz">
+                        <rect key="frame" x="0.0" y="24" width="1024" height="50"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="V0L-pS-kcf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mGP-za-8Hv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1289" y="-101"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
@@ -19,57 +36,35 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhone Size: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egl-js-Gcb">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <rect key="frame" x="147" y="332.5" width="106" height="25"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhone Version: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HBv-GR-d3r">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <rect key="frame" x="133" y="287.5" width="134" height="25"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="GkS-Ns-SUH">
-                                <rect key="frame" x="58" y="55" width="284" height="142"/>
+                                <rect key="frame" x="100" y="82.5" width="200" height="175"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="UFE-rl-Fzk"/>
+                                </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.26274511218070984" green="0.78431379795074463" blue="0.46274513006210327" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="backgroundColor" red="0.22842004895210266" green="0.75400829315185547" blue="0.38757467269897461" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="HBv-GR-d3r" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="AOm-DR-JTL"/>
                             <constraint firstItem="GkS-Ns-SUH" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="HXl-cc-PTa"/>
-                            <constraint firstAttribute="centerY" secondItem="egl-js-Gcb" secondAttribute="centerY" constant="-25" id="L4D-JL-lZA"/>
-                            <constraint firstItem="GkS-Ns-SUH" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="35" id="Tv7-jD-Jrm"/>
-                            <constraint firstAttribute="centerX" secondItem="egl-js-Gcb" secondAttribute="centerX" constant="-0.5" id="gg3-kl-TyF"/>
-                            <constraint firstAttribute="centerY" secondItem="HBv-GR-d3r" secondAttribute="centerY" constant="25" id="hYa-SJ-gsi"/>
-                            <constraint firstItem="GkS-Ns-SUH" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="42" id="klt-BW-uRu"/>
-                            <constraint firstAttribute="centerX" secondItem="HBv-GR-d3r" secondAttribute="centerX" constant="-0.5" id="phJ-Pi-cYA"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="GkS-Ns-SUH" secondAttribute="bottom" constant="403" id="xAY-9o-YTr"/>
+                            <constraint firstItem="HBv-GR-d3r" firstAttribute="top" secondItem="GkS-Ns-SUH" secondAttribute="bottom" constant="30" id="Xb6-CP-4Rl"/>
+                            <constraint firstItem="egl-js-Gcb" firstAttribute="top" secondItem="HBv-GR-d3r" secondAttribute="bottom" constant="20" id="dw6-3E-u17"/>
+                            <constraint firstItem="egl-js-Gcb" firstAttribute="centerX" secondItem="HBv-GR-d3r" secondAttribute="centerX" id="pkg-8j-Mxy"/>
+                            <constraint firstItem="HBv-GR-d3r" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="uL7-rZ-M1T"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="egl-js-Gcb"/>
-                                <exclude reference="HBv-GR-d3r"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="hYa-SJ-gsi"/>
-                                <exclude reference="phJ-Pi-cYA"/>
-                                <exclude reference="L4D-JL-lZA"/>
-                                <exclude reference="gg3-kl-TyF"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="egl-js-Gcb"/>
-                                <include reference="HBv-GR-d3r"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="hYa-SJ-gsi"/>
-                                <include reference="phJ-Pi-cYA"/>
-                                <include reference="L4D-JL-lZA"/>
-                                <include reference="gg3-kl-TyF"/>
-                            </mask>
-                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="v4q-FZ-2Kc"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="400" height="600"/>
                     <connections>
@@ -79,10 +74,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="149" y="-38"/>
+            <point key="canvasLocation" x="-693" y="-234"/>
         </scene>
     </scenes>
     <resources>
-        <image name="logo" width="254" height="92"/>
+        <image name="logo" width="566" height="175"/>
     </resources>
 </document>
