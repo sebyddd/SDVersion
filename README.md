@@ -24,10 +24,15 @@ Add SDVersion to your `Package.swift`:
 ```swift
 dependencies: [
     .package(url: "https://github.com/sebyddd/SDVersion.git", from: "5.0.0")
+],
+targets: [
+    .target(name: "YourApp", dependencies: [
+        .product(name: "SDiOSVersion", package: "SDVersion")  // or SDMacVersion, SDwatchOSVersion, SDtvOSVersion
+    ])
 ]
 ```
 
-Or in Xcode: File > Add Package Dependencies > Enter the repository URL.
+Or in Xcode: File > Add Package Dependencies > Enter the repository URL, then select the appropriate library for your platform.
 
 ### CocoaPods
 

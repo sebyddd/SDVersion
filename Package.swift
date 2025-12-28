@@ -12,10 +12,7 @@ let package = Package(
         .watchOS(.v6)
     ],
     products: [
-        .library(
-            name: "SDVersion",
-            targets: ["SDVersion"]
-        ),
+        // Platform-specific libraries - use the one matching your target platform
         .library(
             name: "SDiOSVersion",
             targets: ["SDiOSVersion"]
@@ -35,47 +32,31 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "SDVersion",
-            dependencies: [],
-            path: "SDVersion",
-            exclude: [
-                "SDiOSVersion",
-                "SDMacVersion",
-                "SDwatchOSVersion",
-                "SDtvOSVersion",
-                "PrivacyInfo.xcprivacy"
-            ],
-            publicHeadersPath: ".",
-            cSettings: [
-                .headerSearchPath(".")
-            ]
-        ),
-        .target(
             name: "SDiOSVersion",
             dependencies: [],
             path: "SDVersion/SDiOSVersion",
-            resources: [.copy("../PrivacyInfo.xcprivacy")],
+            resources: [.process("../PrivacyInfo.xcprivacy")],
             publicHeadersPath: "."
         ),
         .target(
             name: "SDMacVersion",
             dependencies: [],
             path: "SDVersion/SDMacVersion",
-            resources: [.copy("../PrivacyInfo.xcprivacy")],
+            resources: [.process("../PrivacyInfo.xcprivacy")],
             publicHeadersPath: "."
         ),
         .target(
             name: "SDwatchOSVersion",
             dependencies: [],
             path: "SDVersion/SDwatchOSVersion",
-            resources: [.copy("../PrivacyInfo.xcprivacy")],
+            resources: [.process("../PrivacyInfo.xcprivacy")],
             publicHeadersPath: "."
         ),
         .target(
             name: "SDtvOSVersion",
             dependencies: [],
             path: "SDVersion/SDtvOSVersion",
-            resources: [.copy("../PrivacyInfo.xcprivacy")],
+            resources: [.process("../PrivacyInfo.xcprivacy")],
             publicHeadersPath: "."
         )
     ]
