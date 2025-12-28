@@ -78,7 +78,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Build Package (macOS)
-        run: swift build
+        run: swift build --product SDMacVersion
 
   pod-lint:
     name: CocoaPods Lint
