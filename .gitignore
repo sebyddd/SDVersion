@@ -1,5 +1,4 @@
 # Xcode
-#
 build/
 *.pbxuser
 !default.pbxuser
@@ -9,22 +8,48 @@ build/
 !default.mode2v3
 *.perspectivev3
 !default.perspectivev3
-xcuserdata
+xcuserdata/
 *.xccheckout
 *.moved-aside
-DerivedData
+DerivedData/
 *.hmap
 *.ipa
 *.xcuserstate
+*.xcscmblueprint
+
+# macOS
 .DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Swift Package Manager
+.build/
+.swiftpm/
+Package.resolved
+SourcePackages/
 
 # CocoaPods
-#
-# We recommend against adding the Pods directory to your .gitignore. However
-# you should judge for yourself, the pros and cons are mentioned at:
-# http://guides.cocoapods.org/using/using-cocoapods.html#should-i-ignore-the-pods-directory-in-source-control?
-#
-# Pods/
+Pods/
+*.xcworkspace
 
+# Carthage
+Carthage/Build/
+Carthage/Checkouts/
 
+# fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output/
 
+# Code Injection
+iOSInjectionProject/
+
+# Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# Accio dependency management
+Dependencies/
+.accio/

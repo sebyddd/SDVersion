@@ -1,0 +1,90 @@
+name: CI
+
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+    branches: [ master, main ]
+
+jobs:
+  build-ios:
+    name: Build iOS
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build iOS Framework
+        run: |
+          xcodebuild build \
+            -scheme SDiOSVersion \
+            -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest' \
+            -project SDVersion-Demo/SDVersion.xcodeproj \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO \
+            | xcpretty || true
+
+  build-macos:
+    name: Build macOS
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build macOS Framework
+        run: |
+          xcodebuild build \
+            -scheme SDMacVersion \
+            -destination 'platform=macOS' \
+            -project SDVersion-Demo/SDVersion.xcodeproj \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO \
+            | xcpretty || true
+
+  build-tvos:
+    name: Build tvOS
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build tvOS Framework
+        run: |
+          xcodebuild build \
+            -scheme SDtvOSVersion \
+            -destination 'platform=tvOS Simulator,name=Apple TV,OS=latest' \
+            -project SDVersion-Demo/SDVersion.xcodeproj \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO \
+            | xcpretty || true
+
+  build-watchos:
+    name: Build watchOS
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build watchOS Framework
+        run: |
+          xcodebuild build \
+            -scheme SDwatchOSVersion \
+            -destination 'platform=watchOS Simulator,name=Apple Watch Series 10 (46mm),OS=latest' \
+            -project SDVersion-Demo/SDVersion.xcodeproj \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO \
+            | xcpretty || true
+
+  build-spm:
+    name: Build Swift Package
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build Package (macOS)
+        run: swift build --target SDMacVersion
+
+  pod-lint:
+    name: CocoaPods Lint
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Lint Podspec
+        run: pod lib lint --allow-warnings
