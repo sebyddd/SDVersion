@@ -1,10 +1,14 @@
-# SDVersion
+<p align="center">
+  <img src="https://dl.dropboxusercontent.com/s/bmfjwfe2ngnivwn/sdversion.png?dl=0" alt="SDVersion"/>
+</p>
 
-[![CI](https://github.com/sebyddd/SDVersion/actions/workflows/ci.yml/badge.svg)](https://github.com/sebyddd/SDVersion/actions/workflows/ci.yml)
-[![CocoaPods](https://img.shields.io/cocoapods/v/SDVersion.svg)](https://cocoapods.org/pods/SDVersion)
-[![SPM](https://img.shields.io/badge/SPM-compatible-brightgreen.svg)](https://swift.org/package-manager/)
-[![Platform](https://img.shields.io/badge/platform-iOS%20%7C%20watchOS%20%7C%20tvOS%20%7C%20macOS-D0547F.svg)](https://github.com/sebyddd/SDVersion)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+<p align="center">
+  <a href="https://github.com/sebyddd/SDVersion/actions/workflows/ci.yml"><img src="https://github.com/sebyddd/SDVersion/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <a href="https://cocoapods.org/pods/SDVersion"><img src="https://img.shields.io/cocoapods/v/SDVersion.svg" alt="CocoaPods"></a>
+  <a href="https://swift.org/package-manager/"><img src="https://img.shields.io/badge/SPM-compatible-brightgreen.svg" alt="SPM"></a>
+  <a href="https://github.com/sebyddd/SDVersion"><img src="https://img.shields.io/badge/platform-iOS%20%7C%20watchOS%20%7C%20tvOS%20%7C%20macOS-D0547F.svg" alt="Platform"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"></a>
+</p>
 
 Lightweight Cocoa library for detecting the running device's model and screen size.
 
