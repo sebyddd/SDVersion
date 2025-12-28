@@ -9,12 +9,9 @@ on:
 jobs:
   build-ios:
     name: Build iOS
-    runs-on: macos-14
+    runs-on: macos-15
     steps:
       - uses: actions/checkout@v4
-
-      - name: Select Xcode 16
-        run: sudo xcode-select -s /Applications/Xcode_16.app
 
       - name: Build iOS Framework
         run: |
@@ -28,12 +25,9 @@ jobs:
 
   build-macos:
     name: Build macOS
-    runs-on: macos-14
+    runs-on: macos-15
     steps:
       - uses: actions/checkout@v4
-
-      - name: Select Xcode 16
-        run: sudo xcode-select -s /Applications/Xcode_16.app
 
       - name: Build macOS Framework
         run: |
@@ -47,12 +41,9 @@ jobs:
 
   build-tvos:
     name: Build tvOS
-    runs-on: macos-14
+    runs-on: macos-15
     steps:
       - uses: actions/checkout@v4
-
-      - name: Select Xcode 16
-        run: sudo xcode-select -s /Applications/Xcode_16.app
 
       - name: Build tvOS Framework
         run: |
@@ -66,12 +57,9 @@ jobs:
 
   build-watchos:
     name: Build watchOS
-    runs-on: macos-14
+    runs-on: macos-15
     steps:
       - uses: actions/checkout@v4
-
-      - name: Select Xcode 16
-        run: sudo xcode-select -s /Applications/Xcode_16.app
 
       - name: Build watchOS Framework
         run: |
@@ -85,24 +73,18 @@ jobs:
 
   build-spm:
     name: Build Swift Package
-    runs-on: macos-14
+    runs-on: macos-15
     steps:
       - uses: actions/checkout@v4
-
-      - name: Select Xcode 16
-        run: sudo xcode-select -s /Applications/Xcode_16.app
 
       - name: Build Package (macOS)
         run: swift build
 
   pod-lint:
     name: CocoaPods Lint
-    runs-on: macos-14
+    runs-on: macos-15
     steps:
       - uses: actions/checkout@v4
-
-      - name: Select Xcode 16
-        run: sudo xcode-select -s /Applications/Xcode_16.app
 
       - name: Lint Podspec
         run: pod lib lint --allow-warnings
