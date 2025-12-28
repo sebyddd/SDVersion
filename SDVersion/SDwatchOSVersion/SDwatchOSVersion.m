@@ -154,22 +154,25 @@
 {
     CGFloat screenHeight = CGRectGetHeight([WKInterfaceDevice currentDevice].screenBounds);
 
-    // Screen heights for different watch sizes
+    // Screen heights for different watch sizes (in points = pixels / 2)
+    // 38mm: 340px = 170pt, 42mm: 390px = 195pt, 40mm: 394px = 197pt
+    // 41mm: 430px = 215pt, 44mm: 448px = 224pt, 45mm: 484px = 242pt
+    // 46mm: 496px = 248pt, 49mm: 502px = 251pt
     if (screenHeight == 170) {
         return Screen38mm;
     } else if (screenHeight == 195) {
         return Screen42mm;
     } else if (screenHeight == 197) {
         return Screen40mm;
-    } else if (screenHeight == 205) {
-        return Screen41mm;
     } else if (screenHeight == 215) {
-        return Screen44mm;
+        return Screen41mm;
     } else if (screenHeight == 224) {
+        return Screen44mm;
+    } else if (screenHeight == 242) {
         return Screen45mm;
-    } else if (screenHeight == 227) {
+    } else if (screenHeight == 248) {
         return Screen46mm;
-    } else if (screenHeight == 242 || screenHeight == 251) {
+    } else if (screenHeight == 251) {
         return Screen49mm;
     } else {
         return UnknownSize;

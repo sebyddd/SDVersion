@@ -165,12 +165,14 @@ static NSString * const SDMacChipType    = @"SDMacChipType";
             mutableDic[SDMacVersionEnum] = @(DeviceVersionMacBookPro);
             chipType = ChipTypeM4;
         }
-        else if ([model hasPrefix:@"Mac16,7"] || [model hasPrefix:@"Mac16,8"]) {
+        else if ([model hasPrefix:@"Mac16,6"] || [model hasPrefix:@"Mac16,7"]) {
+            // 14" M4 Pro (Mac16,6) and 16" M4 Pro (Mac16,7)
             mutableDic[SDMacDeviceName] = @"MacBook Pro";
             mutableDic[SDMacVersionEnum] = @(DeviceVersionMacBookPro);
             chipType = ChipTypeM4Pro;
         }
-        else if ([model hasPrefix:@"Mac16,5"] || [model hasPrefix:@"Mac16,6"]) {
+        else if ([model hasPrefix:@"Mac16,5"] || [model hasPrefix:@"Mac16,8"]) {
+            // 16" M4 Max (Mac16,5) and 14" M4 Max (Mac16,8)
             mutableDic[SDMacDeviceName] = @"MacBook Pro";
             mutableDic[SDMacVersionEnum] = @(DeviceVersionMacBookPro);
             chipType = ChipTypeM4Max;

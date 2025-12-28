@@ -19,7 +19,7 @@ jobs:
       - name: Build iOS Framework
         run: |
           xcodebuild build \
-            -scheme SDVersion \
+            -scheme SDiOSVersion \
             -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest' \
             -project SDVersion-Demo/SDVersion.xcodeproj \
             CODE_SIGN_IDENTITY="" \

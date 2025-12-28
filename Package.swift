@@ -54,24 +54,28 @@ let package = Package(
             name: "SDiOSVersion",
             dependencies: [],
             path: "SDVersion/SDiOSVersion",
+            resources: [.copy("../PrivacyInfo.xcprivacy")],
             publicHeadersPath: "."
         ),
         .target(
             name: "SDMacVersion",
             dependencies: [],
             path: "SDVersion/SDMacVersion",
+            resources: [.copy("../PrivacyInfo.xcprivacy")],
             publicHeadersPath: "."
         ),
         .target(
             name: "SDwatchOSVersion",
             dependencies: [],
             path: "SDVersion/SDwatchOSVersion",
+            resources: [.copy("../PrivacyInfo.xcprivacy")],
             publicHeadersPath: "."
         ),
         .target(
             name: "SDtvOSVersion",
             dependencies: [],
             path: "SDVersion/SDtvOSVersion",
+            resources: [.copy("../PrivacyInfo.xcprivacy")],
             publicHeadersPath: "."
         )
     ]
